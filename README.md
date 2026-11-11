@@ -207,6 +207,12 @@ cp .claude/skills/personnel-appointment/SKILL.md examples/schemas/personnel_appo
 
 逐步的操作说明，以及怎么把它交给别的 agent，见 [SKILL_GUIDE.md](SKILL_GUIDE.md)。
 
+## Java 实现（进行中）
+
+`agent-platform/` 是正在做的 Java 版（Spring Boot），目标是一个通用 agent 平台，文档抽取是它的第一个能力。方案见 [SPRINGBOOT_SERVICE_DESIGN.md](SPRINGBOOT_SERVICE_DESIGN.md)，进度和用法见 [agent-platform/README.md](agent-platform/README.md)。
+
+这里的 Python 实现是它的参考实现：Java 版照着它移植，并用它的输出做基准来测试。改了读取、表格、文本工具之后，要重新生成基准数据，做法见 agent-platform/README.md 的"测试"一节。
+
 ## 测试
 
 ```bash
