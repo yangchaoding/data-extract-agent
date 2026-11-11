@@ -127,6 +127,8 @@ fields:
 
 同一个指标在文档里出现多处时（年报的摘要、主要会计数据、报表、附注），在 `description` 里写清口径：合并还是母公司、本期还是上期。
 
+要加一种新的文档类型，见 [NEW_DOCTYPE_GUIDE.md](NEW_DOCTYPE_GUIDE.md)：以银行流水和会议纪要为例，从看切片、写 schema、试跑、调整到加业务校验的完整步骤。
+
 ## 输出
 
 ```json
@@ -187,6 +189,23 @@ result.fields["total_amount"]  # FieldResult：status、items（值、摘抄、�
 ```
 
 识别结果已经在内存里（比如刚从服务接口拿到）时用 `document_from_result(data)`。换别的模型客户端，只要实现 `complete(system, user) -> str` 即可。
+
+## Claude Code Skill
+
+干部任免审批表的抽取做成了一个 Claude Code Skill：`.claude/skills/personnel-appointment/`。在这个仓库里打开 Claude Code，说"把 ocr_out/xxx 这份干部任免审批表抽出来"就会用上它，也可以用 `/personnel-appointment` 直接调用。
+
+它固定使用 `examples/schemas/personnel_appointment.yaml`。跑完之后会区分"原文空栏"和"需要复核"，并抽查同一行里容易取反的字段（籍贯和出生地、全日制和在职教育、审批机关意见和行政任免机关意见等）：这几对字段引的是同一行原文，取反了程序核对不出来。
+
+想在别的项目里也能用，把它装到个人目录：
+
+```bash
+mkdir -p ~/.claude/skills/personnel-appointment
+cp .claude/skills/personnel-appointment/SKILL.md examples/schemas/personnel_appointment.yaml ~/.claude/skills/personnel-appointment/
+```
+
+再在 `~/.claude/skills/personnel-appointment/local.md` 里写上本机 extract-agent 的位置（或者把 `extract-agent` 加进 PATH）。改了 `SKILL.md` 或 schema 之后，重新执行上面的 `cp`。
+
+逐步的操作说明，以及怎么把它交给别的 agent，见 [SKILL_GUIDE.md](SKILL_GUIDE.md)。
 
 ## 测试
 
