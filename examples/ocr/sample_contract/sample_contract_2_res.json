@@ -1,0 +1,30 @@
+{
+    "input_path": "sample_contract.pdf",
+    "page_index": 2,
+    "page_count": 3,
+    "width": 1240,
+    "height": 1754,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": true,
+        "format_block_content": false,
+        "markdown_ignore_labels": ["number", "footnote", "header", "header_image", "footer", "footer_image", "aside_text"]
+    },
+    "parsing_res_list": [
+        {"block_label": "header", "block_content": "星河智造科技有限公司 软件开发服务合同", "block_bbox": [120, 60, 1120, 96], "block_id": 0, "block_order": null, "group_id": 0},
+        {"block_label": "table_title", "block_content": "续表", "block_bbox": [580, 130, 660, 166], "block_id": 1, "block_order": null, "group_id": 1},
+        {"block_label": "table", "block_content": "<table><tr><td>期次</td><td>付款节点</td><td>比例</td><td>金额（元）</td></tr><tr><td>第三期</td><td>系统上线并经甲方验收合格后10个工作日内</td><td>40%</td><td>512,000.00</td></tr><tr><td>第四期</td><td>免费维护期届满后10个工作日内</td><td>10%</td><td>128,000.00</td></tr></table>", "block_bbox": [120, 180, 1120, 370], "block_id": 2, "block_order": null, "group_id": 2},
+        {"block_label": "paragraph_title", "block_content": "第四条 违约责任", "block_bbox": [120, 420, 420, 460], "block_id": 3, "block_order": 1, "group_id": 3},
+        {"block_label": "text", "block_content": "4.1 乙方逾期交付的，每逾期一日，应按合同总价的0.05%向甲方支付违约金，违约金累计不超过合同总价的10%。", "block_bbox": [120, 480, 1120, 560], "block_id": 4, "block_order": 2, "group_id": 4},
+        {"block_label": "text", "block_content": "4.2 甲方逾期付款的，每逾期一日，应按逾期金额的0.05%向乙方支付违约金。", "block_bbox": [120, 580, 1120, 620], "block_id": 5, "block_order": 3, "group_id": 5},
+        {"block_label": "paragraph_title", "block_content": "第五条 争议解决", "block_bbox": [120, 670, 420, 710], "block_id": 6, "block_order": 4, "group_id": 6},
+        {"block_label": "text", "block_content": "5.1 因本合同引起的或与本合同有关的任何争议，双方应友好协商解决；协商不成的，任何一方均可提交杭州仲裁委员会，按照其现行有效的仲裁规则进行仲裁。", "block_bbox": [120, 730, 1120, 850], "block_id": 7, "block_order": 5, "group_id": 7},
+        {"block_label": "text", "block_content": "5.2 本合同一式肆份，甲乙双方各执贰份，自双方盖章之日起生效。", "block_bbox": [120, 870, 1120, 910], "block_id": 8, "block_order": 6, "group_id": 8},
+        {"block_label": "text", "block_content": "甲方（盖章）：星河智造科技有限公司", "block_bbox": [120, 1000, 600, 1040], "block_id": 9, "block_order": 7, "group_id": 9},
+        {"block_label": "text", "block_content": "乙方（盖章）：青岚软件技术有限公司", "block_bbox": [640, 1000, 1120, 1040], "block_id": 10, "block_order": 8, "group_id": 10},
+        {"block_label": "seal", "block_content": "星河智造科技有限公司 合同专用章", "block_bbox": [200, 1060, 440, 1300], "block_id": 11, "block_order": null, "group_id": 11},
+        {"block_label": "number", "block_content": "第 3 页 共 3 页", "block_bbox": [540, 1660, 700, 1690], "block_id": 12, "block_order": null, "group_id": 12}
+    ]
+}

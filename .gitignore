@@ -1,0 +1,56 @@
+# Python virtual environments
+.venv/
+.venv-*/
+venv/
+env/
+
+# Python bytecode, caches and coverage
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Generated package metadata and build output
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Local IDE and operating-system files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local configuration and credentials (keep example configuration)
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Uploaded OCR documents and private personnel records
+/tests/task-*
+*.raw.json
+*.raw/
+/ocr_out/
+
+# Generated extraction results; keep JSON fixtures under examples/
+/extract_out/
+/result*.json
+/*.result*.json
+/*.data.json
+
+# Logs, temporary files and backups
+*.log
+*.tmp
+*.bak
+.git-backup*/
