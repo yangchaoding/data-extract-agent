@@ -1,0 +1,197 @@
+{
+  "name": "format_block_content",
+  "title": "带格式的文档",
+  "page_count": 1,
+  "blocks": [
+    {
+      "id": 0,
+      "kind": "heading",
+      "label": "doc_title",
+      "text": "带格式的文档",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 0,
+      "path": [],
+      "lead": [],
+      "tokens": 7,
+      "table": null
+    },
+    {
+      "id": 1,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "第一节 概述",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 1,
+      "path": [
+        "第一节 概述"
+      ],
+      "lead": [],
+      "tokens": 6,
+      "table": null
+    },
+    {
+      "id": 2,
+      "kind": "text",
+      "label": "text",
+      "text": "居中的一段文字",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "第一节 概述"
+      ],
+      "lead": [],
+      "tokens": 8,
+      "table": null
+    },
+    {
+      "id": 3,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "1.1 背景",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 2,
+      "path": [
+        "第一节 概述",
+        "1.1 背景"
+      ],
+      "lead": [],
+      "tokens": 4,
+      "table": null
+    },
+    {
+      "id": 4,
+      "kind": "text",
+      "label": "text",
+      "text": "图片之前  图片之后",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "第一节 概述",
+        "1.1 背景"
+      ],
+      "lead": [],
+      "tokens": 9,
+      "table": null
+    },
+    {
+      "id": 5,
+      "kind": "text",
+      "label": "text",
+      "text": "第一行\n第二行\n第三行",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "第一节 概述",
+        "1.1 背景"
+      ],
+      "lead": [],
+      "tokens": 10,
+      "table": null
+    },
+    {
+      "id": 6,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "第二节 范围",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 1,
+      "path": [
+        "第二节 范围"
+      ],
+      "lead": [],
+      "tokens": 6,
+      "table": null
+    },
+    {
+      "id": 7,
+      "kind": "text",
+      "label": "text",
+      "text": "段落一\n段落二",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "第二节 范围"
+      ],
+      "lead": [],
+      "tokens": 7,
+      "table": null
+    },
+    {
+      "id": 8,
+      "kind": "text",
+      "label": "text",
+      "text": "a < b 且 c > d，这不是标签。",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "第二节 范围"
+      ],
+      "lead": [],
+      "tokens": 11,
+      "table": null
+    }
+  ]
+}

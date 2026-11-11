@@ -1,0 +1,90 @@
+[
+  {
+    "logId": "x",
+    "result": {
+      "layoutParsingResults": [
+        {
+          "prunedResult": {
+            "page_index": null,
+            "page_count": null,
+            "width": 1200,
+            "height": 1700,
+            "parsing_res_list": [
+              {
+                "block_id": 0,
+                "block_order": 1,
+                "group_id": 0,
+                "block_label": "doc_title",
+                "block_content": "逐页调用的结果",
+                "block_bbox": [
+                  100,
+                  100,
+                  1100,
+                  160
+                ]
+              },
+              {
+                "block_id": 1,
+                "block_order": 2,
+                "group_id": 1,
+                "block_label": "table",
+                "block_content": "<table><tr><td>栏目</td><td>内容</td></tr><tr><td>姓名</td><td>张三</td></tr></table>",
+                "block_bbox": [
+                  104,
+                  257,
+                  1083,
+                  1453
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "errorCode": 0
+  },
+  {
+    "logId": "x",
+    "result": {
+      "layoutParsingResults": [
+        {
+          "prunedResult": {
+            "page_index": null,
+            "page_count": null,
+            "width": 1200,
+            "height": 1700,
+            "parsing_res_list": [
+              {
+                "block_id": 0,
+                "block_order": 1,
+                "group_id": 0,
+                "block_label": "table",
+                "block_content": "<table><tr><td>民族</td><td>汉族</td></tr><tr><td>籍贯</td><td>云南</td></tr></table>",
+                "block_bbox": [
+                  126,
+                  189,
+                  1105,
+                  1454
+                ]
+              },
+              {
+                "block_id": 1,
+                "block_order": 2,
+                "group_id": 1,
+                "block_label": "vision_footnote",
+                "block_content": "填表人：某某单位",
+                "block_bbox": [
+                  100,
+                  100,
+                  1100,
+                  160
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "errorCode": 0
+  }
+]

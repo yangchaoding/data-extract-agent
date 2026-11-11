@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  只对本项目生效的 Maven 配置。.mvn/maven.config 里用 -s 和 -gs 指向这个文件，
+  所以在本目录下执行 mvn 时，用户级和全局级的 settings.xml 都不会被读取。
+
+  为什么需要它：有的机器在 Maven 的全局配置里设了镜像，镜像地址失效之后，
+  所有依赖都下载不了。这里不设任何镜像，直接从 Maven 中央仓库下载。
+
+  公司有内部仓库时，在下面的 <mirrors> 里加上它即可。
+-->
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <mirrors>
+    </mirrors>
+</settings>

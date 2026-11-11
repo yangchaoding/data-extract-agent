@@ -1,0 +1,121 @@
+{
+  "name": "margins",
+  "title": null,
+  "page_count": 3,
+  "blocks": [
+    {
+      "id": 0,
+      "kind": "text",
+      "label": "header",
+      "text": "某某公司 2024 年度报告",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 11,
+      "table": null
+    },
+    {
+      "id": 1,
+      "kind": "text",
+      "label": "text",
+      "text": "第 1 页的正文。",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 7,
+      "table": null
+    },
+    {
+      "id": 2,
+      "kind": "text",
+      "label": "aside_text",
+      "text": "内部资料 注意保密",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 9,
+      "table": null
+    },
+    {
+      "id": 3,
+      "kind": "text",
+      "label": "footer",
+      "text": "第 1 页 共 3 页",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 6,
+      "table": null
+    },
+    {
+      "id": 4,
+      "kind": "text",
+      "label": "text",
+      "text": "第 2 页的正文。",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 7,
+      "table": null
+    },
+    {
+      "id": 5,
+      "kind": "text",
+      "label": "text",
+      "text": "第 3 页的正文。",
+      "page": 3,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 7,
+      "table": null
+    }
+  ]
+}

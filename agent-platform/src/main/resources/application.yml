@@ -1,0 +1,13 @@
+# 应用配置。现在只有基础项，后面每加一个能力，在这里加它的配置段。
+spring:
+  application:
+    name: agent-platform
+  main:
+    # 命令行方式运行时不需要启动横幅和"Starting… / Started…"这两行启动日志
+    banner-mode: "off"
+    log-startup-info: false
+
+logging:
+  level:
+    root: warn
+    com.cb.agent: info

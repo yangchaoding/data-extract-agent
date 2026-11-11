@@ -1,0 +1,620 @@
+[
+  {
+    "name": "sample_contract",
+    "title": "软件开发服务合同",
+    "page_count": 3,
+    "blocks": [
+      {
+        "id": 0,
+        "kind": "text",
+        "label": "header",
+        "text": "星河智造科技有限公司 软件开发服务合同",
+        "page": 1,
+        "page_end": null,
+        "bbox": [
+          120,
+          60,
+          1120,
+          96
+        ],
+        "level": null,
+        "path": [],
+        "lead": [],
+        "tokens": 19,
+        "table": null
+      },
+      {
+        "id": 1,
+        "kind": "heading",
+        "label": "doc_title",
+        "text": "软件开发服务合同",
+        "page": 1,
+        "page_end": null,
+        "bbox": [
+          380,
+          150,
+          860,
+          210
+        ],
+        "level": 0,
+        "path": [],
+        "lead": [],
+        "tokens": 9,
+        "table": null
+      },
+      {
+        "id": 2,
+        "kind": "text",
+        "label": "text",
+        "text": "合同编号：HT-2024-0318",
+        "page": 1,
+        "page_end": null,
+        "bbox": [
+          120,
+          250,
+          520,
+          286
+        ],
+        "level": null,
+        "path": [],
+        "lead": [],
+        "tokens": 11,
+        "table": null
+      },
+      {
+        "id": 3,
+        "kind": "text",
+        "label": "text",
+        "text": "甲方（委托方）：星河智造科技有限公司",
+        "page": 1,
+        "page_end": null,
+        "bbox": [
+          120,
+          310,
+          760,
+          346
+        ],
+        "level": null,
+        "path": [],
+        "lead": [],
+        "tokens": 17,
+        "table": null
+      },
+      {
+        "id": 4,
+        "kind": "text",
+        "label": "text",
+        "text": "乙方（受托方）：青岚软件技术有限公司",
+        "page": 1,
+        "page_end": null,
+        "bbox": [
+          120,
+          360,
+          760,
+          396
+        ],
+        "level": null,
+        "path": [],
+        "lead": [],
+        "tokens": 17,
+        "table": null
+      },
+      {
+        "id": 5,
+        "kind": "text",
+        "label": "text",
+        "text": "签订日期：2024年3月18日\n签订地点：杭州市",
+        "page": 1,
+        "page_end": null,
+        "bbox": [
+          120,
+          410,
+          620,
+          480
+        ],
+        "level": null,
+        "path": [],
+        "lead": [],
+        "tokens": 19,
+        "table": null
+      },
+      {
+        "id": 6,
+        "kind": "text",
+        "label": "text",
+        "text": "鉴于甲方拟委托乙方开发生产排程管理系统，乙方具备相应的技术能力并愿意接受委托，双方根据《中华人民共和国民法典》及相关法律法规，经平等协商，订立本合同。",
+        "page": 1,
+        "page_end": null,
+        "bbox": [
+          120,
+          520,
+          1120,
+          640
+        ],
+        "level": null,
+        "path": [],
+        "lead": [],
+        "tokens": 73,
+        "table": null
+      },
+      {
+        "id": 7,
+        "kind": "heading",
+        "label": "paragraph_title",
+        "text": "第一条 项目内容",
+        "page": 1,
+        "page_end": null,
+        "bbox": [
+          120,
+          680,
+          420,
+          720
+        ],
+        "level": 1,
+        "path": [
+          "第一条 项目内容"
+        ],
+        "lead": [],
+        "tokens": 8,
+        "table": null
+      },
+      {
+        "id": 8,
+        "kind": "text",
+        "label": "text",
+        "text": "1.1 乙方为甲方开发生产排程管理系统（以下简称“系统”），工作内容包括需求分析、系统设计、编码实现、测试及上线部署。",
+        "page": 1,
+        "page_end": null,
+        "bbox": [
+          120,
+          740,
+          1120,
+          820
+        ],
+        "level": null,
+        "path": [
+          "第一条 项目内容"
+        ],
+        "lead": [],
+        "tokens": 54,
+        "table": null
+      },
+      {
+        "id": 9,
+        "kind": "text",
+        "label": "text",
+        "text": "1.2 系统的具体功能范围以双方签字确认的《需求规格说明书》为准。",
+        "page": 1,
+        "page_end": null,
+        "bbox": [
+          120,
+          840,
+          1120,
+          880
+        ],
+        "level": null,
+        "path": [
+          "第一条 项目内容"
+        ],
+        "lead": [],
+        "tokens": 30,
+        "table": null
+      },
+      {
+        "id": 10,
+        "kind": "heading",
+        "label": "paragraph_title",
+        "text": "第二条 合同期限",
+        "page": 1,
+        "page_end": null,
+        "bbox": [
+          120,
+          920,
+          420,
+          960
+        ],
+        "level": 1,
+        "path": [
+          "第二条 合同期限"
+        ],
+        "lead": [],
+        "tokens": 8,
+        "table": null
+      },
+      {
+        "id": 11,
+        "kind": "text",
+        "label": "text",
+        "text": "2.1 本合同期限自2024年4月1日起至2024年12月31日止。",
+        "page": 1,
+        "page_end": null,
+        "bbox": [
+          120,
+          980,
+          1120,
+          1020
+        ],
+        "level": null,
+        "path": [
+          "第二条 合同期限"
+        ],
+        "lead": [],
+        "tokens": 25,
+        "table": null
+      },
+      {
+        "id": 12,
+        "kind": "text",
+        "label": "text",
+        "text": "2.2 系统上线验收合格后，乙方提供12个月的免费维护服务。",
+        "page": 1,
+        "page_end": null,
+        "bbox": [
+          120,
+          1040,
+          1120,
+          1080
+        ],
+        "level": null,
+        "path": [
+          "第二条 合同期限"
+        ],
+        "lead": [],
+        "tokens": 26,
+        "table": null
+      },
+      {
+        "id": 13,
+        "kind": "heading",
+        "label": "paragraph_title",
+        "text": "第三条 合同价款及支付",
+        "page": 2,
+        "page_end": null,
+        "bbox": [
+          120,
+          150,
+          520,
+          190
+        ],
+        "level": 1,
+        "path": [
+          "第三条 合同价款及支付"
+        ],
+        "lead": [],
+        "tokens": 11,
+        "table": null
+      },
+      {
+        "id": 14,
+        "kind": "text",
+        "label": "text",
+        "text": "3.1 本合同含税总价为人民币1,280,000.00元（大写：壹佰贰拾捌万元整），增值税税率为6%。",
+        "page": 2,
+        "page_end": null,
+        "bbox": [
+          120,
+          210,
+          1120,
+          290
+        ],
+        "level": null,
+        "path": [
+          "第三条 合同价款及支付"
+        ],
+        "lead": [],
+        "tokens": 41,
+        "table": null
+      },
+      {
+        "id": 15,
+        "kind": "text",
+        "label": "text",
+        "text": "3.2 上述价款已包含乙方完成本合同全部工作所需的人工、差旅、税费等一切费用，除本合同另有约定外，甲方无需另行支付任何款项。",
+        "page": 2,
+        "page_end": null,
+        "bbox": [
+          120,
+          310,
+          1120,
+          390
+        ],
+        "level": null,
+        "path": [
+          "第三条 合同价款及支付"
+        ],
+        "lead": [],
+        "tokens": 58,
+        "table": null
+      },
+      {
+        "id": 16,
+        "kind": "text",
+        "label": "text",
+        "text": "3.3 甲方按下表分期向乙方支付合同价款，乙方应在每期付款前开具等额的增值税专用发票：",
+        "page": 2,
+        "page_end": null,
+        "bbox": [
+          120,
+          410,
+          1120,
+          490
+        ],
+        "level": null,
+        "path": [
+          "第三条 合同价款及支付"
+        ],
+        "lead": [],
+        "tokens": 40,
+        "table": null
+      },
+      {
+        "id": 17,
+        "kind": "caption",
+        "label": "table_title",
+        "text": "表1 付款计划",
+        "page": 2,
+        "page_end": null,
+        "bbox": [
+          520,
+          1380,
+          720,
+          1416
+        ],
+        "level": null,
+        "path": [
+          "第三条 合同价款及支付"
+        ],
+        "lead": [],
+        "tokens": 6,
+        "table": null
+      },
+      {
+        "id": 18,
+        "kind": "table",
+        "label": "table",
+        "text": "| 期次 | 付款节点 | 比例 | 金额（元） |\n| --- | --- | --- | --- |\n| 第一期 | 合同签订后10个工作日内 | 30% | 384,000.00 |\n| 第二期 | 《需求规格说明书》经甲方确认后10个工作日内 | 20% | 256,000.00 |\n| 第三期 | 系统上线并经甲方验收合格后10个工作日内 | 40% | 512,000.00 |\n| 第四期 | 免费维护期届满后10个工作日内 | 10% | 128,000.00 |",
+        "page": 2,
+        "page_end": 3,
+        "bbox": [
+          120,
+          1430,
+          1120,
+          1620
+        ],
+        "level": null,
+        "path": [
+          "第三条 合同价款及支付"
+        ],
+        "lead": [
+          "表1 付款计划"
+        ],
+        "tokens": 147,
+        "table": {
+          "rows": [
+            [
+              "期次",
+              "付款节点",
+              "比例",
+              "金额（元）"
+            ],
+            [
+              "第一期",
+              "合同签订后10个工作日内",
+              "30%",
+              "384,000.00"
+            ],
+            [
+              "第二期",
+              "《需求规格说明书》经甲方确认后10个工作日内",
+              "20%",
+              "256,000.00"
+            ],
+            [
+              "第三期",
+              "系统上线并经甲方验收合格后10个工作日内",
+              "40%",
+              "512,000.00"
+            ],
+            [
+              "第四期",
+              "免费维护期届满后10个工作日内",
+              "10%",
+              "128,000.00"
+            ]
+          ],
+          "header_rows": 1,
+          "explicit_header": false
+        }
+      },
+      {
+        "id": 20,
+        "kind": "heading",
+        "label": "paragraph_title",
+        "text": "第四条 违约责任",
+        "page": 3,
+        "page_end": null,
+        "bbox": [
+          120,
+          420,
+          420,
+          460
+        ],
+        "level": 1,
+        "path": [
+          "第四条 违约责任"
+        ],
+        "lead": [],
+        "tokens": 8,
+        "table": null
+      },
+      {
+        "id": 21,
+        "kind": "text",
+        "label": "text",
+        "text": "4.1 乙方逾期交付的，每逾期一日，应按合同总价的0.05%向甲方支付违约金，违约金累计不超过合同总价的10%。",
+        "page": 3,
+        "page_end": null,
+        "bbox": [
+          120,
+          480,
+          1120,
+          560
+        ],
+        "level": null,
+        "path": [
+          "第四条 违约责任"
+        ],
+        "lead": [],
+        "tokens": 49,
+        "table": null
+      },
+      {
+        "id": 22,
+        "kind": "text",
+        "label": "text",
+        "text": "4.2 甲方逾期付款的，每逾期一日，应按逾期金额的0.05%向乙方支付违约金。",
+        "page": 3,
+        "page_end": null,
+        "bbox": [
+          120,
+          580,
+          1120,
+          620
+        ],
+        "level": null,
+        "path": [
+          "第四条 违约责任"
+        ],
+        "lead": [],
+        "tokens": 34,
+        "table": null
+      },
+      {
+        "id": 23,
+        "kind": "heading",
+        "label": "paragraph_title",
+        "text": "第五条 争议解决",
+        "page": 3,
+        "page_end": null,
+        "bbox": [
+          120,
+          670,
+          420,
+          710
+        ],
+        "level": 1,
+        "path": [
+          "第五条 争议解决"
+        ],
+        "lead": [],
+        "tokens": 8,
+        "table": null
+      },
+      {
+        "id": 24,
+        "kind": "text",
+        "label": "text",
+        "text": "5.1 因本合同引起的或与本合同有关的任何争议，双方应友好协商解决；协商不成的，任何一方均可提交杭州仲裁委员会，按照其现行有效的仲裁规则进行仲裁。",
+        "page": 3,
+        "page_end": null,
+        "bbox": [
+          120,
+          730,
+          1120,
+          850
+        ],
+        "level": null,
+        "path": [
+          "第五条 争议解决"
+        ],
+        "lead": [],
+        "tokens": 69,
+        "table": null
+      },
+      {
+        "id": 25,
+        "kind": "text",
+        "label": "text",
+        "text": "5.2 本合同一式肆份，甲乙双方各执贰份，自双方盖章之日起生效。",
+        "page": 3,
+        "page_end": null,
+        "bbox": [
+          120,
+          870,
+          1120,
+          910
+        ],
+        "level": null,
+        "path": [
+          "第五条 争议解决"
+        ],
+        "lead": [],
+        "tokens": 29,
+        "table": null
+      },
+      {
+        "id": 26,
+        "kind": "text",
+        "label": "text",
+        "text": "甲方（盖章）：星河智造科技有限公司",
+        "page": 3,
+        "page_end": null,
+        "bbox": [
+          120,
+          1000,
+          600,
+          1040
+        ],
+        "level": null,
+        "path": [
+          "第五条 争议解决"
+        ],
+        "lead": [],
+        "tokens": 16,
+        "table": null
+      },
+      {
+        "id": 27,
+        "kind": "text",
+        "label": "text",
+        "text": "乙方（盖章）：青岚软件技术有限公司",
+        "page": 3,
+        "page_end": null,
+        "bbox": [
+          640,
+          1000,
+          1120,
+          1040
+        ],
+        "level": null,
+        "path": [
+          "第五条 争议解决"
+        ],
+        "lead": [],
+        "tokens": 16,
+        "table": null
+      },
+      {
+        "id": 28,
+        "kind": "seal",
+        "label": "seal",
+        "text": "星河智造科技有限公司 合同专用章",
+        "page": 3,
+        "page_end": null,
+        "bbox": [
+          200,
+          1060,
+          440,
+          1300
+        ],
+        "level": null,
+        "path": [
+          "第五条 争议解决"
+        ],
+        "lead": [],
+        "tokens": 16,
+        "table": null
+      }
+    ]
+  }
+]

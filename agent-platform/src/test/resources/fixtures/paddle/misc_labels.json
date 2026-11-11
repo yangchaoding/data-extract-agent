@@ -1,0 +1,284 @@
+[
+  {
+    "input_path": "doc.pdf",
+    "page_index": 0,
+    "page_count": 1,
+    "width": 1200,
+    "height": 1700,
+    "parsing_res_list": [
+      {
+        "block_id": 0,
+        "block_order": 1,
+        "group_id": 0,
+        "block_label": "doc_title",
+        "block_content": "各种类别",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 1,
+        "block_order": 2,
+        "group_id": 1,
+        "block_label": "abstract_title",
+        "block_content": "摘要",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 2,
+        "block_order": 3,
+        "group_id": 2,
+        "block_label": "abstract",
+        "block_content": "这是摘要的内容。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 3,
+        "block_order": 4,
+        "group_id": 3,
+        "block_label": "content",
+        "block_content": "第一章 …… 1\n第二章 …… 5",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 4,
+        "block_order": 5,
+        "group_id": 4,
+        "block_label": "paragraph_title",
+        "block_content": "1 正文",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 5,
+        "block_order": 6,
+        "group_id": 5,
+        "block_label": "text",
+        "block_content": "带脚注的正文。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 6,
+        "block_order": 7,
+        "group_id": 6,
+        "block_label": "footnote",
+        "block_content": "注：数据来源于年报。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 7,
+        "block_order": 8,
+        "group_id": 7,
+        "block_label": "vision_footnote",
+        "block_content": "图注：示意图。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 8,
+        "block_order": 9,
+        "group_id": 8,
+        "block_label": "formula",
+        "block_content": "E = mc^2",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 9,
+        "block_order": 10,
+        "group_id": 9,
+        "block_label": "formula_number",
+        "block_content": "(1)",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 10,
+        "block_order": 11,
+        "group_id": 10,
+        "block_label": "display_formula",
+        "block_content": "a^2 + b^2 = c^2",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 11,
+        "block_order": 12,
+        "group_id": 11,
+        "block_label": "seal",
+        "block_content": "某某公司合同专用章",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 12,
+        "block_order": 13,
+        "group_id": 12,
+        "block_label": "figure_title",
+        "block_content": "图1 组织结构",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 13,
+        "block_order": 14,
+        "group_id": 13,
+        "block_label": "image",
+        "block_content": "",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 14,
+        "block_order": 15,
+        "group_id": 14,
+        "block_label": "chart",
+        "block_content": "类别 | 数值\n甲 | 10\n乙 | 20",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 15,
+        "block_order": 16,
+        "group_id": 15,
+        "block_label": "table",
+        "block_content": "<fcel>姓名<fcel>年龄<nl><fcel>张三<fcel>30<nl><fcel>李四<ecel><nl>",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 16,
+        "block_order": 17,
+        "group_id": 16,
+        "block_label": "table",
+        "block_content": "这块内容识别不出表格",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 17,
+        "block_order": 18,
+        "group_id": 17,
+        "block_label": "text",
+        "block_content": null,
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 18,
+        "block_order": 19,
+        "group_id": 18,
+        "block_label": "reference_title",
+        "block_content": "参考文献",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 19,
+        "block_order": 20,
+        "group_id": 19,
+        "block_label": "reference",
+        "block_content": "[1] 某某. 某书. 2020.",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 20,
+        "block_order": 21,
+        "group_id": 20,
+        "block_label": "unknown_label",
+        "block_content": "不认识的类别按正文处理。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      }
+    ]
+  }
+]

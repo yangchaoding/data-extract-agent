@@ -1,0 +1,74 @@
+{
+  "input_path": "doc.pdf",
+  "page_index": null,
+  "page_count": 3,
+  "width": 1200,
+  "height": 1700,
+  "parsing_res_list": [
+    {
+      "block_id": 0,
+      "block_order": 1,
+      "group_id": 0,
+      "block_label": "doc_title",
+      "block_content": "合并成一页的文档",
+      "block_bbox": [
+        100,
+        100,
+        1100,
+        160
+      ]
+    },
+    {
+      "block_id": 1,
+      "block_order": 2,
+      "group_id": 1,
+      "block_label": "paragraph_title",
+      "block_content": "第一条 总则",
+      "block_bbox": [
+        100,
+        100,
+        1100,
+        160
+      ]
+    },
+    {
+      "block_id": 2,
+      "block_order": 3,
+      "group_id": 2,
+      "block_label": "text",
+      "block_content": "本合同自签订之日起生效。",
+      "block_bbox": [
+        100,
+        100,
+        1100,
+        160
+      ]
+    },
+    {
+      "block_id": 3,
+      "block_order": 4,
+      "group_id": 3,
+      "block_label": "paragraph_title",
+      "block_content": "第二条 价款",
+      "block_bbox": [
+        100,
+        100,
+        1100,
+        160
+      ]
+    },
+    {
+      "block_id": 4,
+      "block_order": 5,
+      "group_id": 4,
+      "block_label": "table",
+      "block_content": "<table><tr><td>期次</td><td>金额</td></tr><tr><td>第一期</td><td>100</td></tr></table>",
+      "block_bbox": [
+        100,
+        100,
+        1100,
+        160
+      ]
+    }
+  ]
+}

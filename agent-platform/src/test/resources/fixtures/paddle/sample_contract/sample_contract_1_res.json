@@ -1,0 +1,25 @@
+{
+    "input_path": "sample_contract.pdf",
+    "page_index": 1,
+    "page_count": 3,
+    "width": 1240,
+    "height": 1754,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": true,
+        "format_block_content": false,
+        "markdown_ignore_labels": ["number", "footnote", "header", "header_image", "footer", "footer_image", "aside_text"]
+    },
+    "parsing_res_list": [
+        {"block_label": "header", "block_content": "星河智造科技有限公司 软件开发服务合同", "block_bbox": [120, 60, 1120, 96], "block_id": 0, "block_order": null, "group_id": 0},
+        {"block_label": "paragraph_title", "block_content": "第三条 合同价款及支付", "block_bbox": [120, 150, 520, 190], "block_id": 1, "block_order": 1, "group_id": 1},
+        {"block_label": "text", "block_content": "3.1 本合同含税总价为人民币1,280,000.00元（大写：壹佰贰拾捌万元整），增值税税率为6%。", "block_bbox": [120, 210, 1120, 290], "block_id": 2, "block_order": 2, "group_id": 2},
+        {"block_label": "text", "block_content": "3.2 上述价款已包含乙方完成本合同全部工作所需的人工、差旅、税费等一切费用，除本合同另有约定外，甲方无需另行支付任何款项。", "block_bbox": [120, 310, 1120, 390], "block_id": 3, "block_order": 3, "group_id": 3},
+        {"block_label": "text", "block_content": "3.3 甲方按下表分期向乙方支付合同价款，乙方应在每期付款前开具等额的增值税专用发票：", "block_bbox": [120, 410, 1120, 490], "block_id": 4, "block_order": 4, "group_id": 4},
+        {"block_label": "table_title", "block_content": "表1 付款计划", "block_bbox": [520, 1380, 720, 1416], "block_id": 5, "block_order": null, "group_id": 5},
+        {"block_label": "table", "block_content": "<table><tr><td>期次</td><td>付款节点</td><td>比例</td><td>金额（元）</td></tr><tr><td>第一期</td><td>合同签订后10个工作日内</td><td>30%</td><td>384,000.00</td></tr><tr><td>第二期</td><td>《需求规格说明书》经甲方确认后10个工作日内</td><td>20%</td><td>256,000.00</td></tr></table>", "block_bbox": [120, 1430, 1120, 1620], "block_id": 6, "block_order": null, "group_id": 6},
+        {"block_label": "number", "block_content": "第 2 页 共 3 页", "block_bbox": [540, 1660, 700, 1690], "block_id": 7, "block_order": null, "group_id": 7}
+    ]
+}

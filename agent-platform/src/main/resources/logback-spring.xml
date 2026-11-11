@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  日志配置：全部写到标准错误输出。
+
+  为什么不用默认的标准输出：命令行命令的结果是写到标准输出的（inspect 加上 json 选项时输出的是 JSON）。
+  日志也写到那里的话，把结果存成文件或者交给别的程序时，里面会混进日志，JSON 就坏了。
+  日志级别在 application.yml 的 logging.level 里设置。
+-->
+<configuration>
+    <appender name="STDERR" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.err</target>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%d{HH:mm:ss.SSS} %-5level %logger{30} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="WARN">
+        <appender-ref ref="STDERR"/>
+    </root>
+</configuration>

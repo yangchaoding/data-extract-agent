@@ -1,0 +1,345 @@
+[
+  {
+    "input_path": "doc.pdf",
+    "page_index": 0,
+    "page_count": 2,
+    "width": 1200,
+    "height": 1700,
+    "parsing_res_list": [
+      {
+        "block_id": 0,
+        "block_order": 1,
+        "group_id": 0,
+        "block_label": "doc_title",
+        "block_content": "某某股份有限公司 2024 年年度报告",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 1,
+        "block_order": 2,
+        "group_id": 1,
+        "block_label": "paragraph_title",
+        "block_content": "第一章 公司简介",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 2,
+        "block_order": 3,
+        "group_id": 2,
+        "block_label": "text",
+        "block_content": "本公司成立于 2001 年。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 3,
+        "block_order": 4,
+        "group_id": 3,
+        "block_label": "paragraph_title",
+        "block_content": "一、基本情况",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 4,
+        "block_order": 5,
+        "group_id": 4,
+        "block_label": "text",
+        "block_content": "注册资本 5,000 万元。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 5,
+        "block_order": 6,
+        "group_id": 5,
+        "block_label": "paragraph_title",
+        "block_content": "（一）注册信息",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 6,
+        "block_order": 7,
+        "group_id": 6,
+        "block_label": "text",
+        "block_content": "统一社会信用代码：91330100MA2XXXXXXX",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 7,
+        "block_order": 8,
+        "group_id": 7,
+        "block_label": "paragraph_title",
+        "block_content": "（二）股东情况",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 8,
+        "block_order": 9,
+        "group_id": 8,
+        "block_label": "text",
+        "block_content": "控股股东为某某集团。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 9,
+        "block_order": 10,
+        "group_id": 9,
+        "block_label": "paragraph_title",
+        "block_content": "二、经营范围",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 10,
+        "block_order": 11,
+        "group_id": 10,
+        "block_label": "text",
+        "block_content": "软件开发、技术服务。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      }
+    ]
+  },
+  {
+    "input_path": "doc.pdf",
+    "page_index": 1,
+    "page_count": 2,
+    "width": 1200,
+    "height": 1700,
+    "parsing_res_list": [
+      {
+        "block_id": 0,
+        "block_order": 1,
+        "group_id": 0,
+        "block_label": "paragraph_title",
+        "block_content": "第二章 财务数据",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 1,
+        "block_order": 2,
+        "group_id": 1,
+        "block_label": "paragraph_title",
+        "block_content": "1 资产",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 2,
+        "block_order": 3,
+        "group_id": 2,
+        "block_label": "paragraph_title",
+        "block_content": "1.1 流动资产",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 3,
+        "block_order": 4,
+        "group_id": 3,
+        "block_label": "text",
+        "block_content": "货币资金 1,234.56 万元。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 4,
+        "block_order": 5,
+        "group_id": 4,
+        "block_label": "paragraph_title",
+        "block_content": "1.2 非流动资产",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 5,
+        "block_order": 6,
+        "group_id": 5,
+        "block_label": "text",
+        "block_content": "固定资产 789.00 万元。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 6,
+        "block_order": 7,
+        "group_id": 6,
+        "block_label": "paragraph_title",
+        "block_content": "重要提示",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 7,
+        "block_order": 8,
+        "group_id": 7,
+        "block_label": "text",
+        "block_content": "以上数据未经审计。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 8,
+        "block_order": 9,
+        "group_id": 8,
+        "block_label": "paragraph_title",
+        "block_content": "2 负债",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 9,
+        "block_order": 10,
+        "group_id": 9,
+        "block_label": "text",
+        "block_content": "短期借款 100.00 万元。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 10,
+        "block_order": 11,
+        "group_id": 10,
+        "block_label": "doc_title",
+        "block_content": "附件一 审计报告",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 11,
+        "block_order": 12,
+        "group_id": 11,
+        "block_label": "text",
+        "block_content": "我们审计了后附的财务报表。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 12,
+        "block_order": 13,
+        "group_id": 12,
+        "block_label": "paragraph_title",
+        "block_content": "2024年度工作总结",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 13,
+        "block_order": 14,
+        "group_id": 13,
+        "block_label": "text",
+        "block_content": "这个标题以年份开头，不是编号。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      }
+    ]
+  }
+]

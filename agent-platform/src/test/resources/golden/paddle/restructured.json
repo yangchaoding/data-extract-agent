@@ -1,0 +1,85 @@
+{
+  "name": "restructured",
+  "title": "合并过的结果",
+  "page_count": 2,
+  "blocks": [
+    {
+      "id": 0,
+      "kind": "heading",
+      "label": "doc_title",
+      "text": "合并过的结果",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 0,
+      "path": [],
+      "lead": [],
+      "tokens": 7,
+      "table": null
+    },
+    {
+      "id": 1,
+      "kind": "table",
+      "label": "table",
+      "text": "| 序号 | 名称 |\n| --- | --- |\n| 1 | 甲 |\n| 2 | 乙 |\n| 3 | 丙 |",
+      "page": 1,
+      "page_end": 2,
+      "bbox": [
+        100,
+        300,
+        1100,
+        1500
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 24,
+      "table": {
+        "rows": [
+          [
+            "序号",
+            "名称"
+          ],
+          [
+            "1",
+            "甲"
+          ],
+          [
+            "2",
+            "乙"
+          ],
+          [
+            "3",
+            "丙"
+          ]
+        ],
+        "header_rows": 1,
+        "explicit_header": false
+      }
+    },
+    {
+      "id": 2,
+      "kind": "text",
+      "label": "text",
+      "text": "表格之后的文字。",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 8,
+      "table": null
+    }
+  ]
+}

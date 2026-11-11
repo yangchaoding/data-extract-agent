@@ -1,0 +1,37 @@
+{
+  "res": {
+    "input_path": "doc.pdf",
+    "page_index": 0,
+    "page_count": 1,
+    "width": 1200,
+    "height": 1700,
+    "parsing_res_list": [
+      {
+        "block_id": 0,
+        "block_order": 1,
+        "group_id": 0,
+        "block_label": "doc_title",
+        "block_content": "旧写法",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 1,
+        "block_order": 2,
+        "group_id": 1,
+        "block_label": "text",
+        "block_content": "内容。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      }
+    ]
+  }
+}

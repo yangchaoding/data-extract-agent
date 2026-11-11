@@ -1,0 +1,561 @@
+{
+  "name": "headings",
+  "title": "某某股份有限公司 2024 年年度报告",
+  "page_count": 2,
+  "blocks": [
+    {
+      "id": 0,
+      "kind": "heading",
+      "label": "doc_title",
+      "text": "某某股份有限公司 2024 年年度报告",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 0,
+      "path": [],
+      "lead": [],
+      "tokens": 16,
+      "table": null
+    },
+    {
+      "id": 1,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "第一章 公司简介",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 1,
+      "path": [
+        "第一章 公司简介"
+      ],
+      "lead": [],
+      "tokens": 8,
+      "table": null
+    },
+    {
+      "id": 2,
+      "kind": "text",
+      "label": "text",
+      "text": "本公司成立于 2001 年。",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "第一章 公司简介"
+      ],
+      "lead": [],
+      "tokens": 10,
+      "table": null
+    },
+    {
+      "id": 3,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "一、基本情况",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 2,
+      "path": [
+        "第一章 公司简介",
+        "一、基本情况"
+      ],
+      "lead": [],
+      "tokens": 6,
+      "table": null
+    },
+    {
+      "id": 4,
+      "kind": "text",
+      "label": "text",
+      "text": "注册资本 5,000 万元。",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "第一章 公司简介",
+        "一、基本情况"
+      ],
+      "lead": [],
+      "tokens": 10,
+      "table": null
+    },
+    {
+      "id": 5,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "（一）注册信息",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 3,
+      "path": [
+        "第一章 公司简介",
+        "一、基本情况",
+        "（一）注册信息"
+      ],
+      "lead": [],
+      "tokens": 7,
+      "table": null
+    },
+    {
+      "id": 6,
+      "kind": "text",
+      "label": "text",
+      "text": "统一社会信用代码：91330100MA2XXXXXXX",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "第一章 公司简介",
+        "一、基本情况",
+        "（一）注册信息"
+      ],
+      "lead": [],
+      "tokens": 16,
+      "table": null
+    },
+    {
+      "id": 7,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "（二）股东情况",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 3,
+      "path": [
+        "第一章 公司简介",
+        "一、基本情况",
+        "（二）股东情况"
+      ],
+      "lead": [],
+      "tokens": 7,
+      "table": null
+    },
+    {
+      "id": 8,
+      "kind": "text",
+      "label": "text",
+      "text": "控股股东为某某集团。",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "第一章 公司简介",
+        "一、基本情况",
+        "（二）股东情况"
+      ],
+      "lead": [],
+      "tokens": 10,
+      "table": null
+    },
+    {
+      "id": 9,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "二、经营范围",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 2,
+      "path": [
+        "第一章 公司简介",
+        "二、经营范围"
+      ],
+      "lead": [],
+      "tokens": 6,
+      "table": null
+    },
+    {
+      "id": 10,
+      "kind": "text",
+      "label": "text",
+      "text": "软件开发、技术服务。",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "第一章 公司简介",
+        "二、经营范围"
+      ],
+      "lead": [],
+      "tokens": 10,
+      "table": null
+    },
+    {
+      "id": 11,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "第二章 财务数据",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 1,
+      "path": [
+        "第二章 财务数据"
+      ],
+      "lead": [],
+      "tokens": 8,
+      "table": null
+    },
+    {
+      "id": 12,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "1 资产",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 2,
+      "path": [
+        "第二章 财务数据",
+        "1 资产"
+      ],
+      "lead": [],
+      "tokens": 3,
+      "table": null
+    },
+    {
+      "id": 13,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "1.1 流动资产",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 3,
+      "path": [
+        "第二章 财务数据",
+        "1 资产",
+        "1.1 流动资产"
+      ],
+      "lead": [],
+      "tokens": 6,
+      "table": null
+    },
+    {
+      "id": 14,
+      "kind": "text",
+      "label": "text",
+      "text": "货币资金 1,234.56 万元。",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "第二章 财务数据",
+        "1 资产",
+        "1.1 流动资产"
+      ],
+      "lead": [],
+      "tokens": 12,
+      "table": null
+    },
+    {
+      "id": 15,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "1.2 非流动资产",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 3,
+      "path": [
+        "第二章 财务数据",
+        "1 资产",
+        "1.2 非流动资产"
+      ],
+      "lead": [],
+      "tokens": 7,
+      "table": null
+    },
+    {
+      "id": 16,
+      "kind": "text",
+      "label": "text",
+      "text": "固定资产 789.00 万元。",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "第二章 财务数据",
+        "1 资产",
+        "1.2 非流动资产"
+      ],
+      "lead": [],
+      "tokens": 10,
+      "table": null
+    },
+    {
+      "id": 17,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "重要提示",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 4,
+      "path": [
+        "第二章 财务数据",
+        "1 资产",
+        "1.2 非流动资产",
+        "重要提示"
+      ],
+      "lead": [],
+      "tokens": 5,
+      "table": null
+    },
+    {
+      "id": 18,
+      "kind": "text",
+      "label": "text",
+      "text": "以上数据未经审计。",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "第二章 财务数据",
+        "1 资产",
+        "1.2 非流动资产",
+        "重要提示"
+      ],
+      "lead": [],
+      "tokens": 9,
+      "table": null
+    },
+    {
+      "id": 19,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "2 负债",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 2,
+      "path": [
+        "第二章 财务数据",
+        "2 负债"
+      ],
+      "lead": [],
+      "tokens": 3,
+      "table": null
+    },
+    {
+      "id": 20,
+      "kind": "text",
+      "label": "text",
+      "text": "短期借款 100.00 万元。",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "第二章 财务数据",
+        "2 负债"
+      ],
+      "lead": [],
+      "tokens": 10,
+      "table": null
+    },
+    {
+      "id": 21,
+      "kind": "heading",
+      "label": "doc_title",
+      "text": "附件一 审计报告",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 1,
+      "path": [
+        "附件一 审计报告"
+      ],
+      "lead": [],
+      "tokens": 8,
+      "table": null
+    },
+    {
+      "id": 22,
+      "kind": "text",
+      "label": "text",
+      "text": "我们审计了后附的财务报表。",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "附件一 审计报告"
+      ],
+      "lead": [],
+      "tokens": 13,
+      "table": null
+    },
+    {
+      "id": 23,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "2024年度工作总结",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 3,
+      "path": [
+        "附件一 审计报告",
+        "2024年度工作总结"
+      ],
+      "lead": [],
+      "tokens": 9,
+      "table": null
+    },
+    {
+      "id": 24,
+      "kind": "text",
+      "label": "text",
+      "text": "这个标题以年份开头，不是编号。",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "附件一 审计报告",
+        "2024年度工作总结"
+      ],
+      "lead": [],
+      "tokens": 15,
+      "table": null
+    }
+  ]
+}

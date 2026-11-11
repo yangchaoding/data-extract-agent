@@ -1,0 +1,296 @@
+{
+  "name": "cross_page_table",
+  "title": "财务报告",
+  "page_count": 3,
+  "blocks": [
+    {
+      "id": 0,
+      "kind": "heading",
+      "label": "doc_title",
+      "text": "财务报告",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 0,
+      "path": [],
+      "lead": [],
+      "tokens": 5,
+      "table": null
+    },
+    {
+      "id": 1,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "一、主要财务指标",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 1,
+      "path": [
+        "一、主要财务指标"
+      ],
+      "lead": [],
+      "tokens": 8,
+      "table": null
+    },
+    {
+      "id": 2,
+      "kind": "caption",
+      "label": "table_title",
+      "text": "表1 主要财务指标",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "一、主要财务指标"
+      ],
+      "lead": [],
+      "tokens": 8,
+      "table": null
+    },
+    {
+      "id": 3,
+      "kind": "text",
+      "label": "text",
+      "text": "单位：万元",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "一、主要财务指标"
+      ],
+      "lead": [
+        "表1 主要财务指标"
+      ],
+      "tokens": 5,
+      "table": null
+    },
+    {
+      "id": 4,
+      "kind": "table",
+      "label": "table",
+      "text": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |\n| 营业成本 | 8,000.00 | 7,000.00 |\n| 净利润 | 1,234.00 | 1,000.00 |\n| 每股收益 | 0.56 | 0.45 |",
+      "page": 1,
+      "page_end": 2,
+      "bbox": [
+        100,
+        300,
+        1100,
+        900
+      ],
+      "level": null,
+      "path": [
+        "一、主要财务指标"
+      ],
+      "lead": [
+        "表1 主要财务指标",
+        "单位：万元"
+      ],
+      "tokens": 76,
+      "table": {
+        "rows": [
+          [
+            "项目",
+            "本期",
+            "上期"
+          ],
+          [
+            "营业收入",
+            "12,345.67",
+            "10,000.00"
+          ],
+          [
+            "营业成本",
+            "8,000.00",
+            "7,000.00"
+          ],
+          [
+            "净利润",
+            "1,234.00",
+            "1,000.00"
+          ],
+          [
+            "每股收益",
+            "0.56",
+            "0.45"
+          ]
+        ],
+        "header_rows": 1,
+        "explicit_header": true
+      }
+    },
+    {
+      "id": 5,
+      "kind": "text",
+      "label": "footer",
+      "text": "第 1 页",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "一、主要财务指标"
+      ],
+      "lead": [],
+      "tokens": 3,
+      "table": null
+    },
+    {
+      "id": 6,
+      "kind": "text",
+      "label": "header",
+      "text": "财务报告",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "一、主要财务指标"
+      ],
+      "lead": [],
+      "tokens": 5,
+      "table": null
+    },
+    {
+      "id": 10,
+      "kind": "text",
+      "label": "text",
+      "text": "上表数据经审计。",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "一、主要财务指标"
+      ],
+      "lead": [],
+      "tokens": 8,
+      "table": null
+    },
+    {
+      "id": 11,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "二、分部信息",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 1,
+      "path": [
+        "二、分部信息"
+      ],
+      "lead": [],
+      "tokens": 6,
+      "table": null
+    },
+    {
+      "id": 12,
+      "kind": "table",
+      "label": "table",
+      "text": "| 分部 | 收入 |\n| --- | --- |\n| 华东 | 100 |\n| 华北 | 200 |\n| 华南 | 300 |\n| 西部 | 400 |",
+      "page": 2,
+      "page_end": 3,
+      "bbox": [
+        100,
+        900,
+        1100,
+        1500
+      ],
+      "level": null,
+      "path": [
+        "二、分部信息"
+      ],
+      "lead": [],
+      "tokens": 36,
+      "table": {
+        "rows": [
+          [
+            "分部",
+            "收入"
+          ],
+          [
+            "华东",
+            "100"
+          ],
+          [
+            "华北",
+            "200"
+          ],
+          [
+            "华南",
+            "300"
+          ],
+          [
+            "西部",
+            "400"
+          ]
+        ],
+        "header_rows": 1,
+        "explicit_header": false
+      }
+    },
+    {
+      "id": 13,
+      "kind": "text",
+      "label": "text",
+      "text": "分部数据未经审计。",
+      "page": 3,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "二、分部信息"
+      ],
+      "lead": [],
+      "tokens": 9,
+      "table": null
+    }
+  ]
+}

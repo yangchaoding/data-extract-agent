@@ -1,0 +1,85 @@
+{
+  "name": "response_list",
+  "title": "逐页调用的结果",
+  "page_count": 2,
+  "blocks": [
+    {
+      "id": 0,
+      "kind": "heading",
+      "label": "doc_title",
+      "text": "逐页调用的结果",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 0,
+      "path": [],
+      "lead": [],
+      "tokens": 8,
+      "table": null
+    },
+    {
+      "id": 1,
+      "kind": "table",
+      "label": "table",
+      "text": "| 栏目 | 内容 |\n| --- | --- |\n| 姓名 | 张三 |\n| 民族 | 汉族 |\n| 籍贯 | 云南 |",
+      "page": 1,
+      "page_end": 2,
+      "bbox": [
+        104,
+        257,
+        1083,
+        1453
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 32,
+      "table": {
+        "rows": [
+          [
+            "栏目",
+            "内容"
+          ],
+          [
+            "姓名",
+            "张三"
+          ],
+          [
+            "民族",
+            "汉族"
+          ],
+          [
+            "籍贯",
+            "云南"
+          ]
+        ],
+        "header_rows": 1,
+        "explicit_header": false
+      }
+    },
+    {
+      "id": 2,
+      "kind": "footnote",
+      "label": "vision_footnote",
+      "text": "填表人：某某单位",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 8,
+      "table": null
+    }
+  ]
+}

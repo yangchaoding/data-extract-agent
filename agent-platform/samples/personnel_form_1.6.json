@@ -1,0 +1,204 @@
+[
+  {
+    "logId": "sample",
+    "errorCode": 0,
+    "errorMsg": "Success",
+    "result": {
+      "layoutParsingResults": [
+        {
+          "prunedResult": {
+            "page_count": null,
+            "width": 1191,
+            "height": 1684,
+            "model_settings": {
+              "use_doc_preprocessor": false,
+              "use_layout_detection": true,
+              "format_block_content": false,
+              "merge_layout_blocks": true,
+              "return_layout_polygon_points": true
+            },
+            "parsing_res_list": [
+              {
+                "block_label": "figure_title",
+                "block_content": "干部任免审批表",
+                "block_bbox": [
+                  364,
+                  185,
+                  805,
+                  242
+                ],
+                "block_id": 0,
+                "block_order": null,
+                "group_id": 0,
+                "global_block_id": 0,
+                "global_group_id": 0,
+                "block_polygon_points": [
+                  [
+                    364,
+                    185
+                  ],
+                  [
+                    805,
+                    185
+                  ],
+                  [
+                    805,
+                    242
+                  ],
+                  [
+                    364,
+                    242
+                  ]
+                ]
+              },
+              {
+                "block_label": "table",
+                "block_content": "<table><tr><td>姓名</td><td>林致远</td><td>性别</td><td>男</td><td>出生年月（岁）</td><td>1975.03（49岁）</td><td rowspan=\"4\">照片</td></tr><tr><td>民族</td><td>汉族</td><td>籍贯</td><td>山东济南</td><td>出生地</td><td>山东青岛</td></tr><tr><td>入党时间</td><td>1998.06</td><td>参加工作时间</td><td>1997.07</td><td>健康状况</td><td>健康</td></tr><tr><td>专业技术职务</td><td colspan=\"2\"></td><td>熟悉专业有何专长</td><td colspan=\"2\">经济管理</td></tr><tr><td rowspan=\"2\">学历学位</td><td>全日制教育</td><td colspan=\"2\">大学</td><td>毕业院校系及专业</td><td colspan=\"2\">东岳大学经济学院经济学专业</td></tr><tr><td>在职教育</td><td colspan=\"2\">研究生</td><td>毕业院校系及专业</td><td colspan=\"2\">东岳大学管理学院行政管理专业</td></tr><tr><td>现任职务</td><td colspan=\"6\">青岚市发展和改革委员会党组成员、副主任</td></tr><tr><td>拟任职务</td><td colspan=\"6\">青岚市统计局党组书记、局长</td></tr><tr><td>拟免职务</td><td colspan=\"6\"></td></tr><tr><td>简历</td><td colspan=\"6\">1993.09-1997.07 东岳大学经济学院经济学专业学习\\n1997.07-2003.05 青岚市计划委员会综合科科员\\n2003.05-2009.11 青岚市发展和改革委员会综合科副科长、科长\\n2009.11-2016.08 青岚市发展和改革委员会总经济师\\n2016.08-今 青岚市发展和改革委员会党组成员、副主任</td></tr></table>",
+                "block_bbox": [
+                  104,
+                  257,
+                  1083,
+                  1453
+                ],
+                "block_id": 1,
+                "block_order": null,
+                "group_id": 1,
+                "global_block_id": 1,
+                "global_group_id": 1,
+                "block_polygon_points": [
+                  [
+                    104,
+                    257
+                  ],
+                  [
+                    1083,
+                    257
+                  ],
+                  [
+                    1083,
+                    1453
+                  ],
+                  [
+                    104,
+                    1453
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "dataInfo": {
+        "numPages": 1,
+        "pages": [
+          {
+            "width": 1191,
+            "height": 1684
+          }
+        ],
+        "type": "pdf"
+      }
+    }
+  },
+  {
+    "logId": "sample",
+    "errorCode": 0,
+    "errorMsg": "Success",
+    "result": {
+      "layoutParsingResults": [
+        {
+          "prunedResult": {
+            "page_count": null,
+            "width": 1191,
+            "height": 1684,
+            "model_settings": {
+              "use_doc_preprocessor": false,
+              "use_layout_detection": true,
+              "format_block_content": false,
+              "merge_layout_blocks": true,
+              "return_layout_polygon_points": true
+            },
+            "parsing_res_list": [
+              {
+                "block_label": "table",
+                "block_content": "<table><tr><td>奖惩情况</td><td colspan=\"6\">无</td></tr><tr><td>年度考核结果</td><td colspan=\"6\">2021：优秀\\n2022：称职\\n2023：优秀</td></tr><tr><td>任免理由</td><td colspan=\"6\">工作需要</td></tr><tr><td rowspan=\"5\">家庭主要成员及重要社会关系</td><td>称谓</td><td>姓名</td><td>年龄</td><td>政治面貌</td><td colspan=\"2\">工作单位及职务</td></tr><tr><td>妻子</td><td>苏婉清</td><td>47</td><td>中共党员</td><td colspan=\"2\">青岚市第二中学教师</td></tr><tr><td>儿子</td><td>林一舟</td><td>20</td><td>共青团员</td><td colspan=\"2\">东岳大学计算机学院学生</td></tr><tr><td>父亲</td><td>林国栋</td><td>76</td><td>中共党员</td><td colspan=\"2\">青岚市机械厂退休工人</td></tr><tr><td>母亲</td><td>陈桂兰</td><td>74</td><td>群众</td><td colspan=\"2\">青岚市纺织厂退休工人</td></tr><tr><td>呈报单位</td><td colspan=\"6\">中共青岚市委组织部</td></tr></table>",
+                "block_bbox": [
+                  126,
+                  189,
+                  1105,
+                  1454
+                ],
+                "block_id": 0,
+                "block_order": null,
+                "group_id": 0,
+                "global_block_id": 0,
+                "global_group_id": 0,
+                "block_polygon_points": [
+                  [
+                    126,
+                    189
+                  ],
+                  [
+                    1105,
+                    189
+                  ],
+                  [
+                    1105,
+                    1454
+                  ],
+                  [
+                    126,
+                    1454
+                  ]
+                ]
+              },
+              {
+                "block_label": "vision_footnote",
+                "block_content": "填表人：中共青岚市委组织部",
+                "block_bbox": [
+                  138,
+                  1457,
+                  509,
+                  1490
+                ],
+                "block_id": 1,
+                "block_order": null,
+                "group_id": 1,
+                "global_block_id": 1,
+                "global_group_id": 1,
+                "block_polygon_points": [
+                  [
+                    138,
+                    1457
+                  ],
+                  [
+                    509,
+                    1457
+                  ],
+                  [
+                    509,
+                    1490
+                  ],
+                  [
+                    138,
+                    1490
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "dataInfo": {
+        "numPages": 1,
+        "pages": [
+          {
+            "width": 1191,
+            "height": 1684
+          }
+        ],
+        "type": "pdf"
+      }
+    }
+  }
+]

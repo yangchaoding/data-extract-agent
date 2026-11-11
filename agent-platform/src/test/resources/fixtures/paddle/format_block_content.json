@@ -1,0 +1,128 @@
+[
+  {
+    "input_path": "doc.pdf",
+    "page_index": 0,
+    "page_count": 1,
+    "width": 1200,
+    "height": 1700,
+    "parsing_res_list": [
+      {
+        "block_id": 0,
+        "block_order": 1,
+        "group_id": 0,
+        "block_label": "doc_title",
+        "block_content": "# 带格式的文档",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 1,
+        "block_order": 2,
+        "group_id": 1,
+        "block_label": "paragraph_title",
+        "block_content": "## 第一节 概述",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 2,
+        "block_order": 3,
+        "group_id": 2,
+        "block_label": "text",
+        "block_content": "<div style=\"text-align: center;\">居中的一段文字</div>",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 3,
+        "block_order": 4,
+        "group_id": 3,
+        "block_label": "paragraph_title",
+        "block_content": "### 1.1 背景",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 4,
+        "block_order": 5,
+        "group_id": 4,
+        "block_label": "text",
+        "block_content": "图片之前 ![](imgs/a.png) 图片之后",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 5,
+        "block_order": 6,
+        "group_id": 5,
+        "block_label": "text",
+        "block_content": "第一行<br>第二行<br/>第三行",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 6,
+        "block_order": 7,
+        "group_id": 6,
+        "block_label": "paragraph_title",
+        "block_content": "## 第二节 范围",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 7,
+        "block_order": 8,
+        "group_id": 7,
+        "block_label": "text",
+        "block_content": "<p>段落一</p><p>段落二</p>",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 8,
+        "block_order": 9,
+        "group_id": 8,
+        "block_label": "text",
+        "block_content": "a < b 且 c > d，这不是标签。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      }
+    ]
+  }
+]

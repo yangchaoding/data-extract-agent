@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 用 Spring Boot 的父 POM 统一管理依赖和插件的版本，下面的依赖大多不用写版本号 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.1.2</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.cb</groupId>
+    <artifactId>agent-platform</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <name>agent-platform</name>
+    <description>通用 agent 平台。第一个能力是文档抽取：读取识别结果，按 skill 定义抽取并核对。</description>
+
+    <properties>
+        <!-- 必须用 JDK 21 构建；版本不对时由下面的 enforcer 插件给出明确的提示 -->
+        <java.version>21</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- 这两个库不在 Spring Boot 的版本管理范围内，要自己指定 -->
+        <jsoup.version>1.24.1</jsoup.version>
+        <archunit.version>1.5.1</archunit.version>
+    </properties>
+
+    <dependencies>
+        <!-- Spring Boot 基础：配置、日志、依赖注入。HTTP 接口到做批量接口的阶段再加 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- JSON 解析（Jackson 3，Spring Boot 4 的默认版本）。读取识别结果要用 -->
+        <dependency>
+            <groupId>tools.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+        <!-- 宽容的 HTML 解析：识别结果里的表格是 HTML，标签经常不规范 -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>${jsoup.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- 分层规则测试：单模块里编译器拦不住跨层引用，用它在测试里检查包之间的依赖方向 -->
+        <dependency>
+            <groupId>com.tngtech.archunit</groupId>
+            <artifactId>archunit</artifactId>
+            <version>${archunit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <!-- JDK 版本不对时直接报错并说明原因，而不是在编译时冒出看不懂的错误 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>require-jdk-21</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireJavaVersion>
+                                    <version>[21,)</version>
+                                    <message>本项目需要 JDK 21。请把 JAVA_HOME 指向 JDK 21 后再执行 mvn，做法见 README.md 的"构建"一节。</message>
+                                </requireJavaVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

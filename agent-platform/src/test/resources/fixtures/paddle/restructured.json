@@ -1,0 +1,78 @@
+[
+  {
+    "input_path": "doc.pdf",
+    "page_index": 0,
+    "page_count": 2,
+    "width": 1200,
+    "height": 1700,
+    "parsing_res_list": [
+      {
+        "block_id": 0,
+        "block_order": 1,
+        "group_id": 0,
+        "block_label": "doc_title",
+        "block_content": "合并过的结果",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 1,
+        "block_order": 2,
+        "group_id": 1,
+        "block_label": "table",
+        "block_content": "<table><tr><td>序号</td><td>名称</td></tr><tr><td>1</td><td>甲</td></tr><tr><td>2</td><td>乙</td></tr><tr><td>3</td><td>丙</td></tr></table>",
+        "block_bbox": [
+          100,
+          300,
+          1100,
+          1500
+        ],
+        "global_block_id": 5,
+        "global_group_id": 5
+      }
+    ]
+  },
+  {
+    "input_path": "doc.pdf",
+    "page_index": 1,
+    "page_count": 2,
+    "width": 1200,
+    "height": 1700,
+    "parsing_res_list": [
+      {
+        "block_id": 0,
+        "block_order": 1,
+        "group_id": 0,
+        "block_label": "table",
+        "block_content": "",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          400
+        ],
+        "global_block_id": 9,
+        "global_group_id": 5
+      },
+      {
+        "block_id": 1,
+        "block_order": 2,
+        "group_id": 1,
+        "block_label": "text",
+        "block_content": "表格之后的文字。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ],
+        "global_block_id": 10,
+        "global_group_id": 10
+      }
+    ]
+  }
+]

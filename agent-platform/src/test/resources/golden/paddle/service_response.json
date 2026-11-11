@@ -1,0 +1,64 @@
+{
+  "name": "service_response",
+  "title": "服务接口的返回",
+  "page_count": 2,
+  "blocks": [
+    {
+      "id": 0,
+      "kind": "heading",
+      "label": "doc_title",
+      "text": "服务接口的返回",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 0,
+      "path": [],
+      "lead": [],
+      "tokens": 8,
+      "table": null
+    },
+    {
+      "id": 1,
+      "kind": "text",
+      "label": "text",
+      "text": "第一页。",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 4,
+      "table": null
+    },
+    {
+      "id": 2,
+      "kind": "text",
+      "label": "text",
+      "text": "第二页。",
+      "page": 2,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 4,
+      "table": null
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+[
+  {
+    "input_path": "doc.pdf",
+    "page_index": 0,
+    "page_count": 4,
+    "width": 1200,
+    "height": 1700,
+    "parsing_res_list": [
+      {
+        "block_id": 0,
+        "block_order": 1,
+        "group_id": 0,
+        "block_label": "doc_title",
+        "block_content": "表格集",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 1,
+        "block_order": 2,
+        "group_id": 1,
+        "block_label": "table",
+        "block_content": "<table><tr><td>a</td><td>b</td><td>c</td></tr><tr><td>1</td><td>2</td><td>3</td></tr></table>",
+        "block_bbox": [
+          100,
+          300,
+          1100,
+          900
+        ]
+      }
+    ]
+  },
+  {
+    "input_path": "doc.pdf",
+    "page_index": 1,
+    "page_count": 4,
+    "width": 1200,
+    "height": 1700,
+    "parsing_res_list": [
+      {
+        "block_id": 0,
+        "block_order": 1,
+        "group_id": 0,
+        "block_label": "table",
+        "block_content": "<table><tr><td>a</td><td>b</td><td>c</td><td>d</td></tr><tr><td>1</td><td>2</td><td>3</td><td>4</td></tr></table>",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          500
+        ]
+      }
+    ]
+  },
+  {
+    "input_path": "doc.pdf",
+    "page_index": 2,
+    "page_count": 4,
+    "width": 1200,
+    "height": 1700,
+    "parsing_res_list": [
+      {
+        "block_id": 0,
+        "block_order": 1,
+        "group_id": 0,
+        "block_label": "table",
+        "block_content": "<table><tr><td>x</td><td>y</td><td>z</td><td>w</td></tr><tr><td>5</td><td>6</td><td>7</td><td>8</td></tr></table>",
+        "block_bbox": [
+          100,
+          100,
+          600,
+          500
+        ]
+      },
+      {
+        "block_id": 1,
+        "block_order": 2,
+        "group_id": 1,
+        "block_label": "text",
+        "block_content": "这段文字把两张表隔开了。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 2,
+        "block_order": 3,
+        "group_id": 2,
+        "block_label": "table",
+        "block_content": "<table><tr><th>甲</th><th>乙</th></tr><tr><td>1</td><td>2</td></tr></table>",
+        "block_bbox": [
+          100,
+          900,
+          1100,
+          1500
+        ]
+      }
+    ]
+  },
+  {
+    "input_path": "doc.pdf",
+    "page_index": 3,
+    "page_count": 4,
+    "width": 1200,
+    "height": 1700,
+    "parsing_res_list": [
+      {
+        "block_id": 0,
+        "block_order": 1,
+        "group_id": 0,
+        "block_label": "table",
+        "block_content": "<table><tr><th>丙</th><th>丁</th></tr><tr><td>3</td><td>4</td></tr></table>",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          500
+        ]
+      }
+    ]
+  }
+]

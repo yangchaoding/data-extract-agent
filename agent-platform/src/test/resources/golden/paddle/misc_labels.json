@@ -1,0 +1,422 @@
+{
+  "name": "misc_labels",
+  "title": "各种类别",
+  "page_count": 1,
+  "blocks": [
+    {
+      "id": 0,
+      "kind": "heading",
+      "label": "doc_title",
+      "text": "各种类别",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 0,
+      "path": [],
+      "lead": [],
+      "tokens": 5,
+      "table": null
+    },
+    {
+      "id": 1,
+      "kind": "heading",
+      "label": "abstract_title",
+      "text": "摘要",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 1,
+      "path": [
+        "摘要"
+      ],
+      "lead": [],
+      "tokens": 3,
+      "table": null
+    },
+    {
+      "id": 2,
+      "kind": "text",
+      "label": "abstract",
+      "text": "这是摘要的内容。",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "摘要"
+      ],
+      "lead": [],
+      "tokens": 8,
+      "table": null
+    },
+    {
+      "id": 3,
+      "kind": "toc",
+      "label": "content",
+      "text": "第一章 …… 1\n第二章 …… 5",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "摘要"
+      ],
+      "lead": [],
+      "tokens": 10,
+      "table": null
+    },
+    {
+      "id": 4,
+      "kind": "heading",
+      "label": "paragraph_title",
+      "text": "1 正文",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 1,
+      "path": [
+        "1 正文"
+      ],
+      "lead": [],
+      "tokens": 3,
+      "table": null
+    },
+    {
+      "id": 5,
+      "kind": "text",
+      "label": "text",
+      "text": "带脚注的正文。",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "1 正文"
+      ],
+      "lead": [],
+      "tokens": 7,
+      "table": null
+    },
+    {
+      "id": 6,
+      "kind": "footnote",
+      "label": "footnote",
+      "text": "注：数据来源于年报。",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "1 正文"
+      ],
+      "lead": [],
+      "tokens": 10,
+      "table": null
+    },
+    {
+      "id": 7,
+      "kind": "footnote",
+      "label": "vision_footnote",
+      "text": "图注：示意图。",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "1 正文"
+      ],
+      "lead": [],
+      "tokens": 7,
+      "table": null
+    },
+    {
+      "id": 8,
+      "kind": "formula",
+      "label": "formula",
+      "text": "E = mc^2",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "1 正文"
+      ],
+      "lead": [],
+      "tokens": 3,
+      "table": null
+    },
+    {
+      "id": 9,
+      "kind": "formula",
+      "label": "display_formula",
+      "text": "a^2 + b^2 = c^2",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "1 正文"
+      ],
+      "lead": [],
+      "tokens": 6,
+      "table": null
+    },
+    {
+      "id": 10,
+      "kind": "seal",
+      "label": "seal",
+      "text": "某某公司合同专用章",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "1 正文"
+      ],
+      "lead": [],
+      "tokens": 10,
+      "table": null
+    },
+    {
+      "id": 11,
+      "kind": "caption",
+      "label": "figure_title",
+      "text": "图1 组织结构",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "1 正文"
+      ],
+      "lead": [],
+      "tokens": 6,
+      "table": null
+    },
+    {
+      "id": 12,
+      "kind": "table",
+      "label": "chart",
+      "text": "| 类别 | 数值 |\n| --- | --- |\n| 甲 | 10 |\n| 乙 | 20 |",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "1 正文"
+      ],
+      "lead": [
+        "图1 组织结构"
+      ],
+      "tokens": 21,
+      "table": {
+        "rows": [
+          [
+            "类别",
+            "数值"
+          ],
+          [
+            "甲",
+            "10"
+          ],
+          [
+            "乙",
+            "20"
+          ]
+        ],
+        "header_rows": 1,
+        "explicit_header": false
+      }
+    },
+    {
+      "id": 13,
+      "kind": "table",
+      "label": "table",
+      "text": "| 姓名 | 年龄 |\n| --- | --- |\n| 张三 | 30 |\n| 李四 |   |",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "1 正文"
+      ],
+      "lead": [],
+      "tokens": 22,
+      "table": {
+        "rows": [
+          [
+            "姓名",
+            "年龄"
+          ],
+          [
+            "张三",
+            "30"
+          ],
+          [
+            "李四",
+            ""
+          ]
+        ],
+        "header_rows": 1,
+        "explicit_header": false
+      }
+    },
+    {
+      "id": 14,
+      "kind": "text",
+      "label": "table",
+      "text": "这块内容识别不出表格",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "1 正文"
+      ],
+      "lead": [],
+      "tokens": 11,
+      "table": null
+    },
+    {
+      "id": 15,
+      "kind": "heading",
+      "label": "reference_title",
+      "text": "参考文献",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 2,
+      "path": [
+        "1 正文",
+        "参考文献"
+      ],
+      "lead": [],
+      "tokens": 5,
+      "table": null
+    },
+    {
+      "id": 16,
+      "kind": "text",
+      "label": "reference",
+      "text": "[1] 某某. 某书. 2020.",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "1 正文",
+        "参考文献"
+      ],
+      "lead": [],
+      "tokens": 10,
+      "table": null
+    },
+    {
+      "id": 17,
+      "kind": "text",
+      "label": "unknown_label",
+      "text": "不认识的类别按正文处理。",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [
+        "1 正文",
+        "参考文献"
+      ],
+      "lead": [],
+      "tokens": 12,
+      "table": null
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+[
+  {
+    "input_path": "doc.pdf",
+    "page_index": 0,
+    "page_count": 3,
+    "width": 1200,
+    "height": 1700,
+    "parsing_res_list": [
+      {
+        "block_id": 0,
+        "block_order": 1,
+        "group_id": 0,
+        "block_label": "header",
+        "block_content": "某某公司 2024 年度报告",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 1,
+        "block_order": 2,
+        "group_id": 1,
+        "block_label": "header_image",
+        "block_content": "",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 2,
+        "block_order": 3,
+        "group_id": 2,
+        "block_label": "text",
+        "block_content": "第 1 页的正文。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 3,
+        "block_order": 4,
+        "group_id": 3,
+        "block_label": "aside_text",
+        "block_content": "内部资料 注意保密",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 4,
+        "block_order": 5,
+        "group_id": 4,
+        "block_label": "number",
+        "block_content": "1",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 5,
+        "block_order": 6,
+        "group_id": 5,
+        "block_label": "footer",
+        "block_content": "第 1 页 共 3 页",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 6,
+        "block_order": 7,
+        "group_id": 6,
+        "block_label": "footer",
+        "block_content": "1",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      }
+    ]
+  },
+  {
+    "input_path": "doc.pdf",
+    "page_index": 1,
+    "page_count": 3,
+    "width": 1200,
+    "height": 1700,
+    "parsing_res_list": [
+      {
+        "block_id": 0,
+        "block_order": 1,
+        "group_id": 0,
+        "block_label": "header",
+        "block_content": "某某公司 2024 年度报告",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 1,
+        "block_order": 2,
+        "group_id": 1,
+        "block_label": "header_image",
+        "block_content": "",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 2,
+        "block_order": 3,
+        "group_id": 2,
+        "block_label": "text",
+        "block_content": "第 2 页的正文。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 3,
+        "block_order": 4,
+        "group_id": 3,
+        "block_label": "aside_text",
+        "block_content": "内部资料 注意保密",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 4,
+        "block_order": 5,
+        "group_id": 4,
+        "block_label": "number",
+        "block_content": "2",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 5,
+        "block_order": 6,
+        "group_id": 5,
+        "block_label": "footer",
+        "block_content": "第 2 页 共 3 页",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 6,
+        "block_order": 7,
+        "group_id": 6,
+        "block_label": "footer",
+        "block_content": "2",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      }
+    ]
+  },
+  {
+    "input_path": "doc.pdf",
+    "page_index": 2,
+    "page_count": 3,
+    "width": 1200,
+    "height": 1700,
+    "parsing_res_list": [
+      {
+        "block_id": 0,
+        "block_order": 1,
+        "group_id": 0,
+        "block_label": "header",
+        "block_content": "某某公司 2024 年度报告",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 1,
+        "block_order": 2,
+        "group_id": 1,
+        "block_label": "header_image",
+        "block_content": "",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 2,
+        "block_order": 3,
+        "group_id": 2,
+        "block_label": "text",
+        "block_content": "第 3 页的正文。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 3,
+        "block_order": 4,
+        "group_id": 3,
+        "block_label": "aside_text",
+        "block_content": "内部资料 注意保密",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 4,
+        "block_order": 5,
+        "group_id": 4,
+        "block_label": "number",
+        "block_content": "3",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 5,
+        "block_order": 6,
+        "group_id": 5,
+        "block_label": "footer",
+        "block_content": "第 3 页 共 3 页",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 6,
+        "block_order": 7,
+        "group_id": 6,
+        "block_label": "footer",
+        "block_content": "3",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      }
+    ]
+  }
+]

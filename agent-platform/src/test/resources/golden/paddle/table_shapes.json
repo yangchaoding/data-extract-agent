@@ -1,0 +1,265 @@
+{
+  "name": "table_shapes",
+  "title": "各种形状的表格",
+  "page_count": 1,
+  "blocks": [
+    {
+      "id": 0,
+      "kind": "heading",
+      "label": "doc_title",
+      "text": "各种形状的表格",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": 0,
+      "path": [],
+      "lead": [],
+      "tokens": 8,
+      "table": null
+    },
+    {
+      "id": 1,
+      "kind": "table",
+      "label": "table",
+      "text": "| 项目 | 金额 | 金额 |\n| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 收入 | 100 | 90 |",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 35,
+      "table": {
+        "rows": [
+          [
+            "项目",
+            "金额",
+            "金额"
+          ],
+          [
+            "项目",
+            "本期",
+            "上期"
+          ],
+          [
+            "收入",
+            "100",
+            "90"
+          ]
+        ],
+        "header_rows": 2,
+        "explicit_header": false
+      }
+    },
+    {
+      "id": 2,
+      "kind": "table",
+      "label": "table",
+      "text": "| 名称 | 说明 | 备注 |\n| --- | --- | --- |\n| 甲 | 这是一段超过二十四个字的很长的说明文字，合并单元格展开时不会逐格重复 | 〃 |\n| 乙 | 短说明 | 无 |\n| 乙 | 另一行 | 无 |",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 73,
+      "table": {
+        "rows": [
+          [
+            "名称",
+            "说明",
+            "备注"
+          ],
+          [
+            "甲",
+            "这是一段超过二十四个字的很长的说明文字，合并单元格展开时不会逐格重复",
+            "〃"
+          ],
+          [
+            "乙",
+            "短说明",
+            "无"
+          ],
+          [
+            "乙",
+            "另一行",
+            "无"
+          ]
+        ],
+        "header_rows": 1,
+        "explicit_header": false
+      }
+    },
+    {
+      "id": 3,
+      "kind": "table",
+      "label": "table",
+      "text": "| 外层 内1 内2 | 右边 |\n| --- | --- |\n| 第二行 | 值 |",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 22,
+      "table": {
+        "rows": [
+          [
+            "外层 内1 内2",
+            "右边"
+          ],
+          [
+            "第二行",
+            "值"
+          ]
+        ],
+        "header_rows": 1,
+        "explicit_header": false
+      }
+    },
+    {
+      "id": 4,
+      "kind": "table",
+      "label": "table",
+      "text": "| 没有闭合 | 的标签 |\n| --- | --- |\n| 第二行 | 也一样 |",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 24,
+      "table": {
+        "rows": [
+          [
+            "没有闭合",
+            "的标签"
+          ],
+          [
+            "第二行",
+            "也一样"
+          ]
+        ],
+        "header_rows": 1,
+        "explicit_header": false
+      }
+    },
+    {
+      "id": 5,
+      "kind": "table",
+      "label": "table",
+      "text": "| a | b |\n| --- | --- |\n| c | d |",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 12,
+      "table": {
+        "rows": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "c",
+            "d"
+          ]
+        ],
+        "header_rows": 1,
+        "explicit_header": false
+      }
+    },
+    {
+      "id": 6,
+      "kind": "table",
+      "label": "table",
+      "text": "| 带 ｜ 竖线 | 多个 空格 |\n| --- | --- |\n| x | y |",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 19,
+      "table": {
+        "rows": [
+          [
+            "带 ｜ 竖线",
+            "多个 空格"
+          ],
+          [
+            "x",
+            "y"
+          ]
+        ],
+        "header_rows": 1,
+        "explicit_header": false
+      }
+    },
+    {
+      "id": 7,
+      "kind": "table",
+      "label": "table",
+      "text": "| 全是表头 | 没有数据 |",
+      "page": 1,
+      "page_end": null,
+      "bbox": [
+        100,
+        100,
+        1100,
+        160
+      ],
+      "level": null,
+      "path": [],
+      "lead": [],
+      "tokens": 11,
+      "table": {
+        "rows": [
+          [
+            "全是表头",
+            "没有数据"
+          ]
+        ],
+        "header_rows": 0,
+        "explicit_header": false
+      }
+    }
+  ]
+}
