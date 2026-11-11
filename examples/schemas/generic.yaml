@@ -1,0 +1,50 @@
+# 通用文档（报告、公文、通知等）的抽取 schema 示例。
+# 类型不固定的文档先用它跑一遍，再按实际需要补字段。
+
+name: generic_document
+description: 报告、公文、通知等一般性文档
+fields:
+  - name: title
+    title: 标题
+    required: true
+    description: 文档的正式标题
+
+  - name: doc_no
+    title: 文号或编号
+    hints: [文号, 编号, 发文字号]
+
+  - name: issuer
+    title: 发文单位或作者
+    description: 发布这份文档的机构，或署名的作者
+    hints: [发文机关, 编制单位, 作者, 落款]
+
+  - name: issue_date
+    title: 成文日期
+    type: date
+    description: 文档落款或发布的日期
+    hints: [日期, 成文日期, 发布日期, 印发日期]
+
+  - name: recipients
+    title: 主送对象
+    type: list
+    description: 公文的主送单位；没有就留空
+    hints: [主送, 抄送, 各有关单位]
+
+  - name: summary
+    title: 内容摘要
+    verbatim: false
+    description: 用两三句话概括文档的主要内容
+
+  - name: key_dates
+    title: 关键时间节点
+    type: list
+    description: 文中提到的截止日期、生效日期、会议时间等
+    hints: [截止, 之前, 生效, 自发布之日起, 期限]
+    fields:
+      - name: date
+        title: 日期
+        type: date
+        required: true
+      - name: event
+        title: 事项
+        verbatim: false
