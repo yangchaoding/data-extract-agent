@@ -191,6 +191,86 @@ class OpenAiCompatClientTest {
         assertTrue(requests.get(3).has("response_format"));
     }
 
+    // ---- 思考开关 ----------------------------------------------------------------------
+
+    private OpenAiCompatClient thinkingClient(Boolean enableThinking) {
+        return new OpenAiCompatClient(baseUrl, "test-model", "KEY", null, Duration.ofSeconds(10), enableThinking);
+    }
+
+    @Test
+    void 没配置思考开关时不带这个参数() {
+        client(null).complete("s", "u");
+        assertFalse(requests.get(0).has("chat_template_kwargs"), "默认由模型服务自己决定");
+    }
+
+    @Test
+    void 配置了思考开关就带上() {
+        thinkingClient(false).complete("s", "u");
+        assertFalse(requests.get(0).get("chat_template_kwargs").get("enable_thinking").booleanValue());
+        thinkingClient(true).complete("s", "u");
+        assertTrue(requests.get(1).get("chat_template_kwargs").get("enable_thinking").booleanValue());
+    }
+
+    @Test
+    void 服务不认思考开关时最后才去掉它并且记住() {
+        // 例如 OpenAI 官方接口：不认识的参数直接 400
+        responder = body -> body.has("chat_template_kwargs") ? error(400, "unknown parameter") : ok("好", "stop");
+        OpenAiCompatClient client = thinkingClient(false);
+
+        assertEquals("好", client.complete("s", "u"));
+        assertEquals(4, requests.size(), "先带着开关把三种组合试完，再去掉它从头试");
+        JsonNode last = requests.get(3);
+        assertFalse(last.has("chat_template_kwargs"));
+        assertTrue(last.has("temperature"), "别的参数不受连累");
+        assertTrue(last.has("response_format"), "别的参数不受连累");
+
+        client.complete("s", "u");
+        assertEquals(5, requests.size(), "已经记住这个服务不认思考开关，不再先试一次");
+        assertFalse(requests.get(4).has("chat_template_kwargs"));
+    }
+
+    @Test
+    void 只是不支持temperature时思考开关还留着() {
+        responder = body -> body.has("temperature") ? error(400, "temperature is not supported") : ok("好", "stop");
+        thinkingClient(false).complete("s", "u");
+        assertEquals(2, requests.size());
+        assertFalse(requests.get(1).has("temperature"));
+        assertFalse(requests.get(1).get("chat_template_kwargs").get("enable_thinking").booleanValue());
+    }
+
+    @Test
+    void 配置里的思考开关会交给客户端() {
+        ConfiguredLlmClientProvider p = new ConfiguredLlmClientProvider(
+                new ConfiguredLlmClientProvider.Settings(baseUrl, "cb-llm", "EMPTY", null, 300, List.of(), "false"));
+        p.get(null, null).complete("s", "u");
+        assertFalse(requests.get(0).get("chat_template_kwargs").get("enable_thinking").booleanValue());
+    }
+
+    @Test
+    void 配置里的思考开关写错了要到用模型时才报错() {
+        // 建提供者时不报错：skills、chunks 这些不用模型的命令不该因为这一项写错而跑不起来
+        ConfiguredLlmClientProvider p = new ConfiguredLlmClientProvider(
+                new ConfiguredLlmClientProvider.Settings(baseUrl, "cb-llm", "EMPTY", null, 300, List.of(), "maybe"));
+        IllegalArgumentException e = assertThrows(IllegalArgumentException.class, () -> p.get(null, null));
+        assertTrue(e.getMessage().contains("EXTRACT_LLM_ENABLE_THINKING"), "要说明是哪一项配置：" + e.getMessage());
+        assertEquals(0, requests.size(), "没有发出请求");
+    }
+
+    @Test
+    void 开关的几种写法() {
+        assertEquals(null, ConfiguredLlmClientProvider.parseSwitch(null, "x"));
+        assertEquals(null, ConfiguredLlmClientProvider.parseSwitch("  ", "x"), "留空表示没设");
+        for (String on : List.of("true", "TRUE", "1", "yes", " on ")) {
+            assertEquals(Boolean.TRUE, ConfiguredLlmClientProvider.parseSwitch(on, "x"), on);
+        }
+        for (String off : List.of("false", "False", "0", "no", "OFF")) {
+            assertEquals(Boolean.FALSE, ConfiguredLlmClientProvider.parseSwitch(off, "x"), off);
+        }
+        IllegalArgumentException e = assertThrows(IllegalArgumentException.class,
+                () -> ConfiguredLlmClientProvider.parseSwitch("maybe", "agent.llm.enable-thinking"));
+        assertTrue(e.getMessage().contains("agent.llm.enable-thinking"), "要说明是哪一项配置：" + e.getMessage());
+    }
+
     // ---- 截断和错误 --------------------------------------------------------------------
 
     @Test
@@ -230,7 +310,7 @@ class OpenAiCompatClientTest {
 
     private static ConfiguredLlmClientProvider provider(String baseUrl, List<String> allowed) {
         return new ConfiguredLlmClientProvider(
-                new ConfiguredLlmClientProvider.Settings(baseUrl, "cb-llm", "EMPTY", null, 300, allowed));
+                new ConfiguredLlmClientProvider.Settings(baseUrl, "cb-llm", "EMPTY", null, 300, allowed, null));
     }
 
     @Test

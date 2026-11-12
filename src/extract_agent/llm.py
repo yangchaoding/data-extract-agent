@@ -67,7 +67,11 @@ class OpenAICompatLLM:
         max_tokens: int | None = None,
         json_mode: bool = True,
         timeout: float = 300.0,
+        enable_thinking: bool | None = None,
     ) -> None:
+        """enable_thinking：要不要让模型先思考再回答。None（默认）不带这个参数，由服务自己决定；
+        False 关掉思考，True 明确打开。只对认 chat_template_kwargs.enable_thinking 的服务有用
+        （vLLM 部署的 Qwen 等）。带思考的模型抽取时大部分时间和输出花在思考上，关掉会快很多。"""
         from openai import DefaultHttpxClient, OpenAI
 
         self.model = model
@@ -75,6 +79,7 @@ class OpenAICompatLLM:
         self._temperature = temperature
         self._max_tokens = max_tokens
         self._json_mode = json_mode
+        self._enable_thinking = enable_thinking
         # 本机和开发环境内网模型服务直连，避免被系统代理拦下。
         http_client = DefaultHttpxClient(trust_env=False) if _bypass_proxy(base_url) else None
         self._client = OpenAI(
@@ -93,24 +98,31 @@ class OpenAICompatLLM:
         # 有的服务不支持自定义 temperature 或 response_format，会直接返回 400。
         # 依次去掉这两个参数重试；哪种组合成功了就记住，之后都用它。
         # 全部失败说明 400 另有原因（比如输入太长），抛出最初的错误，设置保持不变。
-        attempts = [(self._temperature, self._json_mode)]
+        attempts = [(self._temperature, self._json_mode, self._enable_thinking)]
         if self._temperature is not None:
-            attempts.append((None, self._json_mode))
+            attempts.append((None, self._json_mode, self._enable_thinking))
         if self._json_mode:
-            attempts.append((None, False))
+            attempts.append((None, False, self._enable_thinking))
+        if self._enable_thinking is not None:
+            # 思考开关也可能不被支持。它最后才去掉：先带着它把上面几种组合试完，
+            # 都不行再去掉它重新试一遍，这样不会因为它连累别的参数一起被去掉。
+            attempts += [(temperature, json_mode, None) for temperature, json_mode, _ in attempts]
         first_error: BadRequestError | None = None
-        for temperature, json_mode in attempts:
+        for temperature, json_mode, enable_thinking in attempts:
             optional: dict[str, Any] = {}
             if temperature is not None:
                 optional["temperature"] = temperature
             if json_mode:
                 optional["response_format"] = {"type": "json_object"}
+            if enable_thinking is not None:
+                # 不是 OpenAI 接口的标准参数，要放在 extra_body 里才会原样写进请求体
+                optional["extra_body"] = {"chat_template_kwargs": {"enable_thinking": enable_thinking}}
             try:
                 resp = self._client.chat.completions.create(**params, **optional)
             except BadRequestError as exc:
                 first_error = first_error or exc
                 continue
-            self._temperature, self._json_mode = temperature, json_mode
+            self._temperature, self._json_mode, self._enable_thinking = temperature, json_mode, enable_thinking
             break
         else:
             assert first_error is not None
@@ -142,8 +154,24 @@ def llm_from_env(model: str | None = None, base_url: str | None = None) -> OpenA
         api_key = DEFAULT_LLM_API_KEY  # 本地部署的服务一般不校验 key
     max_tokens = env.get("EXTRACT_LLM_MAX_TOKENS")
     return OpenAICompatLLM(
-        model, base_url=base_url, api_key=api_key, max_tokens=int(max_tokens) if max_tokens else None
+        model,
+        base_url=base_url,
+        api_key=api_key,
+        max_tokens=int(max_tokens) if max_tokens else None,
+        enable_thinking=parse_switch(env.get("EXTRACT_LLM_ENABLE_THINKING"), "EXTRACT_LLM_ENABLE_THINKING"),
     )
+
+
+def parse_switch(text: str | None, name: str) -> bool | None:
+    """读一个开关：true/false、1/0、yes/no、on/off，不分大小写。没设或者是空的返回 None。"""
+    value = (text or "").strip().lower()
+    if not value:
+        return None
+    if value in ("true", "1", "yes", "on"):
+        return True
+    if value in ("false", "0", "no", "off"):
+        return False
+    raise ValueError(f"{name} 的值 {text!r} 看不懂：填 true 或 false，不设表示由模型服务自己决定")
 
 
 _THINK_RE = re.compile(r"<think>.*?</think>", re.S)

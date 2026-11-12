@@ -49,8 +49,11 @@ DEFAULT_LLM_API_KEY = "EMPTY"  # 无需密钥，使用客户端占位值
 | `EXTRACT_LLM_BASE_URL` | 接口地址，也可以用 `--base-url` 传；不设时用 `OPENAI_BASE_URL` |
 | `EXTRACT_LLM_API_KEY` | API key；不设时用 `OPENAI_API_KEY`。本地服务可以不设 |
 | `EXTRACT_LLM_MAX_TOKENS` | 单次输出的上限，可选。抽长列表时输出被截断就调大它 |
+| `EXTRACT_LLM_ENABLE_THINKING` | 要不要让模型先思考再回答，可选。不设时由模型服务自己决定；`false` 关掉思考，`true` 明确打开 |
 
-接口不支持 `response_format` 或自定义 `temperature` 时会自动去掉这两个参数重试。
+接口不支持 `response_format` 或自定义 `temperature` 时会自动去掉这两个参数重试；不认思考开关时也一样。
+
+**关于思考开关：** 默认的内网模型是带思考的，抽取时大部分时间和输出花在思考上。在示例任免表上，关掉之后结果相同，耗时和输出的 token 都降到原来的几分之一。这只在一份干净的样例上验证过，所以默认没有关；要关的话，先拿几份真实的文档比一比开和关的结果。它只对认 `chat_template_kwargs.enable_thinking` 的服务有用（vLLM 部署的 Qwen 等）。
 
 ## 使用
 

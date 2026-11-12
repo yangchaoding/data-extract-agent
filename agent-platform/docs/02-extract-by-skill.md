@@ -200,13 +200,29 @@ sample_contract: 通过 0，未通过核对 0，未找到 26，需要复核：�
 
 多半是 skill 用错了（拿任免表的 skill 去抽合同），或者模型接口回的东西不是 JSON。看 `fields.<名字>.issues` 里的原话。
 
+**抽取很慢，一份表要两三分钟**
+
+多半是模型在思考。默认的内网模型是带思考的，每次调用先想一大段再给结果，时间和输出的 token 大部分花在这上面。关掉思考：
+
+```bash
+EXTRACT_LLM_ENABLE_THINKING=false java -jar target/agent-platform-0.1.0-SNAPSHOT.jar extract samples/personnel_form_1.6.json \
+    --skill personnel-appointment -o extract_out/personnel_form_1.6.json
+```
+
+上面是 Git Bash 的写法。cmd 里先执行 `set EXTRACT_LLM_ENABLE_THINKING=false`，PowerShell 里先执行 `$env:EXTRACT_LLM_ENABLE_THINKING="false"`。要长期生效，改 `application.yml` 里的 `agent.llm.enable-thinking`。
+
+- 不设（默认）：请求里不带这个参数，由模型服务自己决定；`false` 关掉；`true` 明确打开。
+- 在示例任免表上，关掉之后抽出来的值完全相同，输出的 token 从一万五降到两千多，整条命令从将近 3 分钟降到半分钟左右。
+- **这只在一份干净的样例上验证过，所以默认没有关。** 真实的表识别有噪声，思考对"同一行取错栏"有没有帮助还不知道。关之前拿几份真实的表各跑一遍，对比两次的 `data` 和 `needs_review`。
+- 它只对认 `chat_template_kwargs.enable_thinking` 的服务有用（vLLM 部署的 Qwen 等）。服务不认这个参数、直接返回 400 时，程序会去掉它重试，不会因此失败。
+
 **输出被截断**
 
 `issues` 里出现"模型的输出被截断，结果可能不全（调大 EXTRACT_LLM_MAX_TOKENS）"。程序会把这次的任务对半拆开重做（先少抽几个字段，再少看几个片段）；拆到最小还是放不下就记下来。处理办法是调大 `EXTRACT_LLM_MAX_TOKENS`。
 
 **值里出现 `\n` 两个字符，不是换行**
 
-表格里一格分几行写的内容（简历、年度考核结果），片段里就是写成 `\n` 两个字符的，模型照抄下来也是。JSON 里它是字面的反斜杠加 n。要真正的换行的话，读结果时把 `\n` 换成换行即可。
+表格里一格分几行写的内容（简历、年度考核结果），片段里就是写成 `\n` 两个字符的。模型照抄下来的话，值里也是字面的反斜杠加 n（假模型服务就是这样）；也有的模型会把它写成真正的换行（内网的 `cb-llm` 实测是这样）。两种写法都能通过核对。读结果时要统一的话，把 `\n` 两个字符换成换行即可。
 
 **同一个值在两个字段里**
 

@@ -32,9 +32,31 @@ public final class ConfiguredLlmClientProvider implements LlmClientProvider {
      * @param maxTokens      单次输出的上限；0 或 null 表示用服务的默认值
      * @param timeoutSeconds 单次请求最长等多少秒
      * @param allowedHosts   允许连接的主机名或 IP
+     * @param enableThinking 要不要让模型先思考再回答，照配置里写的原样传进来：留空不带这个参数，由服务自己决定；
+     *                       false 关掉；true 打开。写法见 {@link #parseSwitch}。
+     *                       这里不先转成布尔值：写错了要等到真正用模型时才报错，不相干的命令不受影响
      */
     public record Settings(String baseUrl, String model, String apiKey, Integer maxTokens,
-                           int timeoutSeconds, List<String> allowedHosts) {
+                           int timeoutSeconds, List<String> allowedHosts, String enableThinking) {
+    }
+
+    /**
+     * 读一个开关：true/false、1/0、yes/no、on/off，不分大小写。和 Python 版的 {@code parse_switch} 相同。
+     *
+     * @param text 配置里写的值
+     * @param name 这一项配置的名字，报错时用
+     * @return 没设或者是空的返回 null
+     * @throws IllegalArgumentException 写的不是上面这几种
+     */
+    public static Boolean parseSwitch(String text, String name) {
+        String value = text == null ? "" : text.strip().toLowerCase(Locale.ROOT);
+        return switch (value) {
+            case "" -> null;
+            case "true", "1", "yes", "on" -> Boolean.TRUE;
+            case "false", "0", "no", "off" -> Boolean.FALSE;
+            default -> throw new IllegalArgumentException(
+                    name + " 的值 " + text + " 看不懂：填 true 或 false，不设表示由模型服务自己决定");
+        };
     }
 
     private final Settings settings;
@@ -56,9 +78,11 @@ public final class ConfiguredLlmClientProvider implements LlmClientProvider {
             throw new IllegalArgumentException("没有指定模型：用 --model 传入，或者设置环境变量 EXTRACT_LLM_MODEL");
         }
         checkAllowed(url, settings.allowedHosts());
+        Boolean enableThinking = parseSwitch(settings.enableThinking(),
+                "配置 agent.llm.enable-thinking（环境变量 EXTRACT_LLM_ENABLE_THINKING）");
         return clients.computeIfAbsent(url + "\n" + name, k -> new OpenAiCompatClient(
                 url, name, blank(settings.apiKey()) ? "EMPTY" : settings.apiKey(),
-                settings.maxTokens(), Duration.ofSeconds(settings.timeoutSeconds())));
+                settings.maxTokens(), Duration.ofSeconds(settings.timeoutSeconds()), enableThinking));
     }
 
     /**

@@ -51,6 +51,53 @@ def test_bad_request_for_another_reason_is_raised_and_settings_are_kept(server):
     assert server.requests[-1]["temperature"] == 0 and "response_format" in server.requests[-1]
 
 
+def test_thinking_switch_is_sent_only_when_configured(server):
+    OpenAICompatLLM("m", base_url=server.url, api_key="EMPTY").complete("s", "u")
+    assert "chat_template_kwargs" not in server.requests[-1]  # 默认不带，由服务自己决定
+    OpenAICompatLLM("m", base_url=server.url, api_key="EMPTY", enable_thinking=False).complete("s", "u")
+    assert server.requests[-1]["chat_template_kwargs"] == {"enable_thinking": False}
+    OpenAICompatLLM("m", base_url=server.url, api_key="EMPTY", enable_thinking=True).complete("s", "u")
+    assert server.requests[-1]["chat_template_kwargs"] == {"enable_thinking": True}
+
+
+def test_thinking_switch_is_dropped_last_when_the_service_rejects_it(server):
+    server.rejects = ("chat_template_kwargs",)  # 例如 OpenAI 官方接口：不认识的参数直接 400
+    llm = OpenAICompatLLM("m", base_url=server.url, api_key="EMPTY", enable_thinking=False)
+    assert llm.complete("s", "u") == '{"ok": true}'
+    last = server.requests[-1]
+    # 先带着开关把三种组合试完，再去掉它从头试：别的参数不受连累
+    assert len(server.requests) == 4 and "chat_template_kwargs" not in last
+    assert last["temperature"] == 0 and last["response_format"] == {"type": "json_object"}
+    llm.complete("s", "u")  # 记住了，不再先带着试一次
+    assert len(server.requests) == 5 and "chat_template_kwargs" not in server.requests[-1]
+
+
+def test_thinking_switch_survives_when_only_temperature_is_rejected(server):
+    server.rejects = ("temperature",)
+    llm = OpenAICompatLLM("m", base_url=server.url, api_key="EMPTY", enable_thinking=False)
+    llm.complete("s", "u")
+    last = server.requests[-1]
+    assert len(server.requests) == 2 and "temperature" not in last
+    assert last["chat_template_kwargs"] == {"enable_thinking": False}
+
+
+def test_thinking_switch_from_env(server, monkeypatch):
+    monkeypatch.setenv("EXTRACT_LLM_BASE_URL", server.url)
+    monkeypatch.delenv("EXTRACT_LLM_ENABLE_THINKING", raising=False)
+    llm_from_env().complete("s", "u")
+    assert "chat_template_kwargs" not in server.requests[-1]
+    for text, expected in (("false", False), ("OFF", False), ("0", False), ("true", True), (" Yes ", True)):
+        monkeypatch.setenv("EXTRACT_LLM_ENABLE_THINKING", text)
+        llm_from_env().complete("s", "u")
+        assert server.requests[-1]["chat_template_kwargs"] == {"enable_thinking": expected}
+    monkeypatch.setenv("EXTRACT_LLM_ENABLE_THINKING", "")
+    llm_from_env().complete("s", "u")
+    assert "chat_template_kwargs" not in server.requests[-1]
+    monkeypatch.setenv("EXTRACT_LLM_ENABLE_THINKING", "maybe")
+    with pytest.raises(ValueError, match="EXTRACT_LLM_ENABLE_THINKING"):
+        llm_from_env()
+
+
 def test_truncated_output_raises_instead_of_returning_half_a_json(server):
     server.reply, server.finish_reason = '{"items": [{"value": ', "length"
     llm = OpenAICompatLLM("test-model", base_url=server.url, api_key="EMPTY")
@@ -60,7 +107,7 @@ def test_truncated_output_raises_instead_of_returning_half_a_json(server):
 
 def test_llm_from_env(server, monkeypatch):
     for var in ("EXTRACT_LLM_MODEL", "EXTRACT_LLM_BASE_URL", "EXTRACT_LLM_API_KEY", "EXTRACT_LLM_MAX_TOKENS",
-                "OPENAI_API_KEY", "OPENAI_BASE_URL"):
+                "EXTRACT_LLM_ENABLE_THINKING", "OPENAI_API_KEY", "OPENAI_BASE_URL"):
         monkeypatch.delenv(var, raising=False)
     # 将开发默认接口替换成本机假服务，验证不设置环境变量也能调用。
     monkeypatch.setattr("extract_agent.llm.DEFAULT_LLM_BASE_URL", server.url)

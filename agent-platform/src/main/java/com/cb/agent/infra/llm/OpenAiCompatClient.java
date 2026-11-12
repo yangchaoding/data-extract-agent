@@ -25,10 +25,13 @@ import java.util.Map;
  * <p>国内外大多数模型服务，以及 vLLM、Ollama 这类本地部署，都提供这种接口：
  * 往 {@code {接口地址}/chat/completions} 发一个 JSON，拿回模型的回复。
  *
- * <p>三处行为和 Python 版相同：
+ * <p>四处行为和 Python 版相同：
  * <ul>
  *   <li><b>参数降级重试。</b>有的服务不支持自定义 {@code temperature} 或 {@code response_format}，
  *       会直接返回 400。依次去掉这两个参数重试；哪种组合成功了就记住，之后都用它。</li>
+ *   <li><b>思考开关。</b>带思考的模型（vLLM 部署的 Qwen 等）抽取时大部分时间和输出花在思考上。
+ *       配置了开关就在请求里带上 {@code chat_template_kwargs.enable_thinking}；没配置就不带，由服务自己决定。
+ *       服务不认这个参数时，它也在降级重试里，而且最后才去掉。</li>
  *   <li><b>识别截断。</b>{@code finish_reason} 是 {@code length} 时抛出 {@link OutputTruncatedException}。</li>
  *   <li><b>统计用量。</b>每次调用累加，供调用方计算一次抽取用了多少。</li>
  * </ul>
@@ -51,6 +54,8 @@ public final class OpenAiCompatClient implements LlmClient {
     /** 当前用的可选参数。发现服务不支持某个参数之后会被改掉。 */
     private volatile Double temperature;
     private volatile boolean jsonMode;
+    /** 要不要让模型先思考再回答。null 表示不带这个参数。 */
+    private volatile Boolean enableThinking;
 
     private long calls;
     private long promptTokens;
@@ -64,6 +69,15 @@ public final class OpenAiCompatClient implements LlmClient {
      * @param timeout   单次请求最长等多久
      */
     public OpenAiCompatClient(String baseUrl, String model, String apiKey, Integer maxTokens, Duration timeout) {
+        this(baseUrl, model, apiKey, maxTokens, timeout, null);
+    }
+
+    /**
+     * @param enableThinking 要不要让模型先思考再回答：null 不带这个参数，由服务自己决定；
+     *                       false 关掉思考；true 明确打开。其余参数同上
+     */
+    public OpenAiCompatClient(String baseUrl, String model, String apiKey, Integer maxTokens, Duration timeout,
+                              Boolean enableThinking) {
         this.endpoint = baseUrl.replaceAll("/+$", "") + "/chat/completions";
         this.model = model;
         this.apiKey = apiKey;
@@ -71,6 +85,7 @@ public final class OpenAiCompatClient implements LlmClient {
         this.timeout = timeout;
         this.temperature = 0.0;  // 抽取要的是稳定，不要发挥
         this.jsonMode = true;    // 要求模型只输出 JSON
+        this.enableThinking = enableThinking;
         // 固定用 HTTP/1.1：默认会先试着升级到 HTTP/2，有的本地模型服务处理不了这个升级请求
         this.http = HttpClient.newBuilder()
                 .version(HttpClient.Version.HTTP_1_1)
@@ -84,18 +99,27 @@ public final class OpenAiCompatClient implements LlmClient {
         List<Object[]> attempts = new ArrayList<>();
         Double t = temperature;
         boolean j = jsonMode;
-        attempts.add(new Object[]{t, j});
+        Boolean k = enableThinking;
+        attempts.add(new Object[]{t, j, k});
         if (t != null) {
-            attempts.add(new Object[]{null, j});
+            attempts.add(new Object[]{null, j, k});
         }
         if (j) {
-            attempts.add(new Object[]{null, false});
+            attempts.add(new Object[]{null, false, k});
+        }
+        if (k != null) {
+            // 思考开关也可能不被支持。它最后才去掉：先带着它把上面几种组合试完，
+            // 都不行再去掉它重新试一遍，这样不会因为它连累别的参数一起被去掉
+            for (Object[] attempt : List.copyOf(attempts)) {
+                attempts.add(new Object[]{attempt[0], attempt[1], null});
+            }
         }
         LlmCallException firstBadRequest = null;
         for (Object[] attempt : attempts) {
             Double temp = (Double) attempt[0];
             boolean jsonOut = (Boolean) attempt[1];
-            HttpResponse<String> response = send(body(system, user, temp, jsonOut));
+            Boolean thinking = (Boolean) attempt[2];
+            HttpResponse<String> response = send(body(system, user, temp, jsonOut, thinking));
             if (response.statusCode() == 400) {
                 if (firstBadRequest == null) {
                     firstBadRequest = new LlmCallException(describe(response));
@@ -107,13 +131,14 @@ public final class OpenAiCompatClient implements LlmClient {
             }
             temperature = temp; // 这种组合能用，记住
             jsonMode = jsonOut;
+            enableThinking = thinking;
             return read(response.body());
         }
         throw firstBadRequest;
     }
 
     /** 请求体。可选参数只在需要时才带上。 */
-    private String body(String system, String user, Double temp, boolean jsonOut) {
+    private String body(String system, String user, Double temp, boolean jsonOut, Boolean thinking) {
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("model", model);
         body.put("messages", List.of(
@@ -127,6 +152,10 @@ public final class OpenAiCompatClient implements LlmClient {
         }
         if (jsonOut) {
             body.put("response_format", Map.of("type", "json_object"));
+        }
+        if (thinking != null) {
+            // 不是 OpenAI 接口的标准参数：vLLM 把它交给模型的对话模板，Qwen 的模板据此决定要不要思考
+            body.put("chat_template_kwargs", Map.of("enable_thinking", thinking));
         }
         return json.writeValueAsString(body);
     }

@@ -29,6 +29,10 @@ agent:
     api-key: ${EXTRACT_LLM_API_KEY:${OPENAI_API_KEY:EMPTY}}
     # 单次输出的上限。0 表示用服务的默认值。抽很长的列表时输出被截断，就调大它
     max-tokens: ${EXTRACT_LLM_MAX_TOKENS:0}
+    # 要不要让模型先思考再回答。留空（默认）不带这个参数，由模型服务自己决定；false 关掉思考；true 明确打开。
+    # 带思考的模型（vLLM 部署的 Qwen 等）抽取时大部分时间和输出花在思考上，关掉会快很多。
+    # 关之前先拿几份真实的文档比一比开和关的结果。服务不认这个参数时，程序会去掉它重试
+    enable-thinking: ${EXTRACT_LLM_ENABLE_THINKING:}
     # 单次请求最长等多少秒
     timeout-seconds: 300
     # 允许连接的主机，多个用逗号隔开。抽取时文档的内容会发给模型接口，所以只允许发往登记过的地址；

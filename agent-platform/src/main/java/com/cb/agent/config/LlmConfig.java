@@ -24,11 +24,12 @@ public class LlmConfig {
             @Value("${agent.llm.api-key:}") String apiKey,
             @Value("${agent.llm.max-tokens:0}") int maxTokens,
             @Value("${agent.llm.timeout-seconds:300}") int timeoutSeconds,
-            @Value("${agent.llm.allowed-hosts:}") String allowedHosts) {
+            @Value("${agent.llm.allowed-hosts:}") String allowedHosts,
+            @Value("${agent.llm.enable-thinking:}") String enableThinking) {
         // 名单写成逗号隔开的一行，这里拆开并去掉空的
         List<String> hosts = Arrays.stream(allowedHosts.split(","))
                 .map(String::strip).filter(h -> !h.isEmpty()).toList();
         return new ConfiguredLlmClientProvider(new ConfiguredLlmClientProvider.Settings(
-                baseUrl, model, apiKey, maxTokens > 0 ? maxTokens : null, timeoutSeconds, hosts));
+                baseUrl, model, apiKey, maxTokens > 0 ? maxTokens : null, timeoutSeconds, hosts, enableThinking));
     }
 }

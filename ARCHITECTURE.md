@@ -410,10 +410,11 @@ evidence 为空时只整理类型（"没有证据"这件事由 `locate_evidence`
 
 - `LLM` 是一个 `Protocol`（只要实现 `complete(system, user) -> str`），换别的客户端不影响 agent。
 - `OpenAICompatLLM`：OpenAI 兼容接口。**接口地址只填到 `/v1`，客户端自动追加 `/chat/completions`**。访问本机/开发环境内网服务时用 `DefaultHttpxClient(trust_env=False)` 直连，绕过系统代理（`_bypass_proxy`，`llm.py:52`）。
-- 参数降级重试（`llm.py:96`）：有的服务不支持自定义 `temperature` 或 `response_format`，会直接返回 400。依次尝试 `(temperature, json_mode) → (None, json_mode) → (None, False)`，**哪种组合成功了就记住，之后都用它**；全失败说明 400 另有原因（比如输入太长），抛出最初的错误。
-- `finish_reason == "length"` → 抛 `OutputTruncated`（`llm.py:123`），由 agent 的二分拆分逻辑接管。
+- 参数降级重试（`llm.py:101`）：有的服务不支持自定义 `temperature` 或 `response_format`，会直接返回 400。依次尝试 `(temperature, json_mode) → (None, json_mode) → (None, False)`，**哪种组合成功了就记住，之后都用它**；全失败说明 400 另有原因（比如输入太长），抛出最初的错误。
+- 思考开关（`enable_thinking`，环境变量 `EXTRACT_LLM_ENABLE_THINKING`）：`None`（默认）不带这个参数，由服务自己决定；`False`/`True` 时在请求体里带上 `chat_template_kwargs: {"enable_thinking": …}`（vLLM 部署的 Qwen 等认这个参数；它不是 OpenAI 的标准参数，所以走 `extra_body`）。它也在降级重试里，而且**最后才去掉**：先带着它把上面三种组合试完，都是 400 再去掉它从头试一遍，免得因为它连累 `temperature` 和 `response_format` 一起被去掉。
+- `finish_reason == "length"` → 抛 `OutputTruncated`（`llm.py:135`），由 agent 的二分拆分逻辑接管。
 - `Usage` 带锁，因为批次是并发调用的。
-- `parse_json()`（`llm.py:153`）：容忍 `<think>…</think>` 思考过程、代码围栏、前后说明文字——依次尝试原文、围栏内容、第一个 `{` 到最后一个 `}` 的片段，取第一个能解析成 dict 的。
+- `parse_json()`（`llm.py:181`）：容忍 `<think>…</think>` 思考过程、代码围栏、前后说明文字——依次尝试原文、围栏内容、第一个 `{` 到最后一个 `}` 的片段，取第一个能解析成 dict 的。
 - `llm_from_env()`：配置优先级 **命令行参数 > `EXTRACT_LLM_*` > `OPENAI_*` > 代码里的开发默认值**（`llm.py:16`）。
 
 ---

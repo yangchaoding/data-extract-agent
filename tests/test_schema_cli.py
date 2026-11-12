@@ -133,7 +133,7 @@ def test_cli_run_reports_api_failure(server, monkeypatch, capsys):
 
 def test_cli_run_uses_development_defaults(server, tmp_path, monkeypatch, capsys):
     for var in ("EXTRACT_LLM_MODEL", "EXTRACT_LLM_BASE_URL", "EXTRACT_LLM_API_KEY", "EXTRACT_LLM_MAX_TOKENS",
-                "OPENAI_API_KEY", "OPENAI_BASE_URL"):
+                "EXTRACT_LLM_ENABLE_THINKING", "OPENAI_API_KEY", "OPENAI_BASE_URL"):
         monkeypatch.delenv(var, raising=False)
     monkeypatch.setattr("extract_agent.llm.DEFAULT_LLM_BASE_URL", server.url)
     server.responder = RuleLLM(CONTRACT_RULES).complete
