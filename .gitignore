@@ -46,6 +46,7 @@ Desktop.ini
 
 # Generated extraction results; keep JSON fixtures under examples/
 /extract_out/
+/agent-platform/extract_out/
 /result*.json
 /*.result*.json
 /*.data.json

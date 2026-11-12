@@ -1,0 +1,146 @@
+[
+  {
+    "input_path": "doc.pdf",
+    "page_index": 0,
+    "page_count": null,
+    "width": 1200,
+    "height": 1700,
+    "parsing_res_list": [
+      {
+        "block_id": 0,
+        "block_order": 1,
+        "group_id": 0,
+        "block_label": "doc_title",
+        "block_content": "2024年年度报告",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 1,
+        "block_order": 2,
+        "group_id": 1,
+        "block_label": "paragraph_title",
+        "block_content": "第一节 公司简介",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 2,
+        "block_order": 3,
+        "group_id": 2,
+        "block_label": "text",
+        "block_content": "本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      }
+    ]
+  },
+  {
+    "input_path": "doc.pdf",
+    "page_index": 1,
+    "page_count": null,
+    "width": 1200,
+    "height": 1700,
+    "parsing_res_list": [
+      {
+        "block_id": 0,
+        "block_order": 1,
+        "group_id": 0,
+        "block_label": "paragraph_title",
+        "block_content": "第二节 股东情况",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 1,
+        "block_order": 2,
+        "group_id": 1,
+        "block_label": "table_title",
+        "block_content": "表1 前三十名股东持股情况",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 2,
+        "block_order": 3,
+        "group_id": 2,
+        "block_label": "text",
+        "block_content": "单位：股",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 3,
+        "block_order": 4,
+        "group_id": 3,
+        "block_label": "table",
+        "block_content": "<table><tr><td>股东名称</td><td>期末持股数量</td><td>持股比例(%)</td></tr><tr><td>股东01有限公司</td><td>59,000,000</td><td>5.90</td></tr><tr><td>股东02有限公司</td><td>58,000,000</td><td>5.80</td></tr><tr><td>股东03有限公司</td><td>57,000,000</td><td>5.70</td></tr><tr><td>股东04有限公司</td><td>56,000,000</td><td>5.60</td></tr><tr><td>股东05有限公司</td><td>55,000,000</td><td>5.50</td></tr><tr><td>股东06有限公司</td><td>54,000,000</td><td>5.40</td></tr><tr><td>股东07有限公司</td><td>53,000,000</td><td>5.30</td></tr><tr><td>股东08有限公司</td><td>52,000,000</td><td>5.20</td></tr><tr><td>股东09有限公司</td><td>51,000,000</td><td>5.10</td></tr><tr><td>股东10有限公司</td><td>50,000,000</td><td>5.00</td></tr><tr><td>股东11有限公司</td><td>49,000,000</td><td>4.90</td></tr><tr><td>股东12有限公司</td><td>48,000,000</td><td>4.80</td></tr><tr><td>股东13有限公司</td><td>47,000,000</td><td>4.70</td></tr><tr><td>股东14有限公司</td><td>46,000,000</td><td>4.60</td></tr><tr><td>股东15有限公司</td><td>45,000,000</td><td>4.50</td></tr><tr><td>股东16有限公司</td><td>44,000,000</td><td>4.40</td></tr><tr><td>股东17有限公司</td><td>43,000,000</td><td>4.30</td></tr><tr><td>股东18有限公司</td><td>42,000,000</td><td>4.20</td></tr><tr><td>股东19有限公司</td><td>41,000,000</td><td>4.10</td></tr><tr><td>股东20有限公司</td><td>40,000,000</td><td>4.00</td></tr><tr><td>股东21有限公司</td><td>39,000,000</td><td>3.90</td></tr><tr><td>股东22有限公司</td><td>38,000,000</td><td>3.80</td></tr><tr><td>股东23有限公司</td><td>37,000,000</td><td>3.70</td></tr><tr><td>股东24有限公司</td><td>36,000,000</td><td>3.60</td></tr><tr><td>股东25有限公司</td><td>35,000,000</td><td>3.50</td></tr><tr><td>股东26有限公司</td><td>34,000,000</td><td>3.40</td></tr><tr><td>股东27有限公司</td><td>33,000,000</td><td>3.30</td></tr><tr><td>股东28有限公司</td><td>32,000,000</td><td>3.20</td></tr><tr><td>股东29有限公司</td><td>31,000,000</td><td>3.10</td></tr><tr><td>股东30有限公司</td><td>30,000,000</td><td>3.00</td></tr></table>",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      }
+    ]
+  },
+  {
+    "input_path": "doc.pdf",
+    "page_index": 2,
+    "page_count": null,
+    "width": 1200,
+    "height": 1700,
+    "parsing_res_list": [
+      {
+        "block_id": 0,
+        "block_order": 1,
+        "group_id": 0,
+        "block_label": "paragraph_title",
+        "block_content": "第三节 其他事项",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      },
+      {
+        "block_id": 1,
+        "block_order": 2,
+        "group_id": 1,
+        "block_label": "text",
+        "block_content": "本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。",
+        "block_bbox": [
+          100,
+          100,
+          1100,
+          160
+        ]
+      }
+    ]
+  }
+]

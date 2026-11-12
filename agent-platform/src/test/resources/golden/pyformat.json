@@ -1,0 +1,271 @@
+[
+  {
+    "value": null,
+    "repr": "None",
+    "str": "None",
+    "json": "null",
+    "json_sorted": "null",
+    "json_indent2": "null"
+  },
+  {
+    "value": true,
+    "repr": "True",
+    "str": "True",
+    "json": "true",
+    "json_sorted": "true",
+    "json_indent2": "true"
+  },
+  {
+    "value": false,
+    "repr": "False",
+    "str": "False",
+    "json": "false",
+    "json_sorted": "false",
+    "json_indent2": "false"
+  },
+  {
+    "value": 0,
+    "repr": "0",
+    "str": "0",
+    "json": "0",
+    "json_sorted": "0",
+    "json_indent2": "0"
+  },
+  {
+    "value": 1280000,
+    "repr": "1280000",
+    "str": "1280000",
+    "json": "1280000",
+    "json_sorted": "1280000",
+    "json_indent2": "1280000"
+  },
+  {
+    "value": -3,
+    "repr": "-3",
+    "str": "-3",
+    "json": "-3",
+    "json_sorted": "-3",
+    "json_indent2": "-3"
+  },
+  {
+    "value": 0.05,
+    "repr": "0.05",
+    "str": "0.05",
+    "json": "0.05",
+    "json_sorted": "0.05",
+    "json_indent2": "0.05"
+  },
+  {
+    "value": 1234.56,
+    "repr": "1234.56",
+    "str": "1234.56",
+    "json": "1234.56",
+    "json_sorted": "1234.56",
+    "json_indent2": "1234.56"
+  },
+  {
+    "value": 12800000.0,
+    "repr": "12800000.0",
+    "str": "12800000.0",
+    "json": "12800000.0",
+    "json_sorted": "12800000.0",
+    "json_indent2": "12800000.0"
+  },
+  {
+    "value": 100.0,
+    "repr": "100.0",
+    "str": "100.0",
+    "json": "100.0",
+    "json_sorted": "100.0",
+    "json_indent2": "100.0"
+  },
+  {
+    "value": 1e+16,
+    "repr": "1e+16",
+    "str": "1e+16",
+    "json": "1e+16",
+    "json_sorted": "1e+16",
+    "json_indent2": "1e+16"
+  },
+  {
+    "value": 1.5e-05,
+    "repr": "1.5e-05",
+    "str": "1.5e-05",
+    "json": "1.5e-05",
+    "json_sorted": "1.5e-05",
+    "json_indent2": "1.5e-05"
+  },
+  {
+    "value": 0.0001,
+    "repr": "0.0001",
+    "str": "0.0001",
+    "json": "0.0001",
+    "json_sorted": "0.0001",
+    "json_indent2": "0.0001"
+  },
+  {
+    "value": 123456789012345.6,
+    "repr": "123456789012345.6",
+    "str": "123456789012345.6",
+    "json": "123456789012345.6",
+    "json_sorted": "123456789012345.6",
+    "json_indent2": "123456789012345.6"
+  },
+  {
+    "value": "",
+    "repr": "''",
+    "str": "",
+    "json": "\"\"",
+    "json_sorted": "\"\"",
+    "json_indent2": "\"\""
+  },
+  {
+    "value": "张三",
+    "repr": "'张三'",
+    "str": "张三",
+    "json": "\"张三\"",
+    "json_sorted": "\"张三\"",
+    "json_indent2": "\"张三\""
+  },
+  {
+    "value": "带'单引号",
+    "repr": "\"带'单引号\"",
+    "str": "带'单引号",
+    "json": "\"带'单引号\"",
+    "json_sorted": "\"带'单引号\"",
+    "json_indent2": "\"带'单引号\""
+  },
+  {
+    "value": "带\"双引号",
+    "repr": "'带\"双引号'",
+    "str": "带\"双引号",
+    "json": "\"带\\\"双引号\"",
+    "json_sorted": "\"带\\\"双引号\"",
+    "json_indent2": "\"带\\\"双引号\""
+  },
+  {
+    "value": "两种'都\"有",
+    "repr": "'两种\\'都\"有'",
+    "str": "两种'都\"有",
+    "json": "\"两种'都\\\"有\"",
+    "json_sorted": "\"两种'都\\\"有\"",
+    "json_indent2": "\"两种'都\\\"有\""
+  },
+  {
+    "value": "换行\n和制表\t符",
+    "repr": "'换行\\n和制表\\t符'",
+    "str": "换行\n和制表\t符",
+    "json": "\"换行\\n和制表\\t符\"",
+    "json_sorted": "\"换行\\n和制表\\t符\"",
+    "json_indent2": "\"换行\\n和制表\\t符\""
+  },
+  {
+    "value": "反斜杠\\",
+    "repr": "'反斜杠\\\\'",
+    "str": "反斜杠\\",
+    "json": "\"反斜杠\\\\\"",
+    "json_sorted": "\"反斜杠\\\\\"",
+    "json_indent2": "\"反斜杠\\\\\""
+  },
+  {
+    "value": "不换行空格 零宽​",
+    "repr": "'不换行空格\\xa0零宽\\u200b'",
+    "str": "不换行空格 零宽​",
+    "json": "\"不换行空格 零宽​\"",
+    "json_sorted": "\"不换行空格 零宽​\"",
+    "json_indent2": "\"不换行空格 零宽​\""
+  },
+  {
+    "value": [],
+    "repr": "[]",
+    "str": "[]",
+    "json": "[]",
+    "json_sorted": "[]",
+    "json_indent2": "[]"
+  },
+  {
+    "value": {},
+    "repr": "{}",
+    "str": "{}",
+    "json": "{}",
+    "json_sorted": "{}",
+    "json_indent2": "{}"
+  },
+  {
+    "value": [
+      1,
+      "a",
+      null,
+      true
+    ],
+    "repr": "[1, 'a', None, True]",
+    "str": "[1, 'a', None, True]",
+    "json": "[1, \"a\", null, true]",
+    "json_sorted": "[1, \"a\", null, true]",
+    "json_indent2": "[\n  1,\n  \"a\",\n  null,\n  true\n]"
+  },
+  {
+    "value": {
+      "value": 1280000,
+      "evidence": "含税总价为人民币1,280,000.00元"
+    },
+    "repr": "{'value': 1280000, 'evidence': '含税总价为人民币1,280,000.00元'}",
+    "str": "{'value': 1280000, 'evidence': '含税总价为人民币1,280,000.00元'}",
+    "json": "{\"value\": 1280000, \"evidence\": \"含税总价为人民币1,280,000.00元\"}",
+    "json_sorted": "{\"evidence\": \"含税总价为人民币1,280,000.00元\", \"value\": 1280000}",
+    "json_indent2": "{\n  \"value\": 1280000,\n  \"evidence\": \"含税总价为人民币1,280,000.00元\"\n}"
+  },
+  {
+    "value": {
+      "b": 1,
+      "a": {
+        "d": [
+          1.5,
+          {
+            "z": null
+          }
+        ],
+        "c": "文"
+      }
+    },
+    "repr": "{'b': 1, 'a': {'d': [1.5, {'z': None}], 'c': '文'}}",
+    "str": "{'b': 1, 'a': {'d': [1.5, {'z': None}], 'c': '文'}}",
+    "json": "{\"b\": 1, \"a\": {\"d\": [1.5, {\"z\": null}], \"c\": \"文\"}}",
+    "json_sorted": "{\"a\": {\"c\": \"文\", \"d\": [1.5, {\"z\": null}]}, \"b\": 1}",
+    "json_indent2": "{\n  \"b\": 1,\n  \"a\": {\n    \"d\": [\n      1.5,\n      {\n        \"z\": null\n      }\n    ],\n    \"c\": \"文\"\n  }\n}"
+  },
+  {
+    "value": [
+      [],
+      {}
+    ],
+    "repr": "[[], {}]",
+    "str": "[[], {}]",
+    "json": "[[], {}]",
+    "json_sorted": "[[], {}]",
+    "json_indent2": "[\n  [],\n  {}\n]"
+  },
+  {
+    "value": [
+      "诉讼",
+      "仲裁"
+    ],
+    "repr": "['诉讼', '仲裁']",
+    "str": "['诉讼', '仲裁']",
+    "json": "[\"诉讼\", \"仲裁\"]",
+    "json_sorted": "[\"诉讼\", \"仲裁\"]",
+    "json_indent2": "[\n  \"诉讼\",\n  \"仲裁\"\n]"
+  },
+  {
+    "value": {
+      "称谓": "妻子",
+      "姓名": "苏婉清",
+      "年龄": "47"
+    },
+    "repr": "{'称谓': '妻子', '姓名': '苏婉清', '年龄': '47'}",
+    "str": "{'称谓': '妻子', '姓名': '苏婉清', '年龄': '47'}",
+    "json": "{\"称谓\": \"妻子\", \"姓名\": \"苏婉清\", \"年龄\": \"47\"}",
+    "json_sorted": "{\"姓名\": \"苏婉清\", \"年龄\": \"47\", \"称谓\": \"妻子\"}",
+    "json_indent2": "{\n  \"称谓\": \"妻子\",\n  \"姓名\": \"苏婉清\",\n  \"年龄\": \"47\"\n}"
+  }
+]

@@ -1,0 +1,103 @@
+# 合同类文档的抽取 schema 示例。按自己的业务增删字段即可。
+#
+# 字段属性：
+#   name         字段名（输出 JSON 的键）
+#   title        中文名
+#   type         string / number / integer / date / boolean / enum / list
+#   description  给模型看的说明：口径、单位、怎么判断
+#   hints        原文里可能出现的叫法，用来定位
+#   required     必填；找不到时会进入 needs_review
+#   options      enum 的可选项
+#   unit         number / integer 的单位（元、万元、%…）。原文用别的单位时由程序换算成它
+#   fields       list 每一项的子字段；不写表示字符串列表
+#   verbatim     string 的值是否必须是原文里的文字，默认 true；需要概括的字段设为 false
+#   top_k        这个字段每一轮看几个片段，默认用命令行的 --top-k
+#   exhaustive   通读全文找这个字段（散落在各处的列表用），默认 false
+
+name: contract
+description: 采购、服务类合同
+fields:
+  - name: contract_name
+    title: 合同名称
+    description: 合同的标题
+
+  - name: contract_no
+    title: 合同编号
+    hints: [合同编号, 合同号, 协议编号]
+
+  - name: party_a
+    title: 甲方
+    required: true
+    description: 甲方（买方、委托方、发包方）的完整名称
+    hints: [甲方, 买方, 采购方, 委托方, 发包人]
+
+  - name: party_b
+    title: 乙方
+    required: true
+    description: 乙方（卖方、受托方、承包方）的完整名称
+    hints: [乙方, 卖方, 供应商, 受托方, 承包人]
+
+  - name: sign_date
+    title: 签订日期
+    type: date
+    hints: [签订日期, 签署日期, 签约时间]
+
+  - name: total_amount
+    title: 合同总金额
+    type: number
+    unit: 元
+    required: true
+    description: 合同含税总价
+    hints: [合同总价, 合同金额, 总金额, 价税合计, 含税总价]
+
+  - name: tax_rate
+    title: 增值税税率
+    type: number
+    unit: "%"
+    hints: [增值税税率, 税率]
+
+  - name: term_start
+    title: 合同起始日
+    type: date
+    hints: [合同期限, 有效期, 服务期限]
+
+  - name: term_end
+    title: 合同终止日
+    type: date
+    hints: [合同期限, 有效期, 服务期限]
+
+  - name: payment_schedule
+    title: 付款计划
+    type: list
+    description: 分期付款的每一期
+    hints: [付款方式, 支付方式, 付款计划, 付款节点, 分期支付]
+    fields:
+      - name: stage
+        title: 期次
+      - name: condition
+        title: 付款节点或条件
+      - name: ratio
+        title: 比例
+        type: number
+        unit: "%"
+        description: 占合同总价的百分比
+      - name: amount
+        title: 金额
+        type: number
+        unit: 元
+
+  - name: breach_penalty
+    title: 违约金约定
+    verbatim: false
+    description: 用一两句话概括违约金的计算方式和上限
+    hints: [违约责任, 违约金, 逾期]
+
+  - name: dispute_resolution
+    title: 争议解决方式
+    type: enum
+    options: [诉讼, 仲裁]
+    hints: [争议解决, 仲裁, 管辖法院, 提起诉讼]
+
+  - name: dispute_venue
+    title: 仲裁机构或管辖法院
+    hints: [仲裁委员会, 人民法院, 争议解决]

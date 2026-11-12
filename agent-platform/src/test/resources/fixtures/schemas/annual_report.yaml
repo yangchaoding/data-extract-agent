@@ -1,0 +1,116 @@
+# 上市公司年度报告的抽取 schema 示例。
+# 年报里同一个指标会在多处出现（摘要、主要会计数据、财务报表、附注），
+# description 里写清口径（合并/母公司、本期/上期），模型才知道取哪一个。
+# 金额统一用 unit 指定单位：年报里有的表以元为单位，有的以万元、百万元为单位，由程序换算。
+
+name: annual_report
+description: 上市公司年度报告
+fields:
+  - name: company_name
+    title: 公司名称
+    required: true
+    description: 公司的中文全称
+    hints: [公司的中文名称, 公司名称, 公司信息]
+
+  - name: stock_code
+    title: 股票代码
+    hints: [股票代码, 证券代码, 公司股票简况]
+
+  - name: report_year
+    title: 报告年度
+    type: integer
+    description: 报告期所属的年份，例如 2024
+
+  - name: revenue
+    title: 营业收入
+    type: number
+    required: true
+    unit: 元
+    description: 报告期（本年）合并口径的营业收入
+    hints: [营业收入, 营业总收入, 主要会计数据, 主要财务指标]
+
+  - name: net_profit
+    title: 归属于上市公司股东的净利润
+    type: number
+    unit: 元
+    required: true
+    description: 报告期（本年）的数值
+    hints: [归属于上市公司股东的净利润, 归母净利润, 主要会计数据]
+
+  - name: net_profit_deducted
+    title: 扣除非经常性损益后的净利润
+    type: number
+    unit: 元
+    description: 报告期（本年）归属于上市公司股东的扣除非经常性损益的净利润
+    hints: [扣除非经常性损益, 扣非净利润]
+
+  - name: operating_cash_flow
+    title: 经营活动产生的现金流量净额
+    type: number
+    unit: 元
+    description: 报告期（本年）的数值
+    hints: [经营活动产生的现金流量净额]
+
+  - name: total_assets
+    title: 总资产
+    type: number
+    unit: 元
+    description: 报告期末的数值
+    hints: [总资产, 资产总计, 资产总额]
+
+  - name: net_assets
+    title: 归属于上市公司股东的净资产
+    type: number
+    unit: 元
+    description: 报告期末的数值
+    hints: [归属于上市公司股东的净资产, 归属于母公司所有者权益合计]
+
+  - name: eps
+    title: 基本每股收益
+    type: number
+    unit: 元/股
+    description: 报告期（本年）的数值
+    hints: [基本每股收益]
+
+  - name: roe
+    title: 加权平均净资产收益率
+    type: number
+    unit: "%"
+    description: 报告期（本年）的数值
+    hints: [加权平均净资产收益率]
+
+  - name: auditor
+    title: 会计师事务所
+    description: 出具审计报告的会计师事务所名称
+    hints: [会计师事务所名称, 聘请的会计师事务所, 审计机构]
+
+  - name: audit_opinion
+    title: 审计意见类型
+    type: enum
+    options: [标准无保留意见, 带强调事项段的无保留意见, 保留意见, 否定意见, 无法表示意见]
+    hints: [审计意见类型, 审计意见, 审计报告]
+
+  - name: dividend_plan
+    title: 利润分配预案
+    verbatim: false
+    description: 用一句话概括本年度的分红、送股、转增方案；不分配也要写明
+    hints: [利润分配预案, 利润分配方案, 每10股派发现金红利]
+
+  - name: top_shareholders
+    title: 前十名股东
+    type: list
+    top_k: 3
+    description: 报告期末前十名股东（不是前十名无限售条件股东）
+    hints: [前十名股东持股情况, 前10名股东, 股东名称, 持股比例]
+    fields:
+      - name: name
+        title: 股东名称
+        required: true
+      - name: shares
+        title: 期末持股数量
+        type: number
+        unit: 股
+      - name: ratio
+        title: 持股比例
+        type: number
+        unit: "%"

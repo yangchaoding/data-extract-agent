@@ -1,4 +1,4 @@
-# 应用配置。现在只有基础项，后面每加一个能力，在这里加它的配置段。
+# 应用配置。每加一个能力，在这里加它的配置段。
 spring:
   application:
     name: agent-platform
@@ -11,3 +11,26 @@ logging:
   level:
     root: warn
     com.cb.agent: info
+
+agent:
+  # skill 的目录：每个子目录是一个 skill，里面有 skill.yaml（清单）和 SKILL.md（做法说明）。
+  # 相对路径按程序的当前目录算。默认指向仓库里 Claude Code 用的那个目录，两边用的是同一份 skill
+  skills:
+    dir: ${AGENT_SKILLS_DIR:../.claude/skills}
+
+  # 模型接口（OpenAI 兼容）。每一项都可以用环境变量改，优先级和 Python 版相同：
+  #   命令行参数（--model、--base-url） > EXTRACT_LLM_* > OPENAI_* > 这里写的默认值
+  llm:
+    # 接口地址，只填到 /v1，程序自动加上 /chat/completions
+    base-url: ${EXTRACT_LLM_BASE_URL:${OPENAI_BASE_URL:http://10.10.10.123:9503/v1}}
+    # 模型名，用接口 /v1/models 返回的 id
+    model: ${EXTRACT_LLM_MODEL:cb-llm}
+    # 密钥。本地部署的服务一般不校验，留着占位值就行
+    api-key: ${EXTRACT_LLM_API_KEY:${OPENAI_API_KEY:EMPTY}}
+    # 单次输出的上限。0 表示用服务的默认值。抽很长的列表时输出被截断，就调大它
+    max-tokens: ${EXTRACT_LLM_MAX_TOKENS:0}
+    # 单次请求最长等多少秒
+    timeout-seconds: 300
+    # 允许连接的主机，多个用逗号隔开。抽取时文档的内容会发给模型接口，所以只允许发往登记过的地址；
+    # 接口地址的主机不在这里时，程序拒绝调用并提示怎么加。本机地址（localhost、127.x）总是允许的
+    allowed-hosts: ${EXTRACT_LLM_ALLOWED_HOSTS:10.10.10.123}

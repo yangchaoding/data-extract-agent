@@ -1,0 +1,23 @@
+# 机器可读的清单：agent-platform 从这里知道这个 skill 叫什么、管哪类文档、字段定义在哪。
+# 做法说明在同目录的 SKILL.md 里，Claude Code 读的也是它，两边用的是同一个 skill。
+# 各项的含义见 SPRINGBOOT_SERVICE_DESIGN.md 第 9.1 节。
+name: personnel-appointment
+version: 1
+title: 干部任免审批表
+
+# 选 skill 时看的：这类文档长什么样，不包括什么。写成一行，折行会在中文之间多出空格
+description: "干部任免审批表（也叫任免表、干部任免表）：一到两页的大表，栏目有姓名、籍贯、出生年月、现任职务、拟任职务、拟免职务、简历、家庭成员及主要社会关系。不是合同、发票、年报。"
+
+# 用规则判断一份文档是不是这类表：标题命中任意一个，并且特征词命中至少 2 个
+match:
+  title_any: [干部任免审批表, 任免审批表]
+  keywords: [拟任职务, 拟免职务, 呈报单位, 家庭成员及主要社会关系]
+  min_keywords: 2
+
+instructions: SKILL.md
+
+# 字段定义沿用仓库里已有的那一份，不另存。路径相对本目录
+schema: ../../../examples/schemas/personnel_appointment.yaml
+
+# 抽取引擎的参数。一份表大约 1000 token，整份放进一次调用，不切片
+engine: {contextTokens: 6000, topK: 5}

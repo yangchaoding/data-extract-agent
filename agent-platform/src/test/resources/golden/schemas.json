@@ -1,0 +1,1955 @@
+{
+  "schemas": [
+    {
+      "file": "annual_report.yaml",
+      "name": "annual_report",
+      "description": "上市公司年度报告",
+      "fields": [
+        {
+          "name": "company_name",
+          "type": "string",
+          "title": "公司名称",
+          "description": "公司的中文全称",
+          "required": true,
+          "hints": [
+            "公司的中文名称",
+            "公司名称",
+            "公司信息"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "公司名称 公司的中文名称 公司名称 公司信息 公司的中文全称",
+          "describe": "- company_name（公司名称）：string，必填。公司的中文全称（原文中可能写作：公司的中文名称、公司名称、公司信息）",
+          "fields": []
+        },
+        {
+          "name": "stock_code",
+          "type": "string",
+          "title": "股票代码",
+          "description": "",
+          "required": false,
+          "hints": [
+            "股票代码",
+            "证券代码",
+            "公司股票简况"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "股票代码 股票代码 证券代码 公司股票简况",
+          "describe": "- stock_code（股票代码）：string（原文中可能写作：股票代码、证券代码、公司股票简况）",
+          "fields": []
+        },
+        {
+          "name": "report_year",
+          "type": "integer",
+          "title": "报告年度",
+          "description": "报告期所属的年份，例如 2024",
+          "required": false,
+          "hints": [],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "报告年度 报告期所属的年份，例如 2024",
+          "describe": "- report_year（报告年度）：integer。报告期所属的年份，例如 2024",
+          "fields": []
+        },
+        {
+          "name": "revenue",
+          "type": "number",
+          "title": "营业收入",
+          "description": "报告期（本年）合并口径的营业收入",
+          "required": true,
+          "hints": [
+            "营业收入",
+            "营业总收入",
+            "主要会计数据",
+            "主要财务指标"
+          ],
+          "options": [],
+          "unit": "元",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "营业收入 营业收入 营业总收入 主要会计数据 主要财务指标 报告期（本年）合并口径的营业收入",
+          "describe": "- revenue（营业收入）：number，单位：元，必填。报告期（本年）合并口径的营业收入（原文中可能写作：营业收入、营业总收入、主要会计数据、主要财务指标）",
+          "fields": []
+        },
+        {
+          "name": "net_profit",
+          "type": "number",
+          "title": "归属于上市公司股东的净利润",
+          "description": "报告期（本年）的数值",
+          "required": true,
+          "hints": [
+            "归属于上市公司股东的净利润",
+            "归母净利润",
+            "主要会计数据"
+          ],
+          "options": [],
+          "unit": "元",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "归属于上市公司股东的净利润 归属于上市公司股东的净利润 归母净利润 主要会计数据 报告期（本年）的数值",
+          "describe": "- net_profit（归属于上市公司股东的净利润）：number，单位：元，必填。报告期（本年）的数值（原文中可能写作：归属于上市公司股东的净利润、归母净利润、主要会计数据）",
+          "fields": []
+        },
+        {
+          "name": "net_profit_deducted",
+          "type": "number",
+          "title": "扣除非经常性损益后的净利润",
+          "description": "报告期（本年）归属于上市公司股东的扣除非经常性损益的净利润",
+          "required": false,
+          "hints": [
+            "扣除非经常性损益",
+            "扣非净利润"
+          ],
+          "options": [],
+          "unit": "元",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "扣除非经常性损益后的净利润 扣除非经常性损益 扣非净利润 报告期（本年）归属于上市公司股东的扣除非经常性损益的净利润",
+          "describe": "- net_profit_deducted（扣除非经常性损益后的净利润）：number，单位：元。报告期（本年）归属于上市公司股东的扣除非经常性损益的净利润（原文中可能写作：扣除非经常性损益、扣非净利润）",
+          "fields": []
+        },
+        {
+          "name": "operating_cash_flow",
+          "type": "number",
+          "title": "经营活动产生的现金流量净额",
+          "description": "报告期（本年）的数值",
+          "required": false,
+          "hints": [
+            "经营活动产生的现金流量净额"
+          ],
+          "options": [],
+          "unit": "元",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "经营活动产生的现金流量净额 经营活动产生的现金流量净额 报告期（本年）的数值",
+          "describe": "- operating_cash_flow（经营活动产生的现金流量净额）：number，单位：元。报告期（本年）的数值（原文中可能写作：经营活动产生的现金流量净额）",
+          "fields": []
+        },
+        {
+          "name": "total_assets",
+          "type": "number",
+          "title": "总资产",
+          "description": "报告期末的数值",
+          "required": false,
+          "hints": [
+            "总资产",
+            "资产总计",
+            "资产总额"
+          ],
+          "options": [],
+          "unit": "元",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "总资产 总资产 资产总计 资产总额 报告期末的数值",
+          "describe": "- total_assets（总资产）：number，单位：元。报告期末的数值（原文中可能写作：总资产、资产总计、资产总额）",
+          "fields": []
+        },
+        {
+          "name": "net_assets",
+          "type": "number",
+          "title": "归属于上市公司股东的净资产",
+          "description": "报告期末的数值",
+          "required": false,
+          "hints": [
+            "归属于上市公司股东的净资产",
+            "归属于母公司所有者权益合计"
+          ],
+          "options": [],
+          "unit": "元",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "归属于上市公司股东的净资产 归属于上市公司股东的净资产 归属于母公司所有者权益合计 报告期末的数值",
+          "describe": "- net_assets（归属于上市公司股东的净资产）：number，单位：元。报告期末的数值（原文中可能写作：归属于上市公司股东的净资产、归属于母公司所有者权益合计）",
+          "fields": []
+        },
+        {
+          "name": "eps",
+          "type": "number",
+          "title": "基本每股收益",
+          "description": "报告期（本年）的数值",
+          "required": false,
+          "hints": [
+            "基本每股收益"
+          ],
+          "options": [],
+          "unit": "元/股",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "基本每股收益 基本每股收益 报告期（本年）的数值",
+          "describe": "- eps（基本每股收益）：number，单位：元/股。报告期（本年）的数值（原文中可能写作：基本每股收益）",
+          "fields": []
+        },
+        {
+          "name": "roe",
+          "type": "number",
+          "title": "加权平均净资产收益率",
+          "description": "报告期（本年）的数值",
+          "required": false,
+          "hints": [
+            "加权平均净资产收益率"
+          ],
+          "options": [],
+          "unit": "%",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "加权平均净资产收益率 加权平均净资产收益率 报告期（本年）的数值",
+          "describe": "- roe（加权平均净资产收益率）：number，单位：%。报告期（本年）的数值（原文中可能写作：加权平均净资产收益率）",
+          "fields": []
+        },
+        {
+          "name": "auditor",
+          "type": "string",
+          "title": "会计师事务所",
+          "description": "出具审计报告的会计师事务所名称",
+          "required": false,
+          "hints": [
+            "会计师事务所名称",
+            "聘请的会计师事务所",
+            "审计机构"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "会计师事务所 会计师事务所名称 聘请的会计师事务所 审计机构 出具审计报告的会计师事务所名称",
+          "describe": "- auditor（会计师事务所）：string。出具审计报告的会计师事务所名称（原文中可能写作：会计师事务所名称、聘请的会计师事务所、审计机构）",
+          "fields": []
+        },
+        {
+          "name": "audit_opinion",
+          "type": "enum",
+          "title": "审计意见类型",
+          "description": "",
+          "required": false,
+          "hints": [
+            "审计意见类型",
+            "审计意见",
+            "审计报告"
+          ],
+          "options": [
+            "标准无保留意见",
+            "带强调事项段的无保留意见",
+            "保留意见",
+            "否定意见",
+            "无法表示意见"
+          ],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "审计意见类型 审计意见类型 审计意见 审计报告",
+          "describe": "- audit_opinion（审计意见类型）：enum，可选项：标准无保留意见 / 带强调事项段的无保留意见 / 保留意见 / 否定意见 / 无法表示意见（原文中可能写作：审计意见类型、审计意见、审计报告）",
+          "fields": []
+        },
+        {
+          "name": "dividend_plan",
+          "type": "string",
+          "title": "利润分配预案",
+          "description": "用一句话概括本年度的分红、送股、转增方案；不分配也要写明",
+          "required": false,
+          "hints": [
+            "利润分配预案",
+            "利润分配方案",
+            "每10股派发现金红利"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": false,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "利润分配预案 利润分配预案 利润分配方案 每10股派发现金红利 用一句话概括本年度的分红、送股、转增方案；不分配也要写明",
+          "describe": "- dividend_plan（利润分配预案）：string，可以概括。用一句话概括本年度的分红、送股、转增方案；不分配也要写明（原文中可能写作：利润分配预案、利润分配方案、每10股派发现金红利）",
+          "fields": []
+        },
+        {
+          "name": "top_shareholders",
+          "type": "list",
+          "title": "前十名股东",
+          "description": "报告期末前十名股东（不是前十名无限售条件股东）",
+          "required": false,
+          "hints": [
+            "前十名股东持股情况",
+            "前10名股东",
+            "股东名称",
+            "持股比例"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": 3,
+          "exhaustive": false,
+          "query": "前十名股东 前十名股东持股情况 前10名股东 股东名称 持股比例 报告期末前十名股东（不是前十名无限售条件股东） 股东名称 期末持股数量 持股比例",
+          "describe": "- top_shareholders（前十名股东）：list。报告期末前十名股东（不是前十名无限售条件股东）（原文中可能写作：前十名股东持股情况、前10名股东、股东名称、持股比例）\n  每一项是一个对象，包含：\n    - name（股东名称）：string，必填\n    - shares（期末持股数量）：number，单位：股\n    - ratio（持股比例）：number，单位：%",
+          "fields": [
+            {
+              "name": "name",
+              "type": "string",
+              "title": "股东名称",
+              "description": "",
+              "required": true,
+              "hints": [],
+              "options": [],
+              "unit": "",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "股东名称",
+              "describe": "- name（股东名称）：string，必填",
+              "fields": []
+            },
+            {
+              "name": "shares",
+              "type": "number",
+              "title": "期末持股数量",
+              "description": "",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "股",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "期末持股数量",
+              "describe": "- shares（期末持股数量）：number，单位：股",
+              "fields": []
+            },
+            {
+              "name": "ratio",
+              "type": "number",
+              "title": "持股比例",
+              "description": "",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "%",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "持股比例",
+              "describe": "- ratio（持股比例）：number，单位：%",
+              "fields": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "contract.yaml",
+      "name": "contract",
+      "description": "采购、服务类合同",
+      "fields": [
+        {
+          "name": "contract_name",
+          "type": "string",
+          "title": "合同名称",
+          "description": "合同的标题",
+          "required": false,
+          "hints": [],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "合同名称 合同的标题",
+          "describe": "- contract_name（合同名称）：string。合同的标题",
+          "fields": []
+        },
+        {
+          "name": "contract_no",
+          "type": "string",
+          "title": "合同编号",
+          "description": "",
+          "required": false,
+          "hints": [
+            "合同编号",
+            "合同号",
+            "协议编号"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "合同编号 合同编号 合同号 协议编号",
+          "describe": "- contract_no（合同编号）：string（原文中可能写作：合同编号、合同号、协议编号）",
+          "fields": []
+        },
+        {
+          "name": "party_a",
+          "type": "string",
+          "title": "甲方",
+          "description": "甲方（买方、委托方、发包方）的完整名称",
+          "required": true,
+          "hints": [
+            "甲方",
+            "买方",
+            "采购方",
+            "委托方",
+            "发包人"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "甲方 甲方 买方 采购方 委托方 发包人 甲方（买方、委托方、发包方）的完整名称",
+          "describe": "- party_a（甲方）：string，必填。甲方（买方、委托方、发包方）的完整名称（原文中可能写作：甲方、买方、采购方、委托方、发包人）",
+          "fields": []
+        },
+        {
+          "name": "party_b",
+          "type": "string",
+          "title": "乙方",
+          "description": "乙方（卖方、受托方、承包方）的完整名称",
+          "required": true,
+          "hints": [
+            "乙方",
+            "卖方",
+            "供应商",
+            "受托方",
+            "承包人"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "乙方 乙方 卖方 供应商 受托方 承包人 乙方（卖方、受托方、承包方）的完整名称",
+          "describe": "- party_b（乙方）：string，必填。乙方（卖方、受托方、承包方）的完整名称（原文中可能写作：乙方、卖方、供应商、受托方、承包人）",
+          "fields": []
+        },
+        {
+          "name": "sign_date",
+          "type": "date",
+          "title": "签订日期",
+          "description": "",
+          "required": false,
+          "hints": [
+            "签订日期",
+            "签署日期",
+            "签约时间"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "签订日期 签订日期 签署日期 签约时间",
+          "describe": "- sign_date（签订日期）：date（原文中可能写作：签订日期、签署日期、签约时间）",
+          "fields": []
+        },
+        {
+          "name": "total_amount",
+          "type": "number",
+          "title": "合同总金额",
+          "description": "合同含税总价",
+          "required": true,
+          "hints": [
+            "合同总价",
+            "合同金额",
+            "总金额",
+            "价税合计",
+            "含税总价"
+          ],
+          "options": [],
+          "unit": "元",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "合同总金额 合同总价 合同金额 总金额 价税合计 含税总价 合同含税总价",
+          "describe": "- total_amount（合同总金额）：number，单位：元，必填。合同含税总价（原文中可能写作：合同总价、合同金额、总金额、价税合计、含税总价）",
+          "fields": []
+        },
+        {
+          "name": "tax_rate",
+          "type": "number",
+          "title": "增值税税率",
+          "description": "",
+          "required": false,
+          "hints": [
+            "增值税税率",
+            "税率"
+          ],
+          "options": [],
+          "unit": "%",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "增值税税率 增值税税率 税率",
+          "describe": "- tax_rate（增值税税率）：number，单位：%（原文中可能写作：增值税税率、税率）",
+          "fields": []
+        },
+        {
+          "name": "term_start",
+          "type": "date",
+          "title": "合同起始日",
+          "description": "",
+          "required": false,
+          "hints": [
+            "合同期限",
+            "有效期",
+            "服务期限"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "合同起始日 合同期限 有效期 服务期限",
+          "describe": "- term_start（合同起始日）：date（原文中可能写作：合同期限、有效期、服务期限）",
+          "fields": []
+        },
+        {
+          "name": "term_end",
+          "type": "date",
+          "title": "合同终止日",
+          "description": "",
+          "required": false,
+          "hints": [
+            "合同期限",
+            "有效期",
+            "服务期限"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "合同终止日 合同期限 有效期 服务期限",
+          "describe": "- term_end（合同终止日）：date（原文中可能写作：合同期限、有效期、服务期限）",
+          "fields": []
+        },
+        {
+          "name": "payment_schedule",
+          "type": "list",
+          "title": "付款计划",
+          "description": "分期付款的每一期",
+          "required": false,
+          "hints": [
+            "付款方式",
+            "支付方式",
+            "付款计划",
+            "付款节点",
+            "分期支付"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "付款计划 付款方式 支付方式 付款计划 付款节点 分期支付 分期付款的每一期 期次 付款节点或条件 比例 金额",
+          "describe": "- payment_schedule（付款计划）：list。分期付款的每一期（原文中可能写作：付款方式、支付方式、付款计划、付款节点、分期支付）\n  每一项是一个对象，包含：\n    - stage（期次）：string\n    - condition（付款节点或条件）：string\n    - ratio（比例）：number，单位：%。占合同总价的百分比\n    - amount（金额）：number，单位：元",
+          "fields": [
+            {
+              "name": "stage",
+              "type": "string",
+              "title": "期次",
+              "description": "",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "期次",
+              "describe": "- stage（期次）：string",
+              "fields": []
+            },
+            {
+              "name": "condition",
+              "type": "string",
+              "title": "付款节点或条件",
+              "description": "",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "付款节点或条件",
+              "describe": "- condition（付款节点或条件）：string",
+              "fields": []
+            },
+            {
+              "name": "ratio",
+              "type": "number",
+              "title": "比例",
+              "description": "占合同总价的百分比",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "%",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "比例 占合同总价的百分比",
+              "describe": "- ratio（比例）：number，单位：%。占合同总价的百分比",
+              "fields": []
+            },
+            {
+              "name": "amount",
+              "type": "number",
+              "title": "金额",
+              "description": "",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "元",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "金额",
+              "describe": "- amount（金额）：number，单位：元",
+              "fields": []
+            }
+          ]
+        },
+        {
+          "name": "breach_penalty",
+          "type": "string",
+          "title": "违约金约定",
+          "description": "用一两句话概括违约金的计算方式和上限",
+          "required": false,
+          "hints": [
+            "违约责任",
+            "违约金",
+            "逾期"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": false,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "违约金约定 违约责任 违约金 逾期 用一两句话概括违约金的计算方式和上限",
+          "describe": "- breach_penalty（违约金约定）：string，可以概括。用一两句话概括违约金的计算方式和上限（原文中可能写作：违约责任、违约金、逾期）",
+          "fields": []
+        },
+        {
+          "name": "dispute_resolution",
+          "type": "enum",
+          "title": "争议解决方式",
+          "description": "",
+          "required": false,
+          "hints": [
+            "争议解决",
+            "仲裁",
+            "管辖法院",
+            "提起诉讼"
+          ],
+          "options": [
+            "诉讼",
+            "仲裁"
+          ],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "争议解决方式 争议解决 仲裁 管辖法院 提起诉讼",
+          "describe": "- dispute_resolution（争议解决方式）：enum，可选项：诉讼 / 仲裁（原文中可能写作：争议解决、仲裁、管辖法院、提起诉讼）",
+          "fields": []
+        },
+        {
+          "name": "dispute_venue",
+          "type": "string",
+          "title": "仲裁机构或管辖法院",
+          "description": "",
+          "required": false,
+          "hints": [
+            "仲裁委员会",
+            "人民法院",
+            "争议解决"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "仲裁机构或管辖法院 仲裁委员会 人民法院 争议解决",
+          "describe": "- dispute_venue（仲裁机构或管辖法院）：string（原文中可能写作：仲裁委员会、人民法院、争议解决）",
+          "fields": []
+        }
+      ]
+    },
+    {
+      "file": "generic.yaml",
+      "name": "generic_document",
+      "description": "报告、公文、通知等一般性文档",
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "title": "标题",
+          "description": "文档的正式标题",
+          "required": true,
+          "hints": [],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "标题 文档的正式标题",
+          "describe": "- title（标题）：string，必填。文档的正式标题",
+          "fields": []
+        },
+        {
+          "name": "doc_no",
+          "type": "string",
+          "title": "文号或编号",
+          "description": "",
+          "required": false,
+          "hints": [
+            "文号",
+            "编号",
+            "发文字号"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "文号或编号 文号 编号 发文字号",
+          "describe": "- doc_no（文号或编号）：string（原文中可能写作：文号、编号、发文字号）",
+          "fields": []
+        },
+        {
+          "name": "issuer",
+          "type": "string",
+          "title": "发文单位或作者",
+          "description": "发布这份文档的机构，或署名的作者",
+          "required": false,
+          "hints": [
+            "发文机关",
+            "编制单位",
+            "作者",
+            "落款"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "发文单位或作者 发文机关 编制单位 作者 落款 发布这份文档的机构，或署名的作者",
+          "describe": "- issuer（发文单位或作者）：string。发布这份文档的机构，或署名的作者（原文中可能写作：发文机关、编制单位、作者、落款）",
+          "fields": []
+        },
+        {
+          "name": "issue_date",
+          "type": "date",
+          "title": "成文日期",
+          "description": "文档落款或发布的日期",
+          "required": false,
+          "hints": [
+            "日期",
+            "成文日期",
+            "发布日期",
+            "印发日期"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "成文日期 日期 成文日期 发布日期 印发日期 文档落款或发布的日期",
+          "describe": "- issue_date（成文日期）：date。文档落款或发布的日期（原文中可能写作：日期、成文日期、发布日期、印发日期）",
+          "fields": []
+        },
+        {
+          "name": "recipients",
+          "type": "list",
+          "title": "主送对象",
+          "description": "公文的主送单位；没有就留空",
+          "required": false,
+          "hints": [
+            "主送",
+            "抄送",
+            "各有关单位"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "主送对象 主送 抄送 各有关单位 公文的主送单位；没有就留空",
+          "describe": "- recipients（主送对象）：list。公文的主送单位；没有就留空（原文中可能写作：主送、抄送、各有关单位）\n  每一项是一个字符串",
+          "fields": []
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "title": "内容摘要",
+          "description": "用两三句话概括文档的主要内容",
+          "required": false,
+          "hints": [],
+          "options": [],
+          "unit": "",
+          "verbatim": false,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "内容摘要 用两三句话概括文档的主要内容",
+          "describe": "- summary（内容摘要）：string，可以概括。用两三句话概括文档的主要内容",
+          "fields": []
+        },
+        {
+          "name": "key_dates",
+          "type": "list",
+          "title": "关键时间节点",
+          "description": "文中提到的截止日期、生效日期、会议时间等",
+          "required": false,
+          "hints": [
+            "截止",
+            "之前",
+            "生效",
+            "自发布之日起",
+            "期限"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "关键时间节点 截止 之前 生效 自发布之日起 期限 文中提到的截止日期、生效日期、会议时间等 日期 事项",
+          "describe": "- key_dates（关键时间节点）：list。文中提到的截止日期、生效日期、会议时间等（原文中可能写作：截止、之前、生效、自发布之日起、期限）\n  每一项是一个对象，包含：\n    - date（日期）：date，必填\n    - event（事项）：string，可以概括",
+          "fields": [
+            {
+              "name": "date",
+              "type": "date",
+              "title": "日期",
+              "description": "",
+              "required": true,
+              "hints": [],
+              "options": [],
+              "unit": "",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "日期",
+              "describe": "- date（日期）：date，必填",
+              "fields": []
+            },
+            {
+              "name": "event",
+              "type": "string",
+              "title": "事项",
+              "description": "",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "",
+              "verbatim": false,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "事项",
+              "describe": "- event（事项）：string，可以概括",
+              "fields": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "personnel_appointment.yaml",
+      "name": "personnel_appointment",
+      "description": "干部任免审批表。只抽取原文明确记载的内容，不补写、不推算。 表头中的间隔点、空格和换行只用于排版，定位字段时可忽略。 空白栏和未提供的页面内容返回 null；原文明写“无”时保留字符串“无”。 年月按原文保存，不补日期、不计算年龄。 合并单元格在片段中可能重复显示，同一内容只取一次。 同一字段跨行时按阅读顺序保留各段原文，用换行分隔，尤其不要遗漏院校专业和简历的续行。 不要根据入党时间推断政治面貌，不要根据现任职务推断拟任职务、拟免职务或专业技术职务。\n",
+      "fields": [
+        {
+          "name": "姓名",
+          "type": "string",
+          "title": "",
+          "description": "表格上部任免对象本人的姓名，不是家庭成员姓名。",
+          "required": true,
+          "hints": [],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "表格上部任免对象本人的姓名，不是家庭成员姓名。",
+          "describe": "- 姓名：string，必填。表格上部任免对象本人的姓名，不是家庭成员姓名。",
+          "fields": []
+        },
+        {
+          "name": "性别",
+          "type": "string",
+          "title": "",
+          "description": "任免对象本人的性别，照抄原文。",
+          "required": false,
+          "hints": [],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "任免对象本人的性别，照抄原文。",
+          "describe": "- 性别：string。任免对象本人的性别，照抄原文。",
+          "fields": []
+        },
+        {
+          "name": "出生年月（岁）",
+          "type": "string",
+          "title": "",
+          "description": "原样保留出生年月及同一栏明确写出的年龄；只有年月时只写年月，不推算年龄。",
+          "required": false,
+          "hints": [
+            "出生年月",
+            "出生年月（岁）",
+            "年龄"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "出生年月 出生年月（岁） 年龄 原样保留出生年月及同一栏明确写出的年龄；只有年月时只写年月，不推算年龄。",
+          "describe": "- 出生年月（岁）：string。原样保留出生年月及同一栏明确写出的年龄；只有年月时只写年月，不推算年龄。（原文中可能写作：出生年月、出生年月（岁）、年龄）",
+          "fields": []
+        },
+        {
+          "name": "民族",
+          "type": "string",
+          "title": "",
+          "description": "任免对象本人的民族，照抄原文。",
+          "required": false,
+          "hints": [],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "任免对象本人的民族，照抄原文。",
+          "describe": "- 民族：string。任免对象本人的民族，照抄原文。",
+          "fields": []
+        },
+        {
+          "name": "籍贯",
+          "type": "string",
+          "title": "",
+          "description": "籍贯栏的原文，与出生地分开读取。",
+          "required": false,
+          "hints": [],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "籍贯栏的原文，与出生地分开读取。",
+          "describe": "- 籍贯：string。籍贯栏的原文，与出生地分开读取。",
+          "fields": []
+        },
+        {
+          "name": "出生地",
+          "type": "string",
+          "title": "",
+          "description": "出生地栏的原文，不从籍贯补写。",
+          "required": false,
+          "hints": [],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "出生地栏的原文，不从籍贯补写。",
+          "describe": "- 出生地：string。出生地栏的原文，不从籍贯补写。",
+          "fields": []
+        },
+        {
+          "name": "入党时间",
+          "type": "string",
+          "title": "",
+          "description": "原样保留入党年月，不补具体日期。",
+          "required": false,
+          "hints": [],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "原样保留入党年月，不补具体日期。",
+          "describe": "- 入党时间：string。原样保留入党年月，不补具体日期。",
+          "fields": []
+        },
+        {
+          "name": "参加工作时间",
+          "type": "string",
+          "title": "",
+          "description": "参加工作时间栏的年月，原样保留，不从简历推算。",
+          "required": false,
+          "hints": [],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "参加工作时间栏的年月，原样保留，不从简历推算。",
+          "describe": "- 参加工作时间：string。参加工作时间栏的年月，原样保留，不从简历推算。",
+          "fields": []
+        },
+        {
+          "name": "健康状况",
+          "type": "string",
+          "title": "",
+          "description": "健康状况栏明确填写的文字。",
+          "required": false,
+          "hints": [],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "健康状况栏明确填写的文字。",
+          "describe": "- 健康状况：string。健康状况栏明确填写的文字。",
+          "fields": []
+        },
+        {
+          "name": "全日制教育",
+          "type": "string",
+          "title": "",
+          "description": "学历学位区的全日制教育学历或学位，完整保留原文，不与在职教育混淆。",
+          "required": false,
+          "hints": [
+            "学历学位",
+            "全日制",
+            "教育"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "学历学位 全日制 教育 学历学位区的全日制教育学历或学位，完整保留原文，不与在职教育混淆。",
+          "describe": "- 全日制教育：string。学历学位区的全日制教育学历或学位，完整保留原文，不与在职教育混淆。（原文中可能写作：学历学位、全日制、教育）",
+          "fields": []
+        },
+        {
+          "name": "全日制教育毕业院校系及专业",
+          "type": "string",
+          "title": "",
+          "description": "全日制教育对应的毕业院校、院系及专业的完整原文。 合并“毕业院校”和下一行“系及专业”对应的内容，原文跨行处保留换行。 同一文字因合并单元格重复时只取一次，不擅自补写学校、院系或专业。\n",
+          "required": false,
+          "hints": [
+            "全日制",
+            "毕业院校",
+            "系及专业"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "全日制 毕业院校 系及专业 全日制教育对应的毕业院校、院系及专业的完整原文。 合并“毕业院校”和下一行“系及专业”对应的内容，原文跨行处保留换行。 同一文字因合并单元格重复时只取一次，不擅自补写学校、院系或专业。\n",
+          "describe": "- 全日制教育毕业院校系及专业：string。全日制教育对应的毕业院校、院系及专业的完整原文。 合并“毕业院校”和下一行“系及专业”对应的内容，原文跨行处保留换行。 同一文字因合并单元格重复时只取一次，不擅自补写学校、院系或专业。\n（原文中可能写作：全日制、毕业院校、系及专业）",
+          "fields": []
+        },
+        {
+          "name": "在职教育",
+          "type": "string",
+          "title": "",
+          "description": "学历学位区的在职教育学历或学位；明确写“无”则保留“无”，空白返回 null。",
+          "required": false,
+          "hints": [
+            "学历学位",
+            "在职",
+            "教育"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "学历学位 在职 教育 学历学位区的在职教育学历或学位；明确写“无”则保留“无”，空白返回 null。",
+          "describe": "- 在职教育：string。学历学位区的在职教育学历或学位；明确写“无”则保留“无”，空白返回 null。（原文中可能写作：学历学位、在职、教育）",
+          "fields": []
+        },
+        {
+          "name": "在职教育毕业院校系及专业",
+          "type": "string",
+          "title": "",
+          "description": "在职教育对应的毕业院校、院系及专业，跨行保留换行；空白返回 null，不复用全日制内容。",
+          "required": false,
+          "hints": [
+            "在职",
+            "毕业院校",
+            "系及专业"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "在职 毕业院校 系及专业 在职教育对应的毕业院校、院系及专业，跨行保留换行；空白返回 null，不复用全日制内容。",
+          "describe": "- 在职教育毕业院校系及专业：string。在职教育对应的毕业院校、院系及专业，跨行保留换行；空白返回 null，不复用全日制内容。（原文中可能写作：在职、毕业院校、系及专业）",
+          "fields": []
+        },
+        {
+          "name": "现任职务",
+          "type": "string",
+          "title": "",
+          "description": "现任职务栏的完整单位和职务名称，保持原文。",
+          "required": false,
+          "hints": [
+            "现任职务"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "现任职务 现任职务栏的完整单位和职务名称，保持原文。",
+          "describe": "- 现任职务：string。现任职务栏的完整单位和职务名称，保持原文。（原文中可能写作：现任职务）",
+          "fields": []
+        },
+        {
+          "name": "拟任职务",
+          "type": "string",
+          "title": "",
+          "description": "只取拟任职务栏；空白返回 null，不从现任职务或简历补写。",
+          "required": false,
+          "hints": [
+            "拟任职务"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "拟任职务 只取拟任职务栏；空白返回 null，不从现任职务或简历补写。",
+          "describe": "- 拟任职务：string。只取拟任职务栏；空白返回 null，不从现任职务或简历补写。（原文中可能写作：拟任职务）",
+          "fields": []
+        },
+        {
+          "name": "拟免职务",
+          "type": "string",
+          "title": "",
+          "description": "只取拟免职务栏；空白返回 null，不从现任职务或简历补写。",
+          "required": false,
+          "hints": [
+            "拟免职务"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "拟免职务 只取拟免职务栏；空白返回 null，不从现任职务或简历补写。",
+          "describe": "- 拟免职务：string。只取拟免职务栏；空白返回 null，不从现任职务或简历补写。（原文中可能写作：拟免职务）",
+          "fields": []
+        },
+        {
+          "name": "简历",
+          "type": "string",
+          "title": "",
+          "description": "简历栏的全部经历，完整保留每段起止时间、单位和职务，按原文顺序逐段换行。 不概括、不省略任何经历；evidence 应覆盖全部经历，可以分多段逐字摘抄。\n",
+          "required": false,
+          "hints": [],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "简历栏的全部经历，完整保留每段起止时间、单位和职务，按原文顺序逐段换行。 不概括、不省略任何经历；evidence 应覆盖全部经历，可以分多段逐字摘抄。\n",
+          "describe": "- 简历：string。简历栏的全部经历，完整保留每段起止时间、单位和职务，按原文顺序逐段换行。 不概括、不省略任何经历；evidence 应覆盖全部经历，可以分多段逐字摘抄。\n",
+          "fields": []
+        },
+        {
+          "name": "奖惩情况",
+          "type": "string",
+          "title": "",
+          "description": "奖惩情况栏的全部原文；明确写“无”则保留，未提供则返回 null。",
+          "required": false,
+          "hints": [
+            "奖惩情况",
+            "奖励",
+            "惩处"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "奖惩情况 奖励 惩处 奖惩情况栏的全部原文；明确写“无”则保留，未提供则返回 null。",
+          "describe": "- 奖惩情况：string。奖惩情况栏的全部原文；明确写“无”则保留，未提供则返回 null。（原文中可能写作：奖惩情况、奖励、惩处）",
+          "fields": []
+        },
+        {
+          "name": "年度考核结果",
+          "type": "string",
+          "title": "",
+          "description": "年度考核结果栏的全部年份和对应结果，逐段保留，未提供则返回 null。",
+          "required": false,
+          "hints": [
+            "年度考核结果",
+            "年度考核"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "年度考核结果 年度考核 年度考核结果栏的全部年份和对应结果，逐段保留，未提供则返回 null。",
+          "describe": "- 年度考核结果：string。年度考核结果栏的全部年份和对应结果，逐段保留，未提供则返回 null。（原文中可能写作：年度考核结果、年度考核）",
+          "fields": []
+        },
+        {
+          "name": "任免理由",
+          "type": "string",
+          "title": "",
+          "description": "任免理由栏的全部原文，未提供则返回 null，不自行解释任免原因。",
+          "required": false,
+          "hints": [],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "任免理由栏的全部原文，未提供则返回 null，不自行解释任免原因。",
+          "describe": "- 任免理由：string。任免理由栏的全部原文，未提供则返回 null，不自行解释任免原因。",
+          "fields": []
+        },
+        {
+          "name": "呈报单位",
+          "type": "string",
+          "title": "",
+          "description": "呈报单位栏明确填写的单位名称，不从现任职务推断。",
+          "required": false,
+          "hints": [],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "呈报单位栏明确填写的单位名称，不从现任职务推断。",
+          "describe": "- 呈报单位：string。呈报单位栏明确填写的单位名称，不从现任职务推断。",
+          "fields": []
+        },
+        {
+          "name": "审批机关意见",
+          "type": "string",
+          "title": "",
+          "description": "审批机关意见栏的全部可识别文字，包括明确属于该栏的日期，未提供则返回 null。",
+          "required": false,
+          "hints": [],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "审批机关意见栏的全部可识别文字，包括明确属于该栏的日期，未提供则返回 null。",
+          "describe": "- 审批机关意见：string。审批机关意见栏的全部可识别文字，包括明确属于该栏的日期，未提供则返回 null。",
+          "fields": []
+        },
+        {
+          "name": "专业技术职务",
+          "type": "string",
+          "title": "",
+          "description": "只取专业技术职务栏的文字，空白返回 null，不拿行政职务或学历替代。",
+          "required": false,
+          "hints": [
+            "专业技术职务",
+            "技术职称"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "专业技术职务 技术职称 只取专业技术职务栏的文字，空白返回 null，不拿行政职务或学历替代。",
+          "describe": "- 专业技术职务：string。只取专业技术职务栏的文字，空白返回 null，不拿行政职务或学历替代。（原文中可能写作：专业技术职务、技术职称）",
+          "fields": []
+        },
+        {
+          "name": "行政任免机关意见",
+          "type": "string",
+          "title": "",
+          "description": "行政任免机关意见栏的全部可识别文字，包括明确属于该栏的日期，未提供则返回 null。",
+          "required": false,
+          "hints": [],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "行政任免机关意见栏的全部可识别文字，包括明确属于该栏的日期，未提供则返回 null。",
+          "describe": "- 行政任免机关意见：string。行政任免机关意见栏的全部可识别文字，包括明确属于该栏的日期，未提供则返回 null。",
+          "fields": []
+        },
+        {
+          "name": "熟悉专业有何专长",
+          "type": "string",
+          "title": "",
+          "description": "只取熟悉专业有何专长栏的文字，空白返回 null，不从毕业专业或简历推断。",
+          "required": false,
+          "hints": [
+            "熟悉专业",
+            "有何专长"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "熟悉专业 有何专长 只取熟悉专业有何专长栏的文字，空白返回 null，不从毕业专业或简历推断。",
+          "describe": "- 熟悉专业有何专长：string。只取熟悉专业有何专长栏的文字，空白返回 null，不从毕业专业或简历推断。（原文中可能写作：熟悉专业、有何专长）",
+          "fields": []
+        },
+        {
+          "name": "家庭成员及主要社会关系",
+          "type": "list",
+          "title": "",
+          "description": "家庭成员及主要社会关系表中的全部有效人员行，每个人一项。 不包含任免对象本人，不从其他字段猜测亲属，不输出空白行。 没有这一部分时返回 []；每行未填写的子字段返回 null。\n",
+          "required": false,
+          "hints": [
+            "家庭成员",
+            "主要社会关系",
+            "称谓",
+            "政治面貌",
+            "工作单位及职务"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": true,
+          "query": "家庭成员 主要社会关系 称谓 政治面貌 工作单位及职务 家庭成员及主要社会关系表中的全部有效人员行，每个人一项。 不包含任免对象本人，不从其他字段猜测亲属，不输出空白行。 没有这一部分时返回 []；每行未填写的子字段返回 null。\n 称谓 姓名 年龄 政治面貌 工作单位及职务",
+          "describe": "- 家庭成员及主要社会关系：list。家庭成员及主要社会关系表中的全部有效人员行，每个人一项。 不包含任免对象本人，不从其他字段猜测亲属，不输出空白行。 没有这一部分时返回 []；每行未填写的子字段返回 null。\n（原文中可能写作：家庭成员、主要社会关系、称谓、政治面貌、工作单位及职务）\n  每一项是一个对象，包含：\n    - 称谓：string。该成员的称谓或与任免对象的关系，照抄原文。\n    - 姓名：string。当前家庭成员或社会关系人员的姓名。\n    - 年龄：string。该成员年龄栏的原文，不通过出生日期计算。\n    - 政治面貌：string。该成员政治面貌栏的原文，不根据其他内容推断。\n    - 工作单位及职务：string。该成员工作单位及职务的完整原文，不截断单位或职务名称。",
+          "fields": [
+            {
+              "name": "称谓",
+              "type": "string",
+              "title": "",
+              "description": "该成员的称谓或与任免对象的关系，照抄原文。",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "该成员的称谓或与任免对象的关系，照抄原文。",
+              "describe": "- 称谓：string。该成员的称谓或与任免对象的关系，照抄原文。",
+              "fields": []
+            },
+            {
+              "name": "姓名",
+              "type": "string",
+              "title": "",
+              "description": "当前家庭成员或社会关系人员的姓名。",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "当前家庭成员或社会关系人员的姓名。",
+              "describe": "- 姓名：string。当前家庭成员或社会关系人员的姓名。",
+              "fields": []
+            },
+            {
+              "name": "年龄",
+              "type": "string",
+              "title": "",
+              "description": "该成员年龄栏的原文，不通过出生日期计算。",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "该成员年龄栏的原文，不通过出生日期计算。",
+              "describe": "- 年龄：string。该成员年龄栏的原文，不通过出生日期计算。",
+              "fields": []
+            },
+            {
+              "name": "政治面貌",
+              "type": "string",
+              "title": "",
+              "description": "该成员政治面貌栏的原文，不根据其他内容推断。",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "该成员政治面貌栏的原文，不根据其他内容推断。",
+              "describe": "- 政治面貌：string。该成员政治面貌栏的原文，不根据其他内容推断。",
+              "fields": []
+            },
+            {
+              "name": "工作单位及职务",
+              "type": "string",
+              "title": "",
+              "description": "该成员工作单位及职务的完整原文，不截断单位或职务名称。",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "该成员工作单位及职务的完整原文，不截断单位或职务名称。",
+              "describe": "- 工作单位及职务：string。该成员工作单位及职务的完整原文，不截断单位或职务名称。",
+              "fields": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "vat_invoice.yaml",
+      "name": "vat_invoice",
+      "description": "增值税发票",
+      "fields": [
+        {
+          "name": "invoice_code",
+          "type": "string",
+          "title": "发票代码",
+          "description": "",
+          "required": false,
+          "hints": [
+            "发票代码"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "发票代码 发票代码",
+          "describe": "- invoice_code（发票代码）：string（原文中可能写作：发票代码）",
+          "fields": []
+        },
+        {
+          "name": "invoice_no",
+          "type": "string",
+          "title": "发票号码",
+          "description": "",
+          "required": true,
+          "hints": [
+            "发票号码"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "发票号码 发票号码",
+          "describe": "- invoice_no（发票号码）：string，必填（原文中可能写作：发票号码）",
+          "fields": []
+        },
+        {
+          "name": "issue_date",
+          "type": "date",
+          "title": "开票日期",
+          "description": "",
+          "required": true,
+          "hints": [
+            "开票日期"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "开票日期 开票日期",
+          "describe": "- issue_date（开票日期）：date，必填（原文中可能写作：开票日期）",
+          "fields": []
+        },
+        {
+          "name": "buyer_name",
+          "type": "string",
+          "title": "购买方名称",
+          "description": "",
+          "required": true,
+          "hints": [
+            "购买方",
+            "购方",
+            "名称"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "购买方名称 购买方 购方 名称",
+          "describe": "- buyer_name（购买方名称）：string，必填（原文中可能写作：购买方、购方、名称）",
+          "fields": []
+        },
+        {
+          "name": "buyer_tax_id",
+          "type": "string",
+          "title": "购买方纳税人识别号",
+          "description": "统一社会信用代码或纳税人识别号",
+          "required": false,
+          "hints": [
+            "纳税人识别号",
+            "统一社会信用代码"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "购买方纳税人识别号 纳税人识别号 统一社会信用代码 统一社会信用代码或纳税人识别号",
+          "describe": "- buyer_tax_id（购买方纳税人识别号）：string。统一社会信用代码或纳税人识别号（原文中可能写作：纳税人识别号、统一社会信用代码）",
+          "fields": []
+        },
+        {
+          "name": "seller_name",
+          "type": "string",
+          "title": "销售方名称",
+          "description": "",
+          "required": true,
+          "hints": [
+            "销售方",
+            "销方",
+            "名称"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "销售方名称 销售方 销方 名称",
+          "describe": "- seller_name（销售方名称）：string，必填（原文中可能写作：销售方、销方、名称）",
+          "fields": []
+        },
+        {
+          "name": "seller_tax_id",
+          "type": "string",
+          "title": "销售方纳税人识别号",
+          "description": "统一社会信用代码或纳税人识别号",
+          "required": false,
+          "hints": [
+            "纳税人识别号",
+            "统一社会信用代码"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "销售方纳税人识别号 纳税人识别号 统一社会信用代码 统一社会信用代码或纳税人识别号",
+          "describe": "- seller_tax_id（销售方纳税人识别号）：string。统一社会信用代码或纳税人识别号（原文中可能写作：纳税人识别号、统一社会信用代码）",
+          "fields": []
+        },
+        {
+          "name": "items",
+          "type": "list",
+          "title": "货物或服务明细",
+          "description": "明细表里的每一行，不包括\"合计\"行",
+          "required": false,
+          "hints": [
+            "货物或应税劳务",
+            "服务名称",
+            "项目名称",
+            "规格型号"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "货物或服务明细 货物或应税劳务 服务名称 项目名称 规格型号 明细表里的每一行，不包括\"合计\"行 项目名称 规格型号 单位 数量 单价 金额 税率 税额",
+          "describe": "- items（货物或服务明细）：list。明细表里的每一行，不包括\"合计\"行（原文中可能写作：货物或应税劳务、服务名称、项目名称、规格型号）\n  每一项是一个对象，包含：\n    - name（项目名称）：string，必填\n    - spec（规格型号）：string\n    - unit（单位）：string\n    - quantity（数量）：number\n    - unit_price（单价）：number\n    - amount（金额）：number，单位：元。不含税金额\n    - tax_rate（税率）：number，单位：%\n    - tax（税额）：number",
+          "fields": [
+            {
+              "name": "name",
+              "type": "string",
+              "title": "项目名称",
+              "description": "",
+              "required": true,
+              "hints": [],
+              "options": [],
+              "unit": "",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "项目名称",
+              "describe": "- name（项目名称）：string，必填",
+              "fields": []
+            },
+            {
+              "name": "spec",
+              "type": "string",
+              "title": "规格型号",
+              "description": "",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "规格型号",
+              "describe": "- spec（规格型号）：string",
+              "fields": []
+            },
+            {
+              "name": "unit",
+              "type": "string",
+              "title": "单位",
+              "description": "",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "单位",
+              "describe": "- unit（单位）：string",
+              "fields": []
+            },
+            {
+              "name": "quantity",
+              "type": "number",
+              "title": "数量",
+              "description": "",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "数量",
+              "describe": "- quantity（数量）：number",
+              "fields": []
+            },
+            {
+              "name": "unit_price",
+              "type": "number",
+              "title": "单价",
+              "description": "",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "单价",
+              "describe": "- unit_price（单价）：number",
+              "fields": []
+            },
+            {
+              "name": "amount",
+              "type": "number",
+              "title": "金额",
+              "description": "不含税金额",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "元",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "金额 不含税金额",
+              "describe": "- amount（金额）：number，单位：元。不含税金额",
+              "fields": []
+            },
+            {
+              "name": "tax_rate",
+              "type": "number",
+              "title": "税率",
+              "description": "",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "%",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "税率",
+              "describe": "- tax_rate（税率）：number，单位：%",
+              "fields": []
+            },
+            {
+              "name": "tax",
+              "type": "number",
+              "title": "税额",
+              "description": "",
+              "required": false,
+              "hints": [],
+              "options": [],
+              "unit": "",
+              "verbatim": true,
+              "top_k": null,
+              "exhaustive": false,
+              "query": "税额",
+              "describe": "- tax（税额）：number",
+              "fields": []
+            }
+          ]
+        },
+        {
+          "name": "total_amount",
+          "type": "number",
+          "title": "合计金额",
+          "description": "不含税的合计金额",
+          "required": false,
+          "hints": [
+            "合计",
+            "金额"
+          ],
+          "options": [],
+          "unit": "元",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "合计金额 合计 金额 不含税的合计金额",
+          "describe": "- total_amount（合计金额）：number，单位：元。不含税的合计金额（原文中可能写作：合计、金额）",
+          "fields": []
+        },
+        {
+          "name": "total_tax",
+          "type": "number",
+          "title": "合计税额",
+          "description": "",
+          "required": false,
+          "hints": [
+            "合计",
+            "税额"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "合计税额 合计 税额",
+          "describe": "- total_tax（合计税额）：number（原文中可能写作：合计、税额）",
+          "fields": []
+        },
+        {
+          "name": "total_with_tax",
+          "type": "number",
+          "title": "价税合计",
+          "description": "价税合计的小写金额",
+          "required": true,
+          "hints": [
+            "价税合计",
+            "小写"
+          ],
+          "options": [],
+          "unit": "元",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "价税合计 价税合计 小写 价税合计的小写金额",
+          "describe": "- total_with_tax（价税合计）：number，单位：元，必填。价税合计的小写金额（原文中可能写作：价税合计、小写）",
+          "fields": []
+        },
+        {
+          "name": "drawer",
+          "type": "string",
+          "title": "开票人",
+          "description": "",
+          "required": false,
+          "hints": [
+            "开票人"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "开票人 开票人",
+          "describe": "- drawer（开票人）：string（原文中可能写作：开票人）",
+          "fields": []
+        },
+        {
+          "name": "remarks",
+          "type": "string",
+          "title": "备注",
+          "description": "",
+          "required": false,
+          "hints": [
+            "备注"
+          ],
+          "options": [],
+          "unit": "",
+          "verbatim": true,
+          "top_k": null,
+          "exhaustive": false,
+          "query": "备注 备注",
+          "describe": "- remarks（备注）：string（原文中可能写作：备注）",
+          "fields": []
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "raw": {},
+      "error": "schema 需要一个非空的 fields 列表"
+    },
+    {
+      "raw": {
+        "fields": []
+      },
+      "error": "schema 需要一个非空的 fields 列表"
+    },
+    {
+      "raw": {
+        "fields": "不是列表"
+      },
+      "error": "schema 需要一个非空的 fields 列表"
+    },
+    {
+      "raw": {
+        "fields": [
+          {
+            "title": "没有 name"
+          }
+        ]
+      },
+      "error": "fields: 每个字段都要是带 name 的对象"
+    },
+    {
+      "raw": {
+        "fields": [
+          "不是对象"
+        ]
+      },
+      "error": "fields: 每个字段都要是带 name 的对象"
+    },
+    {
+      "raw": {
+        "fields": [
+          {
+            "name": "a",
+            "typo": 1,
+            "another": 2
+          }
+        ]
+      },
+      "error": "fields.a: 不认识的属性 ['another', 'typo']"
+    },
+    {
+      "raw": {
+        "fields": [
+          {
+            "name": "a",
+            "type": "text"
+          }
+        ]
+      },
+      "error": "fields.a: type 必须是 ['boolean', 'date', 'enum', 'integer', 'list', 'number', 'string'] 之一，现在是 'text'"
+    },
+    {
+      "raw": {
+        "fields": [
+          {
+            "name": "a",
+            "type": "enum"
+          }
+        ]
+      },
+      "error": "fields.a: enum 类型需要 options"
+    },
+    {
+      "raw": {
+        "fields": [
+          {
+            "name": "a",
+            "type": "string",
+            "unit": "元"
+          }
+        ]
+      },
+      "error": "fields.a: 只有 number 和 integer 类型可以有 unit"
+    },
+    {
+      "raw": {
+        "fields": [
+          {
+            "name": "a",
+            "type": "string",
+            "fields": [
+              {
+                "name": "b"
+              }
+            ]
+          }
+        ]
+      },
+      "error": "fields.a: 只有 list 类型可以有子字段"
+    },
+    {
+      "raw": {
+        "fields": [
+          {
+            "name": "a",
+            "type": "list",
+            "fields": [
+              {
+                "name": "b",
+                "type": "list"
+              }
+            ]
+          }
+        ]
+      },
+      "error": "fields.a.b: list 的子字段不能再是 list"
+    },
+    {
+      "raw": {
+        "fields": [
+          {
+            "name": "a",
+            "type": "list",
+            "fields": [
+              {
+                "name": "b"
+              },
+              {
+                "name": "b"
+              }
+            ]
+          }
+        ]
+      },
+      "error": "fields.a: 子字段名重复"
+    },
+    {
+      "raw": {
+        "fields": [
+          {
+            "name": "a"
+          },
+          {
+            "name": "b"
+          },
+          {
+            "name": "a"
+          },
+          {
+            "name": "b"
+          }
+        ]
+      },
+      "error": "字段名重复: ['a', 'b']"
+    }
+  ]
+}

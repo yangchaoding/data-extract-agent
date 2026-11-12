@@ -1,0 +1,658 @@
+[
+  {
+    "source": "含税总价为人民币1,280,000.00元（大写：壹佰贰拾捌万元整）",
+    "quote": "含税总价为人民币1,280,000.00元",
+    "key": "含税总价为人民币1280000.00元大写壹佰贰拾捌万元整",
+    "key_glued": "含税总价为人民币1280000.00元大写壹佰贰拾捌万元整",
+    "quote_key": "含税总价为人民币1280000.00元",
+    "parts": [
+      "含税总价为人民币1,280,000.00元"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 0,
+    "similarity": 1.0
+  },
+  {
+    "source": "含税总价为人民币1,280,000.00元",
+    "quote": "含税总价为人民币 1280000.00 元",
+    "key": "含税总价为人民币1280000.00元",
+    "key_glued": "含税总价为人民币1280000.00元",
+    "quote_key": "含税总价为人民币1280000.00元",
+    "parts": [
+      "含税总价为人民币 1280000.00 元"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 0,
+    "similarity": 1.0
+  },
+  {
+    "source": "含税总价为人民币1,280,000.00元",
+    "quote": "含税总价为人民币1,280,000.00元。",
+    "key": "含税总价为人民币1280000.00元",
+    "key_glued": "含税总价为人民币1280000.00元",
+    "quote_key": "含税总价为人民币1280000.00元",
+    "parts": [
+      "含税总价为人民币1,280,000.00元。"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 0,
+    "similarity": 1.0
+  },
+  {
+    "source": "含税总价为人民币1,280,000.00元",
+    "quote": "含税总价为人民币1,290,000.00元",
+    "key": "含税总价为人民币1280000.00元",
+    "key_glued": "含税总价为人民币1280000.00元",
+    "quote_key": "含税总价为人民币1290000.00元",
+    "parts": [
+      "含税总价为人民币1,290,000.00元"
+    ],
+    "supports": false,
+    "contains_value": false,
+    "position": -1,
+    "similarity": 0.8235294117647058
+  },
+  {
+    "source": "含税总价为人民币1,280,000.00元",
+    "quote": "含税总价为美元1,280,000.00元",
+    "key": "含税总价为人民币1280000.00元",
+    "key_glued": "含税总价为人民币1280000.00元",
+    "quote_key": "含税总价为美元1280000.00元",
+    "parts": [
+      "含税总价为美元1,280,000.00元"
+    ],
+    "supports": false,
+    "contains_value": false,
+    "position": -1,
+    "similarity": 0.75
+  },
+  {
+    "source": "增值税税率为6%，合同期限12个月",
+    "quote": "税率为6%",
+    "key": "增值税税率为6合同期限12个月",
+    "key_glued": "增值税税率为6合同期限12个月",
+    "quote_key": "税率为6",
+    "parts": [
+      "税率为6%"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 3,
+    "similarity": 1.0
+  },
+  {
+    "source": "单价 1.5 元，数量 15 件",
+    "quote": "单价15元",
+    "key": "单价1.5元数量15件",
+    "key_glued": "单价1.5元数量15件",
+    "quote_key": "单价15元",
+    "parts": [
+      "单价15元"
+    ],
+    "supports": false,
+    "contains_value": false,
+    "position": -1,
+    "similarity": 0.3333333333333333
+  },
+  {
+    "source": "| 30 | 384 | 合计 |",
+    "quote": "30384",
+    "key": "30 384合计",
+    "key_glued": "30 384合计",
+    "quote_key": "30384",
+    "parts": [
+      "30384"
+    ],
+    "supports": false,
+    "contains_value": false,
+    "position": -1,
+    "similarity": 0.3333333333333333
+  },
+  {
+    "source": "| 30 | 384 | 合计 |",
+    "quote": "| 30 | 384 |",
+    "key": "30 384合计",
+    "key_glued": "30 384合计",
+    "quote_key": "30 384",
+    "parts": [
+      "| 30 | 384 |"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 0,
+    "similarity": 1.0
+  },
+  {
+    "source": "金额 1234 元",
+    "quote": "23",
+    "key": "金额1234元",
+    "key_glued": "金额1234元",
+    "quote_key": "23",
+    "parts": [
+      "23"
+    ],
+    "supports": false,
+    "contains_value": false,
+    "position": -1,
+    "similarity": 1.0
+  },
+  {
+    "source": "金额 1234 元",
+    "quote": "1234",
+    "key": "金额1234元",
+    "key_glued": "金额1234元",
+    "quote_key": "1234",
+    "parts": [
+      "1234"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 2,
+    "similarity": 1.0
+  },
+  {
+    "source": "金额 1234.56 元",
+    "quote": "234.56",
+    "key": "金额1234.56元",
+    "key_glued": "金额1234.56元",
+    "quote_key": "234.56",
+    "parts": [
+      "234.56"
+    ],
+    "supports": false,
+    "contains_value": false,
+    "position": -1,
+    "similarity": 1.0
+  },
+  {
+    "source": "金额 21.56 元",
+    "quote": "1.5",
+    "key": "金额21.56元",
+    "key_glued": "金额21.56元",
+    "quote_key": "1.5",
+    "parts": [
+      "1.5"
+    ],
+    "supports": false,
+    "contains_value": false,
+    "position": -1,
+    "similarity": 1.0
+  },
+  {
+    "source": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+    "quote": "| 项目 | 本期 | 上期 |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+    "key": "项目本期上期营业收入12345.67 10000.00",
+    "key_glued": "项目本期上期营业收入12345.67 10000.00",
+    "quote_key": "项目本期上期营业收入12345.67 10000.00",
+    "parts": [
+      "| 项目 | 本期 | 上期 |",
+      "| 营业收入 | 12,345.67 | 10,000.00 |"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 0,
+    "similarity": 1.0
+  },
+  {
+    "source": "第一条 甲方应于合同签订后十日内支付首期款。第二条 乙方应按期交付。第三条 违约责任另行约定。",
+    "quote": "甲方应于合同签订后十日内支付首期款...违约责任另行约定",
+    "key": "第一条甲方应于合同签订后十日内支付首期款第二条乙方应按期交付第三条违约责任另行约定",
+    "key_glued": "第一条甲方应于合同签订后十日内支付首期款第二条乙方应按期交付第三条违约责任另行约定",
+    "quote_key": "甲方应于合同签订后十日内支付首期款违约责任另行约定",
+    "parts": [
+      "甲方应于合同签订后十日内支付首期款",
+      "违约责任另行约定"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": -1,
+    "similarity": 0.9130434782608695
+  },
+  {
+    "source": "第一条 甲方应于合同签订后十日内支付首期款。第二条 乙方应按期交付。",
+    "quote": "甲方应于合同签订后十日内支付首期款……乙方应按期交付",
+    "key": "第一条甲方应于合同签订后十日内支付首期款第二条乙方应按期交付",
+    "key_glued": "第一条甲方应于合同签订后十日内支付首期款第二条乙方应按期交付",
+    "quote_key": "甲方应于合同签订后十日内支付首期款乙方应按期交付",
+    "parts": [
+      "甲方应于合同签订后十日内支付首期款",
+      "乙方应按期交付"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": -1,
+    "similarity": 0.9090909090909091
+  },
+  {
+    "source": "第一条 甲方应于合同签订后十日内支付首期款。",
+    "quote": "甲方应支付首期款...乙方应按期交付",
+    "key": "第一条甲方应于合同签订后十日内支付首期款",
+    "key_glued": "第一条甲方应于合同签订后十日内支付首期款",
+    "quote_key": "甲方应支付首期款乙方应按期交付",
+    "parts": [
+      "甲方应支付首期款",
+      "乙方应按期交付"
+    ],
+    "supports": false,
+    "contains_value": false,
+    "position": -1,
+    "similarity": 0.3076923076923077
+  },
+  {
+    "source": "账号：6222 0212 3456 7890 123",
+    "quote": "6222021234567890123",
+    "key": "账号6222 0212 3456 7890 123",
+    "key_glued": "账号6222021234567890123",
+    "quote_key": "6222021234567890123",
+    "parts": [
+      "6222021234567890123"
+    ],
+    "supports": false,
+    "contains_value": true,
+    "position": -1,
+    "similarity": 0.5882352941176471
+  },
+  {
+    "source": "账号：6222 0212 3456 7890 123",
+    "quote": "6222 0212 3456",
+    "key": "账号6222 0212 3456 7890 123",
+    "key_glued": "账号6222021234567890123",
+    "quote_key": "6222 0212 3456",
+    "parts": [
+      "6222 0212 3456"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 2,
+    "similarity": 1.0
+  },
+  {
+    "source": "账号：6222 0212 3456 7890 123",
+    "quote": "62220212",
+    "key": "账号6222 0212 3456 7890 123",
+    "key_glued": "账号6222021234567890123",
+    "quote_key": "62220212",
+    "parts": [
+      "62220212"
+    ],
+    "supports": false,
+    "contains_value": false,
+    "position": -1,
+    "similarity": 0.6666666666666666
+  },
+  {
+    "source": "签订日期：2024年3月18日",
+    "quote": "2024年3月18日",
+    "key": "签订日期2024年3月18日",
+    "key_glued": "签订日期2024年3月18日",
+    "quote_key": "2024年3月18日",
+    "parts": [
+      "2024年3月18日"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 4,
+    "similarity": 1.0
+  },
+  {
+    "source": "自2024年4月1日起至2025年3月31日止",
+    "quote": "2024年4月1日起至2025年3月31日",
+    "key": "自2024年4月1日起至2025年3月31日止",
+    "key_glued": "自2024年4月1日起至2025年3月31日止",
+    "quote_key": "2024年4月1日起至2025年3月31日",
+    "parts": [
+      "2024年4月1日起至2025年3月31日"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 1,
+    "similarity": 1.0
+  },
+  {
+    "source": "会议时间：上午9:00至11:30",
+    "quote": "9:00",
+    "key": "会议时间上午9:00至11:30",
+    "key_glued": "会议时间上午9:00至11:30",
+    "quote_key": "9:00",
+    "parts": [
+      "9:00"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 6,
+    "similarity": 1.0
+  },
+  {
+    "source": "2011.07-2015.07 昆明学院文学专业学习",
+    "quote": "2011.07-2015.07",
+    "key": "2011.07-2015.07昆明学院文学专业学习",
+    "key_glued": "2011.07-2015.07昆明学院文学专业学习",
+    "quote_key": "2011.07-2015.07",
+    "parts": [
+      "2011.07-2015.07"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 0,
+    "similarity": 1.0
+  },
+  {
+    "source": "比例为 3/4，另见 2024/03/18",
+    "quote": "3/4",
+    "key": "比例为3/4另见2024/03/18",
+    "key_glued": "比例为3/4另见2024/03/18",
+    "quote_key": "3/4",
+    "parts": [
+      "3/4"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 3,
+    "similarity": 1.0
+  },
+  {
+    "source": "出生年月（岁）1973.10（51岁）",
+    "quote": "1973.10(51岁)",
+    "key": "出生年月岁1973.10 51岁",
+    "key_glued": "出生年月岁1973.10 51岁",
+    "quote_key": "1973.10 51岁",
+    "parts": [
+      "1973.10(51岁)"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 5,
+    "similarity": 1.0
+  },
+  {
+    "source": "“甲方”指星河智造科技有限公司",
+    "quote": "\"甲方\"指星河智造科技有限公司",
+    "key": "甲方指星河智造科技有限公司",
+    "key_glued": "甲方指星河智造科技有限公司",
+    "quote_key": "甲方指星河智造科技有限公司",
+    "parts": [
+      "\"甲方\"指星河智造科技有限公司"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 0,
+    "similarity": 1.0
+  },
+  {
+    "source": "ABC Company Ltd. 的 Invoice No. INV-2024-001",
+    "quote": "abc company ltd",
+    "key": "abccompanyltd的invoicenoinv2024-001",
+    "key_glued": "abccompanyltd的invoicenoinv2024-001",
+    "quote_key": "abccompanyltd",
+    "parts": [
+      "abc company ltd"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 0,
+    "similarity": 1.0
+  },
+  {
+    "source": "ABC Company Ltd. 的 Invoice No. INV-2024-001",
+    "quote": "INV-2024-001",
+    "key": "abccompanyltd的invoicenoinv2024-001",
+    "key_glued": "abccompanyltd的invoicenoinv2024-001",
+    "quote_key": "inv2024-001",
+    "parts": [
+      "INV-2024-001"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 23,
+    "similarity": 1.0
+  },
+  {
+    "source": "编号 HT-2024-0318 的合同",
+    "quote": "HT-2024-0318",
+    "key": "编号ht2024-0318的合同",
+    "key_glued": "编号ht2024-0318的合同",
+    "quote_key": "ht2024-0318",
+    "parts": [
+      "HT-2024-0318"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 2,
+    "similarity": 1.0
+  },
+  {
+    "source": "编号 HT-2024-0318 的合同",
+    "quote": "HT-2024-031",
+    "key": "编号ht2024-0318的合同",
+    "key_glued": "编号ht2024-0318的合同",
+    "quote_key": "ht2024-031",
+    "parts": [
+      "HT-2024-031"
+    ],
+    "supports": false,
+    "contains_value": false,
+    "position": -1,
+    "similarity": 1.0
+  },
+  {
+    "source": "总计 100 元",
+    "quote": "总计100元整",
+    "key": "总计100元",
+    "key_glued": "总计100元",
+    "quote_key": "总计100元整",
+    "parts": [
+      "总计100元整"
+    ],
+    "supports": false,
+    "contains_value": false,
+    "position": -1,
+    "similarity": 0.8
+  },
+  {
+    "source": "某某公司",
+    "quote": "",
+    "key": "某某公司",
+    "key_glued": "某某公司",
+    "quote_key": "",
+    "parts": [],
+    "supports": false,
+    "contains_value": false,
+    "position": -1,
+    "similarity": 0.0
+  },
+  {
+    "source": "某某公司",
+    "quote": "，。、",
+    "key": "某某公司",
+    "key_glued": "某某公司",
+    "quote_key": "",
+    "parts": [],
+    "supports": false,
+    "contains_value": false,
+    "position": -1,
+    "similarity": 0.0
+  },
+  {
+    "source": "某某公司",
+    "quote": "| --- | --- |",
+    "key": "某某公司",
+    "key_glued": "某某公司",
+    "quote_key": "",
+    "parts": [],
+    "supports": false,
+    "contains_value": false,
+    "position": -1,
+    "similarity": 0.0
+  },
+  {
+    "source": "甲",
+    "quote": "甲",
+    "key": "甲",
+    "key_glued": "甲",
+    "quote_key": "甲",
+    "parts": [
+      "甲"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 0,
+    "similarity": 1.0
+  },
+  {
+    "source": "甲乙",
+    "quote": "乙",
+    "key": "甲乙",
+    "key_glued": "甲乙",
+    "quote_key": "乙",
+    "parts": [
+      "乙"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 1,
+    "similarity": 1.0
+  },
+  {
+    "source": "12",
+    "quote": "12",
+    "key": "12",
+    "key_glued": "12",
+    "quote_key": "12",
+    "parts": [
+      "12"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 0,
+    "similarity": 1.0
+  },
+  {
+    "source": "版本 1.2.3 和 1.2",
+    "quote": "1.2",
+    "key": "版本1.2.3和1.2",
+    "key_glued": "版本1.2.3和1.2",
+    "quote_key": "1.2",
+    "parts": [
+      "1.2"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 8,
+    "similarity": 1.0
+  },
+  {
+    "source": "第①项和第②项",
+    "quote": "第①项",
+    "key": "第1项和第2项",
+    "key_glued": "第1项和第2项",
+    "quote_key": "第1项",
+    "parts": [
+      "第①项"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 0,
+    "similarity": 1.0
+  },
+  {
+    "source": "不换行空格 隔开的 文字",
+    "quote": "不换行空格隔开的文字",
+    "key": "不换行空格隔开的文字",
+    "key_glued": "不换行空格隔开的文字",
+    "quote_key": "不换行空格隔开的文字",
+    "parts": [
+      "不换行空格隔开的文字"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 0,
+    "similarity": 1.0
+  },
+  {
+    "source": "零宽​字符夹在中间",
+    "quote": "零宽字符夹在中间",
+    "key": "零宽字符夹在中间",
+    "key_glued": "零宽字符夹在中间",
+    "quote_key": "零宽字符夹在中间",
+    "parts": [
+      "零宽字符夹在中间"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 0,
+    "similarity": 1.0
+  },
+  {
+    "source": "ＡＢＣ１２３全角",
+    "quote": "abc123全角",
+    "key": "abc123全角",
+    "key_glued": "abc123全角",
+    "quote_key": "abc123全角",
+    "parts": [
+      "abc123全角"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 0,
+    "similarity": 1.0
+  },
+  {
+    "source": "同一个词出现两次：合同，以及合同。",
+    "quote": "合同",
+    "key": "同一个词出现两次合同以及合同",
+    "key_glued": "同一个词出现两次合同以及合同",
+    "quote_key": "合同",
+    "parts": [
+      "合同"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 8,
+    "similarity": 1.0
+  },
+  {
+    "source": "数字后面跟着点 12. 然后是别的",
+    "quote": "12",
+    "key": "数字后面跟着点12然后是别的",
+    "key_glued": "数字后面跟着点12然后是别的",
+    "quote_key": "12",
+    "parts": [
+      "12"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 7,
+    "similarity": 1.0
+  },
+  {
+    "source": "温度 -5 到 10 度",
+    "quote": "-5",
+    "key": "温度5到10度",
+    "key_glued": "温度5到10度",
+    "quote_key": "5",
+    "parts": [
+      "-5"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 2,
+    "similarity": 1.0
+  },
+  {
+    "source": "增长 12.5%，下降 3%",
+    "quote": "12.5%",
+    "key": "增长12.5下降3",
+    "key_glued": "增长12.5下降3",
+    "quote_key": "12.5",
+    "parts": [
+      "12.5%"
+    ],
+    "supports": true,
+    "contains_value": true,
+    "position": 2,
+    "similarity": 1.0
+  }
+]

@@ -39,4 +39,19 @@ public final class Golden {
     public static JsonNode tree(Object value) {
         return JSON.valueToTree(value);
     }
+
+    /** 把 JSON 树变成普通的 Java 对象：Map、List、字符串、数字、布尔、null。 */
+    public static Object plain(JsonNode node) {
+        return node == null || node.isNull() ? null : JSON.readValue(node.toString(), Object.class);
+    }
+
+    /**
+     * 把一个值写成规范的文字，用来比较两个值是不是相同。
+     *
+     * <p>不直接比较 JSON 树，是因为同一个数在两边的类型可能不同（一边是 int，一边是 long），
+     * 树的比较会认为它们不相等。写成文字之后只看内容。
+     */
+    public static String canon(Object value) {
+        return com.cb.agent.capability.extract.format.PyFormat.jsonSorted(value);
+    }
 }

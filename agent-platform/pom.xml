@@ -40,6 +40,12 @@
             <artifactId>jackson-databind</artifactId>
         </dependency>
 
+        <!-- YAML 解析：skill 的字段定义（schema）是用 YAML 写的。版本由 Spring Boot 管理 -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+        </dependency>
+
         <!-- 宽容的 HTML 解析：识别结果里的表格是 HTML，标签经常不规范 -->
         <dependency>
             <groupId>org.jsoup</groupId>

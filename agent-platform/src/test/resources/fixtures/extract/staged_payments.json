@@ -1,0 +1,139 @@
+{
+  "input_path": "doc.pdf",
+  "page_index": null,
+  "page_count": null,
+  "width": 1200,
+  "height": 1700,
+  "parsing_res_list": [
+    {
+      "block_id": 0,
+      "block_order": 1,
+      "group_id": 0,
+      "block_label": "paragraph_title",
+      "block_content": "第一条 定义",
+      "block_bbox": [
+        100,
+        100,
+        1100,
+        160
+      ]
+    },
+    {
+      "block_id": 1,
+      "block_order": 2,
+      "group_id": 1,
+      "block_label": "text",
+      "block_content": "本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。",
+      "block_bbox": [
+        100,
+        100,
+        1100,
+        160
+      ]
+    },
+    {
+      "block_id": 2,
+      "block_order": 3,
+      "group_id": 2,
+      "block_label": "paragraph_title",
+      "block_content": "第2条 第一期付款",
+      "block_bbox": [
+        100,
+        100,
+        1100,
+        160
+      ]
+    },
+    {
+      "block_id": 3,
+      "block_order": 4,
+      "group_id": 3,
+      "block_label": "text",
+      "block_content": "第一期款项为人民币100,000元。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。",
+      "block_bbox": [
+        100,
+        100,
+        1100,
+        160
+      ]
+    },
+    {
+      "block_id": 4,
+      "block_order": 5,
+      "group_id": 4,
+      "block_label": "paragraph_title",
+      "block_content": "第3条 第二期付款",
+      "block_bbox": [
+        100,
+        100,
+        1100,
+        160
+      ]
+    },
+    {
+      "block_id": 5,
+      "block_order": 6,
+      "group_id": 5,
+      "block_label": "text",
+      "block_content": "第二期款项为人民币200,000元。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。",
+      "block_bbox": [
+        100,
+        100,
+        1100,
+        160
+      ]
+    },
+    {
+      "block_id": 6,
+      "block_order": 7,
+      "group_id": 6,
+      "block_label": "paragraph_title",
+      "block_content": "第4条 第三期付款",
+      "block_bbox": [
+        100,
+        100,
+        1100,
+        160
+      ]
+    },
+    {
+      "block_id": 7,
+      "block_order": 8,
+      "group_id": 7,
+      "block_label": "text",
+      "block_content": "第三期款项为人民币300,000元。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。",
+      "block_bbox": [
+        100,
+        100,
+        1100,
+        160
+      ]
+    },
+    {
+      "block_id": 8,
+      "block_order": 9,
+      "group_id": 8,
+      "block_label": "paragraph_title",
+      "block_content": "第五条 其他",
+      "block_bbox": [
+        100,
+        100,
+        1100,
+        160
+      ]
+    },
+    {
+      "block_id": 9,
+      "block_order": 10,
+      "group_id": 9,
+      "block_label": "text",
+      "block_content": "本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。本节内容为一般性约定，双方应当遵守诚实信用原则，按照约定全面履行各自的义务。",
+      "block_bbox": [
+        100,
+        100,
+        1100,
+        160
+      ]
+    }
+  ]
+}

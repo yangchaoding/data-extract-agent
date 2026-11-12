@@ -2,6 +2,8 @@ package com.cb.agent.app.document;
 
 import com.cb.agent.capability.document.DocumentDump;
 import com.cb.agent.capability.document.DocumentLoader;
+import com.cb.agent.capability.document.chunk.Chunk;
+import com.cb.agent.capability.document.chunk.Chunker;
 import com.cb.agent.capability.document.model.Document;
 import org.springframework.stereotype.Service;
 
@@ -44,5 +46,15 @@ public class DocumentReadService {
     /** 把文档导出成可以直接序列化成 JSON 的结构。 */
     public Map<String, Object> dump(Document doc) {
         return DocumentDump.toMap(doc);
+    }
+
+    /**
+     * 把文档切成片。
+     *
+     * @param chunkTokens   每片的大小上限（估算的 token 数）
+     * @param contextTokens 整篇文档不超过这个大小时不切，全文就是一片
+     */
+    public List<Chunk> chunk(Document doc, int chunkTokens, int contextTokens) {
+        return Chunker.chunk(doc, chunkTokens, contextTokens);
     }
 }

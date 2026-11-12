@@ -1,0 +1,112 @@
+[
+  {
+    "text": "{\"a\": 1}",
+    "ok": true,
+    "result": {
+      "a": 1
+    }
+  },
+  {
+    "text": "  {\"a\": 1}  ",
+    "ok": true,
+    "result": {
+      "a": 1
+    }
+  },
+  {
+    "text": "```json\n{\"a\": 1}\n```",
+    "ok": true,
+    "result": {
+      "a": 1
+    }
+  },
+  {
+    "text": "```\n{\"a\": 1}\n```",
+    "ok": true,
+    "result": {
+      "a": 1
+    }
+  },
+  {
+    "text": "好的，结果如下：\n{\"a\": {\"value\": \"x\", \"evidence\": \"y\"}}\n以上。",
+    "ok": true,
+    "result": {
+      "a": {
+        "value": "x",
+        "evidence": "y"
+      }
+    }
+  },
+  {
+    "text": "<think>先想一想，{不是 JSON}</think>{\"a\": 1}",
+    "ok": true,
+    "result": {
+      "a": 1
+    }
+  },
+  {
+    "text": "<think>没有闭合 {\"a\": 1}",
+    "ok": true,
+    "result": {
+      "a": 1
+    }
+  },
+  {
+    "text": "[1, 2, 3]",
+    "ok": false,
+    "result": null
+  },
+  {
+    "text": "\"只是一个字符串\"",
+    "ok": false,
+    "result": null
+  },
+  {
+    "text": "不是 JSON",
+    "ok": false,
+    "result": null
+  },
+  {
+    "text": "",
+    "ok": false,
+    "result": null
+  },
+  {
+    "text": "{\"a\": 1} {\"b\": 2}",
+    "ok": false,
+    "result": null
+  },
+  {
+    "text": "{\"a\": [1, 2, {\"b\": null}], \"c\": 1.5, \"d\": true, \"e\": \"中文\"}",
+    "ok": true,
+    "result": {
+      "a": [
+        1,
+        2,
+        {
+          "b": null
+        }
+      ],
+      "c": 1.5,
+      "d": true,
+      "e": "中文"
+    }
+  },
+  {
+    "text": "{\"a\": 1,}",
+    "ok": false,
+    "result": null
+  },
+  {
+    "text": "第一个 {\"a\": 1} 第二个 {\"b\": 2}",
+    "ok": false,
+    "result": null
+  },
+  {
+    "text": "{\"a\": \"值里有 } 括号\"}",
+    "ok": true,
+    "result": {
+      "a": "值里有 } 括号"
+    }
+  }
+]

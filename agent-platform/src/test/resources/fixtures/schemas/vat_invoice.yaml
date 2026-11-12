@@ -1,0 +1,100 @@
+# 增值税发票的抽取 schema 示例。
+# 票据只有一两页，整张不切片，一次调用抽完所有字段。
+
+name: vat_invoice
+description: 增值税发票
+fields:
+  - name: invoice_code
+    title: 发票代码
+    hints: [发票代码]
+
+  - name: invoice_no
+    title: 发票号码
+    required: true
+    hints: [发票号码]
+
+  - name: issue_date
+    title: 开票日期
+    type: date
+    required: true
+    hints: [开票日期]
+
+  - name: buyer_name
+    title: 购买方名称
+    required: true
+    hints: [购买方, 购方, 名称]
+
+  - name: buyer_tax_id
+    title: 购买方纳税人识别号
+    description: 统一社会信用代码或纳税人识别号
+    hints: [纳税人识别号, 统一社会信用代码]
+
+  - name: seller_name
+    title: 销售方名称
+    required: true
+    hints: [销售方, 销方, 名称]
+
+  - name: seller_tax_id
+    title: 销售方纳税人识别号
+    description: 统一社会信用代码或纳税人识别号
+    hints: [纳税人识别号, 统一社会信用代码]
+
+  - name: items
+    title: 货物或服务明细
+    type: list
+    description: 明细表里的每一行，不包括"合计"行
+    hints: [货物或应税劳务, 服务名称, 项目名称, 规格型号]
+    fields:
+      - name: name
+        title: 项目名称
+        required: true
+      - name: spec
+        title: 规格型号
+      - name: unit
+        title: 单位
+      - name: quantity
+        title: 数量
+        type: number
+      - name: unit_price
+        title: 单价
+        type: number
+      - name: amount
+        title: 金额
+        type: number
+        unit: 元
+        description: 不含税金额
+      - name: tax_rate
+        title: 税率
+        type: number
+        unit: "%"
+      - name: tax
+        title: 税额
+        type: number
+
+  - name: total_amount
+    title: 合计金额
+    type: number
+    unit: 元
+    description: 不含税的合计金额
+    hints: [合计, 金额]
+
+  - name: total_tax
+    title: 合计税额
+    type: number
+    hints: [合计, 税额]
+
+  - name: total_with_tax
+    title: 价税合计
+    type: number
+    unit: 元
+    required: true
+    description: 价税合计的小写金额
+    hints: [价税合计, 小写]
+
+  - name: drawer
+    title: 开票人
+    hints: [开票人]
+
+  - name: remarks
+    title: 备注
+    hints: [备注]

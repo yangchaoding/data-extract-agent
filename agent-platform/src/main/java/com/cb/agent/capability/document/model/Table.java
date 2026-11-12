@@ -224,6 +224,15 @@ public final class Table {
         return ranges;
     }
 
+    /**
+     * 第 {@code rowIndex} 行渲染成管道表的一行。用来判断一段证据引的是表格的哪一行。
+     *
+     * @param rowIndex 行号，从 0 开始，包括表头在内
+     */
+    public String renderRow(int rowIndex) {
+        return formatRow(rows.get(rowIndex));
+    }
+
     /** 一行渲染成 {@code | a | b |}。空单元格写一个空格，免得两条竖线贴在一起。 */
     private static String formatRow(List<String> row) {
         List<String> cells = new ArrayList<>(row.size());

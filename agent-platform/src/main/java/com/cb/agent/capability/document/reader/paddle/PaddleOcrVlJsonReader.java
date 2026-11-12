@@ -4,6 +4,7 @@ import com.cb.agent.capability.document.model.Block;
 import com.cb.agent.capability.document.model.BlockKind;
 import com.cb.agent.capability.document.model.Document;
 import com.cb.agent.capability.document.model.IngestReport;
+import com.cb.agent.capability.document.model.LeadIn;
 import com.cb.agent.capability.document.model.PageInfo;
 import com.cb.agent.capability.document.model.PixelBox;
 import com.cb.agent.capability.document.model.Table;
@@ -82,10 +83,6 @@ public final class PaddleOcrVlJsonReader implements DocumentReader {
     // ---- 用到的正则 ---------------------------------------------------------------------
 
     private static final int FLAGS = Pattern.UNICODE_CHARACTER_CLASS | Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE;
-    /** 单独成行的单位说明："单位：万元"、"币种：人民币"。 */
-    private static final Pattern UNIT_LINE = Pattern.compile("单位\\s*[:：为]|币种\\s*[:：]|\\bunit\\s*[:：]", FLAGS);
-    /** 表号："表3"、"续表2"、"附表一"、"Table 1"。 */
-    private static final Pattern TABLE_NO = Pattern.compile("^(?:续?表|附表|table)\\s*[\\d一二三四五六七八九十]", FLAGS);
     /** "续表"字样：下一页表格上方常见的提示。 */
     private static final Pattern CONTINUED = Pattern.compile("续上?表|[（(]\\s*续\\s*[)）]|^续$|continued|cont['’‘]d", FLAGS);
     /** Markdown 的标题写法：开头的一到六个 #。 */
@@ -476,8 +473,8 @@ public final class PaddleOcrVlJsonReader implements DocumentReader {
     private static boolean looksLikeTitle(String content) {
         String text = TextNorm.oneLine(PlainText.of(content));
         return !text.isEmpty() && TextNorm.length(text) <= 60
-                && !TABLE_NO.matcher(text).find()
-                && !UNIT_LINE.matcher(text).find()
+                && !LeadIn.TABLE_NO.matcher(text).find()
+                && !LeadIn.UNIT_LINE.matcher(text).find()
                 && !CONTINUED.matcher(text).find();
     }
 
@@ -486,11 +483,7 @@ public final class PaddleOcrVlJsonReader implements DocumentReader {
      * 它们说的是紧跟在后面的那个块，要和后面的内容放在一起。
      */
     private static boolean isLeadIn(Draft block) {
-        if (block.kind == BlockKind.CAPTION) {
-            return true;
-        }
-        return block.kind == BlockKind.TEXT && block.tokens <= 40
-                && (UNIT_LINE.matcher(block.text).find() || TABLE_NO.matcher(block.text).find());
+        return LeadIn.is(block.kind, block.tokens, block.text);
     }
 
     /** 页首、表格之前的题注和说明，不算正文。对应 {@code _is_head_note}。 */

@@ -1,0 +1,1743 @@
+{
+  "numbers": [
+    {
+      "raw": 1280000,
+      "value": "1280000",
+      "scale": null,
+      "readable": true
+    },
+    {
+      "raw": 1234.56,
+      "value": "1234.56",
+      "scale": null,
+      "readable": true
+    },
+    {
+      "raw": 0.05,
+      "value": "0.05",
+      "scale": null,
+      "readable": true
+    },
+    {
+      "raw": -3,
+      "value": "-3",
+      "scale": null,
+      "readable": true
+    },
+    {
+      "raw": true,
+      "value": null,
+      "scale": null,
+      "readable": false
+    },
+    {
+      "raw": false,
+      "value": null,
+      "scale": null,
+      "readable": false
+    },
+    {
+      "raw": null,
+      "value": null,
+      "scale": null,
+      "readable": false
+    },
+    {
+      "raw": "1,280,000.00元",
+      "value": "1280000.00",
+      "scale": 1,
+      "readable": true
+    },
+    {
+      "raw": "1234.56万元",
+      "value": "1234.56",
+      "scale": 10000,
+      "readable": true
+    },
+    {
+      "raw": "6%",
+      "value": "6",
+      "scale": 1,
+      "readable": true
+    },
+    {
+      "raw": "百分之六",
+      "value": "6",
+      "scale": null,
+      "readable": true
+    },
+    {
+      "raw": "千分之三",
+      "value": "3",
+      "scale": null,
+      "readable": true
+    },
+    {
+      "raw": "(1,234.56)",
+      "value": "-1234.56",
+      "scale": null,
+      "readable": true
+    },
+    {
+      "raw": "（1,234.56）",
+      "value": "-1234.56",
+      "scale": null,
+      "readable": true
+    },
+    {
+      "raw": "1,234.56（万元）",
+      "value": "1234.56",
+      "scale": 10000,
+      "readable": true
+    },
+    {
+      "raw": "-500",
+      "value": "-500",
+      "scale": null,
+      "readable": true
+    },
+    {
+      "raw": "+7.5",
+      "value": "7.5",
+      "scale": null,
+      "readable": true
+    },
+    {
+      "raw": "5亿元",
+      "value": "5",
+      "scale": 100000000,
+      "readable": true
+    },
+    {
+      "raw": "3.2亿",
+      "value": "3.2",
+      "scale": 100000000,
+      "readable": true
+    },
+    {
+      "raw": "5千元",
+      "value": "5",
+      "scale": 1000,
+      "readable": true
+    },
+    {
+      "raw": "3千克",
+      "value": "3",
+      "scale": 1,
+      "readable": true
+    },
+    {
+      "raw": "12个月",
+      "value": "12",
+      "scale": 1,
+      "readable": true
+    },
+    {
+      "raw": "壹佰贰拾捌万元整",
+      "value": "1280000",
+      "scale": 1,
+      "readable": true
+    },
+    {
+      "raw": "一百二十",
+      "value": "120",
+      "scale": null,
+      "readable": true
+    },
+    {
+      "raw": "三千五百万",
+      "value": "35000000",
+      "scale": 1,
+      "readable": true
+    },
+    {
+      "raw": "二亿三千万",
+      "value": "230000000",
+      "scale": 1,
+      "readable": true
+    },
+    {
+      "raw": "二〇二四",
+      "value": "2024",
+      "scale": null,
+      "readable": true
+    },
+    {
+      "raw": "十五",
+      "value": "15",
+      "scale": null,
+      "readable": true
+    },
+    {
+      "raw": "人民币100万元",
+      "value": "100",
+      "scale": 10000,
+      "readable": true
+    },
+    {
+      "raw": "RMB 50 million",
+      "value": "50",
+      "scale": 1000000,
+      "readable": true
+    },
+    {
+      "raw": "1.5 billion",
+      "value": "1.5",
+      "scale": 1000000000,
+      "readable": true
+    },
+    {
+      "raw": "约 300 万",
+      "value": "300",
+      "scale": 10000,
+      "readable": true
+    },
+    {
+      "raw": "abc",
+      "value": null,
+      "scale": null,
+      "readable": false
+    },
+    {
+      "raw": "",
+      "value": null,
+      "scale": null,
+      "readable": false
+    },
+    {
+      "raw": "１２３４．５６",
+      "value": "1234.56",
+      "scale": null,
+      "readable": true
+    },
+    {
+      "raw": "1e5",
+      "value": "1",
+      "scale": 1,
+      "readable": true
+    },
+    {
+      "raw": "12,34",
+      "value": "12",
+      "scale": null,
+      "readable": true
+    },
+    {
+      "raw": "1,234,567",
+      "value": "1234567",
+      "scale": null,
+      "readable": true
+    },
+    {
+      "raw": "0.5‰",
+      "value": "0.5",
+      "scale": 1,
+      "readable": true
+    },
+    {
+      "raw": "两千",
+      "value": "2000",
+      "scale": null,
+      "readable": true
+    },
+    {
+      "raw": "一万零五百",
+      "value": "10500",
+      "scale": 1,
+      "readable": true
+    }
+  ],
+  "units": [
+    {
+      "unit": "元",
+      "scale": 1
+    },
+    {
+      "unit": "万元",
+      "scale": 10000
+    },
+    {
+      "unit": "亿元",
+      "scale": 100000000
+    },
+    {
+      "unit": "百万元",
+      "scale": 1000000
+    },
+    {
+      "unit": "千元",
+      "scale": 1000
+    },
+    {
+      "unit": "千克",
+      "scale": 1
+    },
+    {
+      "unit": "千米",
+      "scale": 1
+    },
+    {
+      "unit": "%",
+      "scale": 1
+    },
+    {
+      "unit": "‰",
+      "scale": 1
+    },
+    {
+      "unit": "人民币万元",
+      "scale": 10000
+    },
+    {
+      "unit": "RMB万元",
+      "scale": 10000
+    },
+    {
+      "unit": "美元",
+      "scale": 1
+    },
+    {
+      "unit": "百万美元",
+      "scale": 1000000
+    },
+    {
+      "unit": "万股",
+      "scale": 10000
+    },
+    {
+      "unit": "股",
+      "scale": 1
+    },
+    {
+      "unit": "",
+      "scale": null
+    },
+    {
+      "unit": "（万元）",
+      "scale": null
+    },
+    {
+      "unit": "million",
+      "scale": 1000000
+    },
+    {
+      "unit": "Billion USD",
+      "scale": 1000000000
+    },
+    {
+      "unit": "thousand",
+      "scale": 1000
+    },
+    {
+      "unit": "个月",
+      "scale": 1
+    },
+    {
+      "unit": "万",
+      "scale": 10000
+    },
+    {
+      "unit": "亿",
+      "scale": 100000000
+    },
+    {
+      "unit": "十万",
+      "scale": 100000
+    },
+    {
+      "unit": "千万",
+      "scale": 10000000
+    },
+    {
+      "unit": "百亿",
+      "scale": 10000000000
+    },
+    {
+      "unit": "千亿",
+      "scale": 100000000000
+    },
+    {
+      "unit": "万亿",
+      "scale": 1000000000000
+    },
+    {
+      "unit": "十亿",
+      "scale": 1000000000
+    },
+    {
+      "unit": "千港元",
+      "scale": 1000
+    },
+    {
+      "unit": "  元 ",
+      "scale": 1
+    },
+    {
+      "unit": "元/股",
+      "scale": 1
+    }
+  ],
+  "cn": [
+    {
+      "text": "二〇二四年三月十五日",
+      "arabic": "2024年3月15日"
+    },
+    {
+      "text": "二○二四年",
+      "arabic": "2024年"
+    },
+    {
+      "text": "十五",
+      "arabic": "15"
+    },
+    {
+      "text": "三十",
+      "arabic": "30"
+    },
+    {
+      "text": "三十五",
+      "arabic": "35"
+    },
+    {
+      "text": "十",
+      "arabic": "10"
+    },
+    {
+      "text": "二O二四",
+      "arabic": "2024"
+    },
+    {
+      "text": "一百二十",
+      "arabic": "1百20"
+    },
+    {
+      "text": "壹佰贰拾捌万",
+      "arabic": "壹佰贰拾捌万"
+    },
+    {
+      "text": "三千五百万",
+      "arabic": "3千5百万"
+    },
+    {
+      "text": "二亿三千万",
+      "arabic": "2亿3千万"
+    },
+    {
+      "text": "两千",
+      "arabic": "两千"
+    },
+    {
+      "text": "一万零五百",
+      "arabic": "1万05百"
+    },
+    {
+      "text": "五",
+      "arabic": "5"
+    },
+    {
+      "text": "百",
+      "arabic": "百"
+    },
+    {
+      "text": "千万",
+      "arabic": "千万"
+    },
+    {
+      "text": "三十五十",
+      "arabic": "三十五十"
+    },
+    {
+      "text": "一二三",
+      "arabic": "123"
+    },
+    {
+      "text": "零",
+      "arabic": "0"
+    },
+    {
+      "text": "〇",
+      "arabic": "0"
+    }
+  ],
+  "cn_amounts": [
+    {
+      "text": "一百二十",
+      "parsed": 120
+    },
+    {
+      "text": "壹佰贰拾捌万",
+      "parsed": 1280000
+    },
+    {
+      "text": "三千五百万",
+      "parsed": 35000000
+    },
+    {
+      "text": "二亿三千万",
+      "parsed": 230000000
+    },
+    {
+      "text": "两千",
+      "parsed": 2000
+    },
+    {
+      "text": "一万零五百",
+      "parsed": 10500
+    },
+    {
+      "text": "五",
+      "parsed": null
+    },
+    {
+      "text": "百",
+      "parsed": 100
+    },
+    {
+      "text": "千万",
+      "parsed": 10000000
+    },
+    {
+      "text": "十",
+      "parsed": 10
+    },
+    {
+      "text": "三十五",
+      "parsed": 35
+    },
+    {
+      "text": "零",
+      "parsed": null
+    },
+    {
+      "text": "〇",
+      "parsed": null
+    },
+    {
+      "text": "二〇二四",
+      "parsed": null
+    },
+    {
+      "text": "万",
+      "parsed": null
+    },
+    {
+      "text": "亿",
+      "parsed": null
+    },
+    {
+      "text": "一亿",
+      "parsed": 100000000
+    },
+    {
+      "text": "十万",
+      "parsed": 100000
+    },
+    {
+      "text": "拾",
+      "parsed": 10
+    },
+    {
+      "text": "壹仟零伍拾",
+      "parsed": 1050
+    },
+    {
+      "text": "九千九百九十九万九千九百九十九",
+      "parsed": 99999999
+    }
+  ],
+  "dates": [
+    {
+      "raw": "2024-03-18",
+      "parsed": "2024-03-18"
+    },
+    {
+      "raw": "2024年3月18日",
+      "parsed": "2024-03-18"
+    },
+    {
+      "raw": "2024/3/18",
+      "parsed": "2024-03-18"
+    },
+    {
+      "raw": "2024.03.18",
+      "parsed": "2024-03-18"
+    },
+    {
+      "raw": "20240318",
+      "parsed": "2024-03-18"
+    },
+    {
+      "raw": "2024年3月",
+      "parsed": "2024-03"
+    },
+    {
+      "raw": "2024-03",
+      "parsed": "2024-03"
+    },
+    {
+      "raw": "2024",
+      "parsed": "2024"
+    },
+    {
+      "raw": "2024年",
+      "parsed": "2024"
+    },
+    {
+      "raw": "二〇二四年三月十八日",
+      "parsed": "2024-03-18"
+    },
+    {
+      "raw": "18/03/2024",
+      "parsed": "2024-03-18"
+    },
+    {
+      "raw": "03/18/2024",
+      "parsed": "2024-03-18"
+    },
+    {
+      "raw": "03/04/2024",
+      "parsed": null
+    },
+    {
+      "raw": "下个月",
+      "parsed": null
+    },
+    {
+      "raw": "",
+      "parsed": null
+    },
+    {
+      "raw": "2024-13-01",
+      "parsed": null
+    },
+    {
+      "raw": "2024-02-30",
+      "parsed": "2024-02-30"
+    },
+    {
+      "raw": "2024年3月18日至2025年3月17日",
+      "parsed": "2024-03-18"
+    },
+    {
+      "raw": 20240318,
+      "parsed": "2024-03-18"
+    },
+    {
+      "raw": "签订于 2024年3月18日",
+      "parsed": "2024-03-18"
+    },
+    {
+      "raw": "2024 年 3 月 18 日",
+      "parsed": "2024-03-18"
+    }
+  ],
+  "date_in": [
+    {
+      "value": "2024-03-18",
+      "evidence": "签订日期：2024年3月18日",
+      "result": true
+    },
+    {
+      "value": "2024-03-19",
+      "evidence": "签订日期：2024年3月18日",
+      "result": false
+    },
+    {
+      "value": "2024-12-31",
+      "evidence": "自2024年4月1日起至12月31日止",
+      "result": true
+    },
+    {
+      "value": "2025-04-01",
+      "evidence": "自2024年4月1日起至2025年3月31日止",
+      "result": false
+    },
+    {
+      "value": "2024-04-01",
+      "evidence": "自2024年4月1日起至2025年3月31日止",
+      "result": true
+    },
+    {
+      "value": "2024-03",
+      "evidence": "2024年3月18日",
+      "result": true
+    },
+    {
+      "value": "2024-03",
+      "evidence": "2024年3月",
+      "result": true
+    },
+    {
+      "value": "2024-04",
+      "evidence": "2024年3月18日",
+      "result": false
+    },
+    {
+      "value": "2024",
+      "evidence": "2024年度报告",
+      "result": true
+    },
+    {
+      "value": "2025",
+      "evidence": "2024年度报告",
+      "result": false
+    },
+    {
+      "value": "2024-03-18",
+      "evidence": "March 18, 2024",
+      "result": true
+    },
+    {
+      "value": "2024-03-18",
+      "evidence": "24年3月18日",
+      "result": true
+    },
+    {
+      "value": "2024-03-18",
+      "evidence": "18/03/2024",
+      "result": true
+    },
+    {
+      "value": "2024-03-18",
+      "evidence": "二〇二四年三月十八日",
+      "result": true
+    },
+    {
+      "value": "2024-03-18",
+      "evidence": "20240318",
+      "result": true
+    },
+    {
+      "value": "2024-03-18",
+      "evidence": "没有日期的一句话",
+      "result": false
+    },
+    {
+      "value": "不是日期",
+      "evidence": "2024年3月18日",
+      "result": false
+    },
+    {
+      "value": "2024-03-18",
+      "evidence": "2024年，3月18日开会",
+      "result": true
+    },
+    {
+      "value": "2024-05-20",
+      "evidence": "时间：2024年5月20日（星期一）上午9:00",
+      "result": true
+    }
+  ],
+  "read": [
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "1,280,000.00元",
+      "evidence": "含税总价为人民币1,280,000.00元",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 1280000,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "128万元",
+      "evidence": "合同总价为128万元",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 1280000,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": 1280000,
+      "evidence": "含税总价为人民币1,280,000.00元",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 1280000,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "1280000",
+      "evidence": "合同总价为128万元",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 1280000,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "129万元",
+      "evidence": "合同总价为128万元",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 1290000,
+      "issues": [
+        "evidence 里没有 129 这个数。数字要照原文写，后面带上原文的单位（例如 1234.56万元），换算由程序来做，不要自己乘除"
+      ]
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "1290000",
+      "evidence": "合同总价为128万元",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 1290000,
+      "issues": [
+        "evidence 里没有 1290000 这个数。数字要照原文写，后面带上原文的单位（例如 1234.56万元），换算由程序来做，不要自己乘除"
+      ]
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "万元"
+      },
+      "raw": "12,345.67",
+      "evidence": "| 营业收入 | 12,345.67 | 10,000.00 |",
+      "chunk": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "block": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "lead": [
+        "单位：万元"
+      ],
+      "value": 12345.67,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "12,345.67",
+      "evidence": "| 营业收入 | 12,345.67 | 10,000.00 |",
+      "chunk": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "block": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "lead": [
+        "单位：万元"
+      ],
+      "value": 123456700,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "12,345.67",
+      "evidence": "| 营业收入 | 12,345.67 | 10,000.00 |",
+      "chunk": "| 项目 | 本期金额(万元) | 上期金额(万元) |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "block": "| 项目 | 本期金额(万元) | 上期金额(万元) |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "lead": [],
+      "value": 123456700,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "12,345.67万元",
+      "evidence": "| 营业收入 | 12,345.67 | 10,000.00 |",
+      "chunk": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "block": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "lead": [
+        "单位：万元"
+      ],
+      "value": 123456700,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "12,345.67元",
+      "evidence": "| 营业收入 | 12,345.67 | 10,000.00 |",
+      "chunk": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "block": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "lead": [
+        "单位：万元"
+      ],
+      "value": 123456700,
+      "issues": [
+        "这个数的单位和原文注明的不一样。数字后面的单位要照原文写"
+      ]
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "12,345.67",
+      "evidence": "| 营业收入 | 12,345.67 | 10,000.00 |",
+      "chunk": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "block": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "lead": [
+        "下表金额均以万元列示"
+      ],
+      "value": 123456700,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "12,345.67",
+      "evidence": "| 营业收入 | 12,345.67 | 10,000.00 |",
+      "chunk": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "block": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "lead": [],
+      "value": 12345.67,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number"
+      },
+      "raw": "12,345.67",
+      "evidence": "| 营业收入 | 12,345.67 | 10,000.00 |",
+      "chunk": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "block": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "lead": [
+        "单位：万元"
+      ],
+      "value": 12345.67,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "12,345.67",
+      "evidence": "| 营业收入 | 12,345.67 | 10,000.00 |",
+      "chunk": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "block": "| 项目 | 本期 | 上期 |\n| --- | --- | --- |\n| 营业收入 | 12,345.67 | 10,000.00 |",
+      "lead": [
+        "单位：万股"
+      ],
+      "value": 12345.67,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "5亿元",
+      "evidence": "注册资本5亿元",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 500000000,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "5亿元",
+      "evidence": "注册资本5元",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 5,
+      "issues": [
+        "这个数的单位和原文注明的不一样。数字后面的单位要照原文写"
+      ]
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "5亿元",
+      "evidence": "注册资本为 5，另见附注",
+      "chunk": "注册资本为 5，另见附注",
+      "block": null,
+      "lead": [],
+      "value": 500000000,
+      "issues": [
+        "原文里找不到这个单位的依据。单位要照原文写，原文没有写单位的只写数字"
+      ]
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number"
+      },
+      "raw": "6%",
+      "evidence": "增值税税率为6%",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 6,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "%"
+      },
+      "raw": "6%",
+      "evidence": "增值税税率为6%",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 6,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "%"
+      },
+      "raw": "百分之六",
+      "evidence": "税率为百分之六",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 6,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "%"
+      },
+      "raw": "0.05%",
+      "evidence": "每逾期一日按合同总价的0.05%支付",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 0.05,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "integer"
+      },
+      "raw": "12个月",
+      "evidence": "合同期限12个月",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 12,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "integer"
+      },
+      "raw": "12.5",
+      "evidence": "数量12.5个",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 12.5,
+      "issues": [
+        "12.5 不是整数"
+      ]
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number"
+      },
+      "raw": "abc",
+      "evidence": "没有数字",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": "abc",
+      "issues": [
+        "'abc' 不是数字"
+      ]
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number"
+      },
+      "raw": true,
+      "evidence": "数量为 1",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": true,
+      "issues": [
+        "True 不是数字"
+      ]
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "1,234.56",
+      "evidence": "| 净利润 | (1,234.56) |",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 1234.56,
+      "issues": [
+        "evidence 里这个数是负数（带负号，或者用括号括着），值也要写成负数"
+      ]
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "(1,234.56)",
+      "evidence": "| 净利润 | (1,234.56) |",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": -1234.56,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "-500",
+      "evidence": "亏损 -500 元",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": -500,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "500",
+      "evidence": "亏损 -500 元",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 500,
+      "issues": [
+        "evidence 里这个数是负数（带负号，或者用括号括着），值也要写成负数"
+      ]
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "壹佰贰拾捌万元整",
+      "evidence": "（大写：壹佰贰拾捌万元整）",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 1280000,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "1280000",
+      "evidence": "（大写：壹佰贰拾捌万元整）",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 1280000,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "1,000元",
+      "evidence": "",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 1000,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": 3.5,
+      "evidence": "单价3.5元",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 3.5,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "万元"
+      },
+      "raw": "1280000元",
+      "evidence": "总价1,280,000元",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 128,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "100",
+      "evidence": "收入100万元，成本100元",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 100,
+      "issues": [
+        "原文里注明的单位不止一种，这个数却没有带单位。请在数字后面写上它在原文里的单位"
+      ]
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "5千元",
+      "evidence": "奖金5千元",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 5000,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number"
+      },
+      "raw": "3千克",
+      "evidence": "重量3千克",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 3,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "number",
+        "unit": "元"
+      },
+      "raw": "2024",
+      "evidence": "二〇二四年度拨款",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": 2024,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "date"
+      },
+      "raw": "2024-03-18",
+      "evidence": "签订日期：2024年3月18日",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": "2024-03-18",
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "date"
+      },
+      "raw": "2024年3月18日",
+      "evidence": "签订日期：2024年3月18日",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": "2024-03-18",
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "date"
+      },
+      "raw": "2024-03-19",
+      "evidence": "签订日期：2024年3月18日",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": "2024-03-19",
+      "issues": [
+        "日期 2024-03-19 和 evidence 里的日期对不上"
+      ]
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "date"
+      },
+      "raw": "2025-04-01",
+      "evidence": "自2024年4月1日起至2025年3月31日止",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": "2025-04-01",
+      "issues": [
+        "日期 2025-04-01 和 evidence 里的日期对不上"
+      ]
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "date"
+      },
+      "raw": "下个月",
+      "evidence": "下个月交付",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": "下个月",
+      "issues": [
+        "'下个月' 不是日期，日期要写成 YYYY-MM-DD"
+      ]
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "date"
+      },
+      "raw": "2024-03-18",
+      "evidence": "",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": "2024-03-18",
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "boolean"
+      },
+      "raw": "是",
+      "evidence": "是否含税：是",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": true,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "boolean"
+      },
+      "raw": true,
+      "evidence": "是否含税：是",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": true,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "boolean"
+      },
+      "raw": "maybe",
+      "evidence": "是否含税：不确定",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": "maybe",
+      "issues": [
+        "'maybe' 不是 true 或 false"
+      ]
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "boolean"
+      },
+      "raw": 0,
+      "evidence": "0",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": false,
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "enum",
+        "options": [
+          "诉讼",
+          "仲裁"
+        ]
+      },
+      "raw": "仲裁",
+      "evidence": "提交杭州仲裁委员会",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": "仲裁",
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "enum",
+        "options": [
+          "诉讼",
+          "仲裁"
+        ]
+      },
+      "raw": " 仲 裁 ",
+      "evidence": "提交杭州仲裁委员会",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": "仲裁",
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "type": "enum",
+        "options": [
+          "诉讼",
+          "仲裁"
+        ]
+      },
+      "raw": "调解",
+      "evidence": "协商调解",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": "调解",
+      "issues": [
+        "'调解' 不在可选项 ['诉讼', '仲裁'] 中"
+      ]
+    },
+    {
+      "field": {
+        "name": "a"
+      },
+      "raw": "星河智造科技有限公司",
+      "evidence": "甲方（委托方）：星河智造科技有限公司",
+      "chunk": "甲方（委托方）：星河智造科技有限公司\n乙方（受托方）：青岚软件技术有限公司\n争议提交杭州仲裁委员会。甲方应支付违约金。",
+      "block": null,
+      "lead": [],
+      "value": "星河智造科技有限公司",
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a"
+      },
+      "raw": "星河智造有限公司",
+      "evidence": "甲方（委托方）：星河智造科技有限公司",
+      "chunk": "甲方（委托方）：星河智造科技有限公司\n乙方（受托方）：青岚软件技术有限公司\n争议提交杭州仲裁委员会。甲方应支付违约金。",
+      "block": null,
+      "lead": [],
+      "value": "星河智造有限公司",
+      "issues": [
+        "值 '星河智造有限公司' 不是原文里的文字，string 的值要照抄原文"
+      ]
+    },
+    {
+      "field": {
+        "name": "a"
+      },
+      "raw": "杭州仲裁委员会",
+      "evidence": "甲方应支付违约金",
+      "chunk": "甲方（委托方）：星河智造科技有限公司\n乙方（受托方）：青岚软件技术有限公司\n争议提交杭州仲裁委员会。甲方应支付违约金。",
+      "block": null,
+      "lead": [],
+      "value": "杭州仲裁委员会",
+      "issues": [
+        "evidence 里没有值 '杭州仲裁委员会'，evidence 要摘抄这个值所在的那句原文"
+      ]
+    },
+    {
+      "field": {
+        "name": "a"
+      },
+      "raw": "星河智造科技有限公司",
+      "evidence": "甲方（委托方）：星河智造科技有限公司",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": "星河智造科技有限公司",
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a",
+        "verbatim": false
+      },
+      "raw": "逾期按日支付违约金",
+      "evidence": "甲方应支付违约金",
+      "chunk": "甲方（委托方）：星河智造科技有限公司\n乙方（受托方）：青岚软件技术有限公司\n争议提交杭州仲裁委员会。甲方应支付违约金。",
+      "block": null,
+      "lead": [],
+      "value": "逾期按日支付违约金",
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a"
+      },
+      "raw": {
+        "x": 1
+      },
+      "evidence": "随便",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": {
+        "x": 1
+      },
+      "issues": [
+        "应该是一个字符串"
+      ]
+    },
+    {
+      "field": {
+        "name": "a"
+      },
+      "raw": [
+        "a"
+      ],
+      "evidence": "随便",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": [
+        "a"
+      ],
+      "issues": [
+        "应该是一个字符串"
+      ]
+    },
+    {
+      "field": {
+        "name": "a"
+      },
+      "raw": 47,
+      "evidence": "年龄 47",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": "47",
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a"
+      },
+      "raw": "  前后有空白  ",
+      "evidence": "前后有空白",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": "前后有空白",
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a"
+      },
+      "raw": "6222021234567890123",
+      "evidence": "账号：6222 0212 3456 7890 123",
+      "chunk": null,
+      "block": null,
+      "lead": [],
+      "value": "6222021234567890123",
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a"
+      },
+      "raw": "第一句。第二句。第三句。",
+      "evidence": "第一句。...第三句。",
+      "chunk": "第一句。第二句。第三句。",
+      "block": null,
+      "lead": [],
+      "value": "第一句。第二句。第三句。",
+      "issues": []
+    },
+    {
+      "field": {
+        "name": "a"
+      },
+      "raw": "无",
+      "evidence": "奖惩情况 | 无",
+      "chunk": "| 奖惩情况 | 无 |",
+      "block": null,
+      "lead": [],
+      "value": "无",
+      "issues": []
+    }
+  ],
+  "locate_chunks": [
+    "第一条 甲方应于合同签订后十日内支付首期款。",
+    "第二条 乙方应按期交付。违约金为合同总价的5%。",
+    "| 项目 | 金额 |\n| --- | --- |\n| 首期款 | 384,000.00 |"
+  ],
+  "locate": [
+    {
+      "evidence": "甲方应于合同签订后十日内支付首期款",
+      "claimed": 0,
+      "home": 0,
+      "issues": []
+    },
+    {
+      "evidence": "甲方应于合同签订后十日内支付首期款",
+      "claimed": 1,
+      "home": 0,
+      "issues": []
+    },
+    {
+      "evidence": "甲方应于合同签订后十日内支付首期款",
+      "claimed": null,
+      "home": 0,
+      "issues": []
+    },
+    {
+      "evidence": "违约金为合同总价的5%",
+      "claimed": null,
+      "home": 1,
+      "issues": []
+    },
+    {
+      "evidence": "违约金为合同总价的6%",
+      "claimed": 1,
+      "home": 1,
+      "issues": [
+        "evidence 必须逐字摘抄原文，一个字、一个数都不能改；片段里找不到这一段：违约金为合同总价的6%"
+      ]
+    },
+    {
+      "evidence": "| 项目 | 金额 |\n| 首期款 | 384,000.00 |",
+      "claimed": 2,
+      "home": 2,
+      "issues": []
+    },
+    {
+      "evidence": "乙方应按期交付...| 首期款 | 384,000.00 |",
+      "claimed": 1,
+      "home": 2,
+      "issues": []
+    },
+    {
+      "evidence": "完全无关的一句话，哪个片段里都没有",
+      "claimed": 0,
+      "home": 0,
+      "issues": [
+        "evidence 必须逐字摘抄原文，一个字、一个数都不能改；片段里找不到这一段：完全无关的一句话，哪个片段里都没有"
+      ]
+    },
+    {
+      "evidence": "",
+      "claimed": 0,
+      "home": 0,
+      "issues": [
+        "没有给出 evidence"
+      ]
+    },
+    {
+      "evidence": "，。",
+      "claimed": null,
+      "home": null,
+      "issues": [
+        "没有给出 evidence"
+      ]
+    },
+    {
+      "evidence": "甲方应于合同签订后十五日内支付首期款",
+      "claimed": null,
+      "home": 0,
+      "issues": [
+        "evidence 必须逐字摘抄原文，一个字、一个数都不能改；片段里找不到这一段：甲方应于合同签订后十五日内支付首期款"
+      ]
+    }
+  ]
+}
