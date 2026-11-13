@@ -6,13 +6,69 @@ spring:
     # 命令行方式运行时不需要启动横幅和"Starting… / Started…"这两行启动日志
     banner-mode: "off"
     log-startup-info: false
+  servlet:
+    multipart:
+      # 表单上传的大小不在这里限制，由下面 agent.api 的几项统一管：那边报出来的原因更清楚
+      # （是哪个文件、有多大、上限是多少）。整个请求的大小在读之前就按 Content-Length 拦过了
+      max-file-size: -1
+      max-request-size: -1
 
 logging:
   level:
     root: warn
     com.cb.agent: info
 
+# ---- 下面 server、management 两段只在作为服务运行时（serve）起作用 ----
+server:
+  # 在哪个地址上监听。默认只在本机：别的机器连不进来，所以可以不配令牌。
+  # 要让别的机器调用时改成这台机器的地址（或者 0.0.0.0 表示所有网卡），这时必须同时配上 agent.api.token，
+  # 否则服务拒绝启动：没有令牌的话，网络上任何能连到这个端口的人都能提交文档、取走结果
+  address: ${AGENT_SERVER_ADDRESS:127.0.0.1}
+  port: ${AGENT_SERVER_PORT:8080}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        # 开两个：/actuator/health 健康检查，/actuator/metrics 指标。它们不用令牌，里面只有数，没有文档的内容
+        include: health,metrics
+  endpoint:
+    health:
+      # 带上细节：排队和处理中的文档数、模型调用的情况、存储所在的盘还剩多少
+      show-details: always
+  health:
+    diskspace:
+      # 自带的磁盘检查看的是程序的当前目录，不一定是存任务的那个盘；由 tasks 那一项代替
+      enabled: false
+
 agent:
+  # HTTP 接口
+  api:
+    # 令牌。配了之后，/api/ 下的请求都要带 Authorization: Bearer <令牌>。留空表示不检查，只在本机监听时可以留空。
+    # 不要把真的令牌写在这个文件里，用环境变量给
+    token: ${AGENT_API_TOKEN:}
+    # 一次请求里能交来多少东西。识别结果一页十几 KB，正常的请求离这些上限很远，设上限是为了挡住写错了的和恶意的请求
+    max-documents: 20            # 最多几份文档（几组文件）
+    max-files: 200               # 最多几个文件，各份文档加在一起
+    max-file-bytes: 8388608      # 单个文件最大 8 MB。不要超过 14 MB：文件放在 JSON 里时是一个 base64 字符串，解析器最长接受 2000 万个字符
+    max-request-bytes: 33554432  # 一次请求的全部文件加起来最大 32 MB
+
+  # 抽取任务
+  tasks:
+    # 同时处理几份文档。每份文档自己还会同时发几个模型调用，所以实际压到模型上的量由 agent.llm.max-concurrency 管
+    workers: ${AGENT_TASKS_WORKERS:2}
+    # 最多有多少份文档在排队。满了之后新的提交会被拒绝（503），让调用方过一会儿再来，不让队列无限变长
+    queue-capacity: 200
+    # 任务结束之后留几天，过了就自动删掉（记录、提交上来的文件、结果）。0 表示不自动删。
+    # 人事材料含个人信息，留多久要按材料的要求定，不要随手设成 0
+    retention-days: ${AGENT_TASKS_RETENTION_DAYS:30}
+
+  # 任务存在哪：提交上来的文件、任务的状态、抽取结果都在这个目录下，一个任务一个子目录。
+  # 相对路径按程序的当前目录算。里面是文档的原文和抽出来的个人信息：目录放在哪、谁能读，部署时要定好。
+  # 现在只支持单个实例，不要让两个服务指向同一个目录
+  store:
+    dir: ${AGENT_STORE_DIR:data/tasks}
+
   # skill 的目录：每个子目录是一个 skill，里面有 skill.yaml（清单）和 SKILL.md（做法说明）。
   # 相对路径按程序的当前目录算。默认指向仓库里 Claude Code 用的那个目录，两边用的是同一份 skill
   skills:
@@ -35,6 +91,9 @@ agent:
     enable-thinking: ${EXTRACT_LLM_ENABLE_THINKING:}
     # 单次请求最长等多少秒
     timeout-seconds: 300
+    # 整个服务同时发给模型接口的调用数的上限，所有任务加在一起（只在 serve 方式下起作用）。
+    # 按模型服务承受得住的量来设。指标 agent.llm.waiting 一直不是 0，说明它设小了，或者模型服务太慢
+    max-concurrency: ${AGENT_LLM_MAX_CONCURRENCY:8}
     # 允许连接的主机，多个用逗号隔开。抽取时文档的内容会发给模型接口，所以只允许发往登记过的地址；
     # 接口地址的主机不在这里时，程序拒绝调用并提示怎么加。本机地址（localhost、127.x）总是允许的
     allowed-hosts: ${EXTRACT_LLM_ALLOWED_HOSTS:10.10.10.123}

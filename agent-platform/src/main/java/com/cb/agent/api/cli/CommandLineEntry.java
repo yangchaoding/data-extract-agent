@@ -8,6 +8,7 @@ import com.cb.agent.core.skill.Skill;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.ExitCodeGenerator;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnNotWebApplication;
 import org.springframework.stereotype.Component;
 import tools.jackson.databind.json.JsonMapper;
 
@@ -21,7 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 命令行入口。
+ * 命令行入口。作为服务运行时（{@code serve}）没有它：那时请求从 HTTP 接口进来，见 {@code api.http}。
  *
  * <p>四个命令，前三个不调用模型：
  * <pre>
@@ -38,6 +39,7 @@ import java.util.Map;
  * <p>退出码：0 成功；1 处理失败（文件不存在、不是认识的格式、模型调用失败、批量时有文档失败）；2 命令写错了。
  */
 @Component
+@ConditionalOnNotWebApplication
 public class CommandLineEntry implements ApplicationRunner, ExitCodeGenerator {
 
     /** 每片的大小上限的默认值，和 Python 版相同。 */
@@ -158,6 +160,10 @@ public class CommandLineEntry implements ApplicationRunner, ExitCodeGenerator {
 
     private static void printUsage(PrintStream out) {
         out.println("用法：");
+        out.println("  serve [--server.port=端口]");
+        out.println("      作为服务一直运行，提供 HTTP 接口（提交抽取任务、查状态、取结果）。按 Ctrl+C 停止。");
+        out.println("      默认只在本机的 8080 端口监听，配置见 application.yml 的 server 和 agent.api。");
+        out.println();
         out.println("  inspect <文件或目录>… [--show] [--json]");
         out.println("      把识别结果读进来，打印出读成了什么样。不调用模型。");
         out.println("        --show   打印每个块的全文（默认只打印开头一小段）");

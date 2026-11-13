@@ -1,15 +1,19 @@
 package com.cb.agent;
 
 import com.cb.agent.app.document.DocumentReadService;
+import com.cb.agent.app.extract.ExtractionTaskService;
 import com.cb.agent.capability.document.model.Document;
+import com.cb.agent.core.store.JobStore;
 import com.cb.agent.testsupport.Golden;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * 整个应用能不能装配起来。
@@ -17,8 +21,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * <p>前面的测试都是直接 new 出对象来测的。这里启动完整的 Spring 容器，确认各层之间的装配是对的：
  * 配置类建出了读取器，应用层的服务拿到了它，并且真的能读出文档。
  */
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 class AgentPlatformApplicationTests {
+
+    @Autowired
+    private ApplicationContext context;
 
     @Autowired
     private DocumentReadService documents;
@@ -30,5 +37,8 @@ class AgentPlatformApplicationTests {
         assertEquals(1, docs.size(), "目录里的三个文件是同一份合同的三页");
         assertEquals("sample_contract", docs.get(0).name());
         assertEquals(3, docs.get(0).pageCount());
+        // 命令行装配不能启动历史任务，更不能因为测试而写入默认的真实任务目录。
+        assertTrue(context.getBeansOfType(ExtractionTaskService.class).isEmpty());
+        assertTrue(context.getBeansOfType(JobStore.class).isEmpty());
     }
 }

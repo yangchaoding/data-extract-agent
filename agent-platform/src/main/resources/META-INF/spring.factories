@@ -1,0 +1,3 @@
+# 启动失败时的说明：配置有问题时打印"哪一项不对、怎么改"，不打印调用栈。见 ConfigProblemAnalyzer
+org.springframework.boot.diagnostics.FailureAnalyzer=\
+com.cb.agent.config.ConfigProblemAnalyzer

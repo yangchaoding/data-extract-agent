@@ -47,6 +47,8 @@ Desktop.ini
 # Generated extraction results; keep JSON fixtures under examples/
 /extract_out/
 /agent-platform/extract_out/
+# Task store of the HTTP service: uploaded documents and extraction results
+/agent-platform/data/
 /result*.json
 /*.result*.json
 /*.data.json

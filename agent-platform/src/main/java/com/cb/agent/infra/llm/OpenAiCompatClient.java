@@ -33,7 +33,8 @@ import java.util.Map;
  *       配置了开关就在请求里带上 {@code chat_template_kwargs.enable_thinking}；没配置就不带，由服务自己决定。
  *       服务不认这个参数时，它也在降级重试里，而且最后才去掉。</li>
  *   <li><b>识别截断。</b>{@code finish_reason} 是 {@code length} 时抛出 {@link OutputTruncatedException}。</li>
- *   <li><b>统计用量。</b>每次调用累加，供调用方计算一次抽取用了多少。</li>
+ *   <li><b>统计用量。</b>每次调用累加，供调用方计算一次抽取用了多少。
+ *       几份文档同时抽取时，各自通过 {@link #metered()} 拿一个单独计量的视图（Python 版没有这个，它一次只跑一份）。</li>
  * </ul>
  *
  * <p>可以被多个线程同时使用。
@@ -95,6 +96,13 @@ public final class OpenAiCompatClient implements LlmClient {
 
     @Override
     public String complete(String system, String user) {
+        return complete(system, user, null);
+    }
+
+    /**
+     * @param view 这次调用是经由哪个单独计量的视图发出的；直接调用时为 null。用量除了记在总数里，也记到它上面
+     */
+    private String complete(String system, String user, Metered view) {
         // 依次去掉 temperature 和 response_format 重试。全部失败说明 400 另有原因（比如输入太长），抛出最初的那个错误
         List<Object[]> attempts = new ArrayList<>();
         Double t = temperature;
@@ -132,7 +140,7 @@ public final class OpenAiCompatClient implements LlmClient {
             temperature = temp; // 这种组合能用，记住
             jsonMode = jsonOut;
             enableThinking = thinking;
-            return read(response.body());
+            return read(response.body(), view);
         }
         throw firstBadRequest;
     }
@@ -197,7 +205,7 @@ public final class OpenAiCompatClient implements LlmClient {
     }
 
     /** 从返回里取出回复，顺带记下用量。 */
-    private String read(String responseBody) {
+    private String read(String responseBody, Metered view) {
         JsonNode root;
         try {
             root = json.readTree(responseBody);
@@ -205,8 +213,12 @@ public final class OpenAiCompatClient implements LlmClient {
             throw new LlmCallException("模型接口返回的不是 JSON：" + excerpt(responseBody), e);
         }
         JsonNode usage = root.get("usage");
-        record(usage == null || usage.isNull() ? 0 : usage.path("prompt_tokens").asLong(0),
-                usage == null || usage.isNull() ? 0 : usage.path("completion_tokens").asLong(0));
+        long prompt = usage == null || usage.isNull() ? 0 : usage.path("prompt_tokens").asLong(0);
+        long completion = usage == null || usage.isNull() ? 0 : usage.path("completion_tokens").asLong(0);
+        record(prompt, completion);
+        if (view != null) {
+            view.record(prompt, completion);
+        }
         JsonNode choice = root.path("choices").path(0);
         if (choice.isMissingNode()) {
             throw new LlmCallException("模型接口的返回里没有 choices：" + excerpt(responseBody));
@@ -228,6 +240,43 @@ public final class OpenAiCompatClient implements LlmClient {
     @Override
     public synchronized Usage usage() {
         return new Usage(calls, promptTokens, completionTokens);
+    }
+
+    @Override
+    public LlmClient metered() {
+        return new Metered();
+    }
+
+    /**
+     * 单独计量的视图。请求还是由外面这个客户端发（连接、"服务不支持哪些参数"的记忆都共用），
+     * 只是用量另外记一份，所以几份文档同时抽取时各自的用量互不干扰。
+     */
+    private final class Metered implements LlmClient {
+
+        private long calls;
+        private long promptTokens;
+        private long completionTokens;
+
+        @Override
+        public String complete(String system, String user) {
+            return OpenAiCompatClient.this.complete(system, user, this);
+        }
+
+        private synchronized void record(long prompt, long completion) {
+            calls++;
+            promptTokens += prompt;
+            completionTokens += completion;
+        }
+
+        @Override
+        public synchronized Usage usage() {
+            return new Usage(calls, promptTokens, completionTokens);
+        }
+
+        @Override
+        public LlmClient metered() {
+            return new Metered();
+        }
     }
 
     private String describe(HttpResponse<String> response) {

@@ -7,9 +7,10 @@
 | 功能 | 状态 | 教程 |
 |---|---|---|
 | 读取 PaddleOCR-VL 的识别结果（一份或多份 JSON） | 已完成 | [01-read-paddleocr-vl.md](01-read-paddleocr-vl.md) |
-| 切片预览 | 命令已有（`chunks`），还没有单独的教程。用法在 [02-extract-by-skill.md](02-extract-by-skill.md) 的第 2 步里带过 | |
+| 切片预览 | 已完成，命令行和 HTTP 都能预览 | [命令行](02-extract-by-skill.md)、[HTTP](03-batch-http.md) |
 | 按 skill 定义抽取数据（例如干部任免审批表） | 已完成。用真实模型跑过示例任免表，结果和教程里的一致；教程里的输出是用假模型服务跑的，不在内网也能重现 | [02-extract-by-skill.md](02-extract-by-skill.md) |
-| 批量接口（HTTP） | 未开始 | |
+| 批量接口（HTTP）、异步任务、文件存储、观测 | 已完成并通过 HTTP 验收，单实例运行 | [03-batch-http.md](03-batch-http.md) |
+| 按标题和关键词自动选 skill（规则路由） | 已完成，选不出时返回候选与依据 | [03-batch-http.md](03-batch-http.md) |
 | 读取 txt、Xiaomi-OCR 的输出 | 未开始 | |
 | 读取 Word、Excel、文字版 PDF、OFD | 未开始 | |
 | 扫描件和图片（调用 OCR） | 未开始 | |
@@ -28,7 +29,8 @@
 1. 看 [../README.md](../README.md) 的"构建"一节，把项目构建出来。
 2. 照着 [01-read-paddleocr-vl.md](01-read-paddleocr-vl.md) 用自带的示例数据走一遍。
 3. 照着 [02-extract-by-skill.md](02-extract-by-skill.md) 把示例任免表抽一遍。手边没有模型服务也能走通，教程里有说明。
-4. 换成你自己的识别结果再走一遍。
+4. 照着 [03-batch-http.md](03-batch-http.md) 启动服务，通过 HTTP 提交任免表与合同，查看路由、任务和结果。
+5. 换成你自己的识别结果再走一遍。
 
 ## 写教程的规矩
 

@@ -26,6 +26,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -136,8 +137,11 @@ public final class PaddleOcrVlJsonReader implements DocumentReader {
         if (!Files.isRegularFile(path)) {
             throw new IllegalArgumentException("找不到输入: " + path);
         }
-        String name = RES_SUFFIX.matcher(stem(path.getFileName().toString())).replaceFirst("");
-        return List.of(fromResult(parse(path), name, path.toString()));
+        String fileName = path.getFileName().toString();
+        String name = RES_SUFFIX.matcher(stem(fileName)).replaceFirst("");
+        List<JsonNode> pages = unwrapPages(parse(path));
+        // 这个文件里的每一页都出自它自己
+        return List.of(build(pages, Collections.nCopies(pages.size(), fileName), name, path.toString()));
     }
 
     /**
@@ -185,8 +189,8 @@ public final class PaddleOcrVlJsonReader implements DocumentReader {
         } catch (IOException e) {
             throw new IllegalArgumentException("读不了目录 " + dir + "：" + e.getMessage(), e);
         }
-        // 文档名 → 这份文档的各页；每页带着排序用的序号
-        Map<String, List<Map.Entry<Integer, JsonNode>>> groups = new LinkedHashMap<>();
+        // 文档名 → 这份文档的各页；每页带着排序用的序号，和它是从哪个文件读出来的
+        Map<String, List<SourcedPage>> groups = new LinkedHashMap<>();
         for (Path file : files) {
             List<JsonNode> pages;
             try {
@@ -198,18 +202,29 @@ public final class PaddleOcrVlJsonReader implements DocumentReader {
             for (JsonNode page : pages) {
                 String src = str(page.get("input_path"));
                 String name = (src != null && !src.isEmpty()) ? stem(lastSegment(src)) : fileStem;
-                List<Map.Entry<Integer, JsonNode>> group = groups.computeIfAbsent(name, k -> new ArrayList<>());
+                List<SourcedPage> group = groups.computeIfAbsent(name, k -> new ArrayList<>());
                 Integer idx = integer(page.get("page_index"));
-                group.add(Map.entry(idx != null ? idx : group.size(), page));
+                group.add(new SourcedPage(idx != null ? idx : group.size(), page, file.getFileName().toString()));
             }
         }
         List<Document> docs = new ArrayList<>();
-        for (Map.Entry<String, List<Map.Entry<Integer, JsonNode>>> e : groups.entrySet()) {
-            List<Map.Entry<Integer, JsonNode>> group = e.getValue();
-            group.sort(Map.Entry.comparingByKey()); // 稳定排序：序号相同的保持原来的先后
-            docs.add(fromPages(group.stream().map(Map.Entry::getValue).toList(), e.getKey(), dir.toString()));
+        for (Map.Entry<String, List<SourcedPage>> e : groups.entrySet()) {
+            List<SourcedPage> group = e.getValue();
+            group.sort(Comparator.comparingInt(SourcedPage::order)); // 稳定排序：序号相同的保持原来的先后
+            docs.add(build(group.stream().map(SourcedPage::page).toList(),
+                    group.stream().map(SourcedPage::file).toList(), e.getKey(), dir.toString()));
         }
         return docs;
+    }
+
+    /**
+     * 读目录时的一页。
+     *
+     * @param order 在这份文档里排第几（{@code page_index}；没有时按读到的先后）
+     * @param page  这一页的识别结果
+     * @param file  这一页是从哪个文件读出来的
+     */
+    private record SourcedPage(int order, JsonNode page, String file) {
     }
 
     /**
@@ -255,6 +270,13 @@ public final class PaddleOcrVlJsonReader implements DocumentReader {
      * 从各页的识别结果建文档。对应 {@code _from_pages}。整个读取的主流程在这里。
      */
     public Document fromPages(List<JsonNode> pages, String name, String source) {
+        return build(pages, null, name, source);
+    }
+
+    /**
+     * @param files 和 {@code pages} 一一对应：每一页是从哪个文件读出来的。识别结果不是从文件来的时候传 null
+     */
+    private Document build(List<JsonNode> pages, List<String> files, String name, String source) {
         JsonNode first = pages.isEmpty() ? null : pages.get(0);
         Integer declared = first == null ? null : integer(first.get("page_count"));
         // 合并成一页的结果：只有一个对象，没有 page_index，却声明了不止一页。这种结果里块上没有页码
@@ -276,7 +298,8 @@ public final class PaddleOcrVlJsonReader implements DocumentReader {
             Integer pageNo = concatenated ? null : (idx != null ? idx + 1 : i + 1);
             if (pageNo != null) {
                 lastPage = Math.max(lastPage, pageNo);
-                pageInfos.put(pageNo, new PageInfo(pageNo, integer(page.get("width")), integer(page.get("height"))));
+                pageInfos.put(pageNo, new PageInfo(pageNo, integer(page.get("width")), integer(page.get("height")),
+                        files == null ? null : files.get(i)));
             }
             boolean atHead = true;                     // 还没有遇到本页的正文
             List<Draft> headNotes = new ArrayList<>(); // 页首、正文之前的题注和说明

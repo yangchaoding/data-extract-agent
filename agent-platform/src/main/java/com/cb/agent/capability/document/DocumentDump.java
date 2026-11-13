@@ -19,7 +19,7 @@ import java.util.Map;
  *   <li>给人看：命令行加 {@code --json} 时输出的就是它；</li>
  *   <li>差分测试：Python 版也导出同样的结构，两边逐项比对。所以字段名用的是 Python 版的写法
  *       （{@code page_end}、{@code header_rows}），其中 {@code regions}、{@code row_pages}、
- *       {@code pages}、{@code reader}、{@code warnings} 是 Java 版新增的，Python 版没有。</li>
+ *       {@code pages}（每一页的大小和它出自哪个文件）、{@code reader}、{@code warnings} 是 Java 版新增的，Python 版没有。</li>
  * </ul>
  *
  * <p>这里不依赖任何 JSON 库，只产出数据结构，由调用方决定怎么序列化。
@@ -44,6 +44,7 @@ public final class DocumentDump {
             p.put("number", page.number());
             p.put("width", page.width());
             p.put("height", page.height());
+            p.put("file", page.file());
             pages.add(p);
         }
         out.put("pages", pages);

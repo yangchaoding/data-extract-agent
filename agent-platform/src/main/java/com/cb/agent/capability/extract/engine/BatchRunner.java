@@ -58,8 +58,15 @@ public final class BatchRunner {
                 }));
             }
             List<R> out = new ArrayList<>();
-            for (Future<R> future : futures) {
-                out.add(future.get()); // 按提交的顺序取，结果的顺序和依次执行时相同
+            try {
+                for (Future<R> future : futures) {
+                    out.add(future.get()); // 按提交的顺序取，结果的顺序和依次执行时相同
+                }
+            } catch (InterruptedException e) {
+                // 这一次抽取被取消了：把还在等模型返回的调用也打断。
+                // 不这样做的话，离开这个 try 时要等它们各自返回，一次调用可能要等几分钟
+                pool.shutdownNow();
+                throw e;
             }
             return out;
         } catch (InterruptedException e) {

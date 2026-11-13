@@ -28,10 +28,22 @@
     </properties>
 
     <dependencies>
-        <!-- Spring Boot 基础：配置、日志、依赖注入。HTTP 接口到做批量接口的阶段再加 -->
+        <!-- Spring Boot 基础：配置、日志、依赖注入 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- HTTP 接口：Spring MVC 加内嵌的 Tomcat。带着命令启动时不会启动它，见 AgentPlatformApplication -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webmvc</artifactId>
+        </dependency>
+
+        <!-- 观测：/actuator/health 健康检查，/actuator/metrics 指标（任务数、模型调用数、token、耗时） -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
         <!-- JSON 解析（Jackson 3，Spring Boot 4 的默认版本）。读取识别结果要用 -->
